@@ -1,26 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <title>Frontend Mentor | E-commerce product page</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | E-commerce product page</title>
+  <body>
+    <header class="header">
+      <div class="header__content-wrapper">
+        <figure class="header__logo">
+          <a href="#">
+            <h2 class="header__company-logo">Sneakers</h2>
+          </a>
+        </figure>
+        <div class="header__divider"></div>
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a
+                href="collections/index.html"
+                class="header__nav-link"
+                target="_blank"
+                >Collections</a
+              >
+            </li>
+            <li class="header__nav-item">
+              <a href="men/index.html" class="header__nav-link" target="_blank"
+                >Men</a
+              >
+            </li>
+            <li class="header__nav-item">
+              <a
+                href="women/index.html"
+                class="header__nav-link"
+                target="_blank"
+                >Women</a
+              >
+            </li>
+            <li class="header__nav-item">
+              <a
+                href="about/index.html"
+                class="header__nav-link"
+                target="_blank"
+                >About</a
+              >
+            </li>
+            <li class="header__nav-item">
+              <a
+                href="contact/index.html"
+                class="header__nav-link"
+                target="_blank"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <!-- Cart and User Icons -->
+        <div class="header__icons">
+          <img
+            src="images/icon-cart.svg"
+            alt="Shopping Cart"
+            class="header__icon header__icon--cart"
+          />
+          <img
+            src="images/image-avatar.png"
+            alt="User"
+            class="header__icon header__icon--user"
+          />
+        </div>
+      </div>
+    </header>
 
-  <link rel="stylesheet" href="main.css">
-</head>
-<body>
+    <main></main>
 
-  Collections
-  Men
-  Women
-  About
-  Contact
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Doina</a>.
+      </div>
+    </footer>
 
-  Sneaker Company
-
-  Fall Limited Edition Sneakers
+    <!--Fall Limited Edition Sneakers
 
   These low-profile sneakers are your perfect casual wear companion. Featuring a 
   durable rubber outer sole, they’ll withstand everything the weather can offer.
@@ -31,16 +109,11 @@
 
   0
   Add to cart
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Doina</a>.
-  </div>
+  -->
 
-  <!-- Inside index.html -->
-<script src="js/main.js"></script>
-<script src="js/gallery.js"></script>
-<script src="js/cart.js"></script>
-
-</body>
+    <!-- Inside index.html -->
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/cart.js"></script>
+  </body>
 </html>
