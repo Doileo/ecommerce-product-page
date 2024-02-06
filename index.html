@@ -91,9 +91,18 @@
     <main class="main">
       <!-- Hero Section -->
       <section class="hero">
-        <img class="hero__image" src="" alt="Hero Image." />
-        <h1 class="hero__title">Welcome to Sneaker Boutique</h1>
-        <button class="hero__button">Explore Now</button>
+        <div class="hero__content">
+          <img
+            class="hero__image"
+            src="images/hero-image.jpg"
+            alt="Hero Image."
+          />
+          <h1 class="hero__title">Discover Comfort, Embrace Style</h1>
+          <p class="hero__subtitle">
+            Explore our collection of stylish and comfortable sneakers
+          </p>
+          <button class="hero__button">Shop Now</button>
+        </div>
       </section>
 
       <!-- Bestsellers Section -->
@@ -198,14 +207,14 @@
           <div class="about__text">
             <h2 class="about__title">About Us</h2>
             <p class="about__description">
-              At SNEAKERS, we believe in more than just footwear; we
-              believe in a lifestyle that seamlessly blends comfort and style.
-              Discover a curated collection of sneakers meticulously designed
-              for both fashion-forward individuals and comfort seekers. Our
-              mission is to offer a diverse range of footwear that transcends
-              trends, providing you with timeless pieces that not only look good
-              but feel incredible. Every step you take should be a testament to
-              your unique style, and we're here to ensure you 'Discover Comfort,
+              At SNEAKERS, we believe in more than just footwear; we believe in
+              a lifestyle that seamlessly blends comfort and style. Discover a
+              curated collection of sneakers meticulously designed for both
+              fashion-forward individuals and comfort seekers. Our mission is to
+              offer a diverse range of footwear that transcends trends,
+              providing you with timeless pieces that not only look good but
+              feel incredible. Every step you take should be a testament to your
+              unique style, and we're here to ensure you 'Discover Comfort,
               Embrace Style.' Welcome to a world where fashion meets comfort,
               and every pair tells a story of quality, innovation, and
               individuality.
@@ -227,29 +236,82 @@
           </div>
         </div>
       </section>
-
-      <!-- Newsletter Section -->
-      <section class="newsletter">
-        <h2>Subscribe to Our Newsletter</h2>
-        <form action="#" method="post">
-          <!-- Add your newsletter form fields here -->
-          <input
-            type="email"
-            name="email"
-            placeholder="Enter your email"
-            required
-          />
-          <button type="submit">Subscribe</button>
-        </form>
-      </section>
     </main>
 
-    <footer>
-      <div class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by <a href="#">Doina</a>.
+    <footer class="footer">
+      <div class="footer__container">
+        <!-- Newsletter and Form Section -->
+        <div class="footer__column">
+          <div class="footer__newsletter">
+            <h3 class="footer__heading">Join Our Newsletter</h3>
+            <p class="footer__paragraph">
+              Stay updated with our latest releases, special offers, and more!
+            </p>
+          </div>
+          <form class="footer__form">
+            <label for="email" class="footer__label">Email Address *</label>
+            <input
+              type="email"
+              id="email"
+              class="footer__input"
+              placeholder="Your email address"
+              required
+            />
+            <button type="submit" class="footer__button">Subscribe</button>
+          </form>
+        </div>
+
+        <!-- Location, Menu, and Social Media Section -->
+        <div class="footer__column footer__menu-social">
+          <!-- Location Section -->
+          <div class="footer__item">
+            <h3 class="footer__heading">Location</h3>
+            <p class="footer__paragraph">
+              123 Sneaker Street, Cityville, Country
+            </p>
+          </div>
+
+          <!-- Menu Section -->
+          <div class="footer__item">
+            <h3 class="footer__heading">Menu</h3>
+            <nav class="footer__menu">
+              <ul class="footer__menu-list">
+                <li class="footer__menu-item">
+                  <a href="men/index.html" class="footer__menu-link">Men</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="women/index.html" class="footer__menu-link">Women</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="about/index.html" class="footer__menu-link">About</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="contact/index.html" class="footer__menu-link"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <!-- Social Media Section -->
+          <div class="footer__item">
+            <h3 class="footer__heading">Follow Us</h3>
+            <ul class="footer__social">
+              <li><a href="#" class="footer__social-link">Facebook</a></li>
+              <li><a href="#" class="footer__social-link">Twitter</a></li>
+              <li><a href="#" class="footer__social-link">Instagram</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Attribution -->
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="#">Doina</a>.
+        </div>
       </div>
     </footer>
 
