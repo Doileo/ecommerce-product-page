@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Mentor | Men's Sneakers Collection</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../main.css" />
+</head>
+<body>
+    <header class="header">
+        <div class="header__content-wrapper">
+          <figure class="header__logo">
+            <a href="../index.html">
+              <h2 class="header__company-logo">Sneakers</h2>
+            </a>
+          </figure>
+          <div class="header__divider"></div>
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-item">
+                <a
+                  href="../collections/index.html"
+                  class="header__nav-link"
+                  target="_blank"
+                  >Collections</a
+                >
+              </li>
+              <li class="header__nav-item">
+                <a href="men/index.html" class="header__nav-link" target="_blank"
+                  >Men</a
+                >
+              </li>
+              <li class="header__nav-item">
+                <a
+                  href="../women/index.html"
+                  class="header__nav-link"
+                  target="_blank"
+                  >Women</a
+                >
+              </li>
+              <li class="header__nav-item">
+                <a
+                  href="../about/index.html"
+                  class="header__nav-link"
+                  target="_blank"
+                  >About</a
+                >
+              </li>
+              <li class="header__nav-item">
+                <a
+                  href="../contact/index.html"
+                  class="header__nav-link"
+                  target="_blank"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <!-- Cart and User Icons -->
+        <div class="header__icons">
+            <img src="../images/icon-cart.svg" alt="Shopping Cart" class="header__icon header__icon--cart">
+            <img src="../images/image-avatar.png" alt="User" class="header__icon header__icon--user">
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero__content">
+            <!-- Hero Image/Banner -->
+            <img src="../images/hero-men.jpg" alt="Men's Sneakers" class="hero__image">
+            <h1 class="hero__title">Shop Men's Sneakers</h1>
+            <p class="hero__subtitle">Discover the latest collection of stylish men's sneakers.</p>
+            <button class="hero__button">Explore Now</button>
+        </div>
+    </section>
+
+    <!-- Featured Categories Section -->
+    <section class="featured-categories">
+        <h2 class="featured-categories__title">Featured Categories</h2>
+        <div class="featured-categories__grid">
+            <!-- Category 1 -->
+            <div class="category-item">
+                <a href="category1.html" class="category-item__link">
+                    <img src="../images/category1.jpg" alt="Casual Sneakers" class="category-item__image">
+                    <h3 class="category-item__title">Casual Sneakers</h3>
+                    <p class="category-item__description">Comfortable and stylish sneakers for everyday wear.</p>
+                </a>
+            </div>
+            <!-- Category 2 -->
+            <div class="category-item">
+                <a href="category2.html" class="category-item__link">
+                    <img src="../images/category2.jpg" alt="Athletic Sneakers" class="category-item__image">
+                    <h3 class="category-item__title">Athletic Sneakers</h3>
+                    <p class="category-item__description">Performance-driven sneakers for sports and workouts.</p>
+                </a>
+            </div>
+            <!-- Category 3 -->
+            <div class="category-item">
+                <a href="category3.html" class="category-item__link">
+                    <img src="../images/category3.jpg" alt="Formal Sneakers" class="category-item__image">
+                    <h3 class="category-item__title">Formal Sneakers</h3>
+                    <p class="category-item__description">Elegant sneakers suitable for formal occasions.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bestsellers Section -->
+    <section class="bestsellers">
+        <h2 class="bestsellers__title">Bestsellers</h2>
+        <div class="bestsellers__grid">
+            <!-- Bestseller 1 -->
+            <div class="bestseller-item">
+                <a href="product1.html" class="bestseller-item__link">
+                    <img src="../images/bestseller1.png" alt="Bestseller 1" class="bestseller-item__image">
+                    <div class="bestseller-item__details">
+                        <h3 class="bestseller-item__title">Men's Sneaker 1</h3>
+                        <p class="bestseller-item__price">$99.99</p>
+                    </div>
+                </a>
+            </div>
+            <!-- Bestseller 2 -->
+            <!-- Add more bestseller items as needed -->
+        </div>
+    </section>
+
+    <!-- About Men's Sneakers Section -->
+    <section class="about-men">
+        <div class="about-men__content">
+            <h2 class="about-men__title">About Men's Sneakers</h2>
+            <p class="about-men__description">
+                Discover a wide range of men's sneakers designed to blend comfort and style. Whether you're looking for casual sneakers for everyday wear, athletic sneakers for workouts, or formal sneakers for special occasions, we have you covered. Our collection features top brands and the latest trends to ensure you find the perfect pair to suit your style and needs.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <!-- Newsletter and Form Section -->
+            <div class="footer__column">
+                <div class="footer__newsletter">
+                    <h3 class="footer__heading">Join Our Newsletter</h3>
+                    <p class="footer__paragraph">Stay updated with our latest releases, special offers, and more!</p>
+                </div>
+                <form class="footer__form">
+                    <label for="email" class="footer__label">Email Address *</label>
+                    <input type="email" id="email" class="footer__input" placeholder="Your email address" required>
+                    <button type="submit" class="footer__button">Subscribe</button>
+                </form>
+            </div>
+        
+            <!-- Location, Menu, and Social Media Section -->
+            <div class="footer__column footer__menu-social">
+                <!-- Location Section -->
+                <div class="footer__item">
+                    <h3 class="footer__heading">Location</h3>
+                    <p class="footer__paragraph">123 Sneaker Street, Cityville, Country</p>
+                </div>
+                
+                <!-- Menu Section -->
+                <div class="footer__item">
+                    <h3 class="footer__heading">Menu</h3>
+                    <nav class="footer__menu">
+                        <ul class="footer__menu-list">
+                            <li class="footer__menu-item">
+                                <a href="../men/index.html" class="footer__menu-link">Men</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="../women/index.html" class="footer__menu-link">Women</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="../about/index.html" class="footer__menu-link">About</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="../contact/index.html" class="footer__menu-link">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+        
+                <!-- Social Media Section -->
+                <div class="footer__item">
+                    <h3 class="footer__heading">Follow Us</h3>
+                    <ul class="footer__social">
+                        <li><a href="#" class="footer__social-link">Facebook</a></li>
+                        <li><a href="#" class="footer__social-link">Twitter</a></li>
+                        <li><a href="#" class="footer__social-link">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        
+            <!-- Attribution -->
+            <div class="attribution">
+                Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Doina</a>.
+            </div>
+        </div>
+    </footer>
+
+    </main>
+    
+</body>
+</html>
