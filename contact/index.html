@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Sneakers</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../main.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header__content-wrapper">
+        <figure class="header__logo">
+          <a href="../index.html">
+            <h2 class="header__company-logo">Sneakers</h2>
+          </a>
+        </figure>
+        <div class="header__divider"></div>
+      </div>
+      <!-- Navigation Bar -->
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a href="../collections/index.html" class="header__nav-link"
+              >Collections</a
+            >
+          </li>
+          <li class="header__nav-item">
+            <a href="../men/index.html" class="header__nav-link">Men</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="../women/index.html" class="header__nav-link">Women</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="../about/" class="header__nav-link">About</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="index.html" class="header__nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- Cart and User Icons -->
+      <div class="header__icons">
+        <img
+          src="../images/icon-cart.svg"
+          alt="Shopping Cart"
+          class="header__icon header__icon--cart"
+        />
+        <img
+          src="../images/image-avatar.png"
+          alt="User"
+          class="header__icon header__icon--user"
+        />
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+      <!-- Contact Section -->
+      <section class="contact">
+        <div class="container">
+          <h2 class="contact__heading">Contact</h2>
+          <div class="contact__content">
+            <!-- Contact Form -->
+            <div class="contact-form">
+              <h3 class="contact-form__heading">Contact Us</h3>
+              <form action="#" method="POST" class="contact-form__form">
+                <div class="form-group">
+                  <label for="first-name" class="form-label"
+                    >First Name *</label
+                  >
+                  <input
+                    type="text"
+                    id="first-name"
+                    name="first-name"
+                    class="form-input"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="last-name" class="form-label">Last Name *</label>
+                  <input
+                    type="text"
+                    id="last-name"
+                    name="last-name"
+                    class="form-input"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email" class="form-label">Email *</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form-input"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="phone" class="form-label">Phone</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    class="form-input"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="subject" class="form-label">Subject</label>
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    class="form-input"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    class="form-textarea"
+                  ></textarea>
+                </div>
+                <button type="submit" class="form-submit">Submit</button>
+              </form>
+            </div>
+
+            <!-- Location and Hours-->
+            <div class="contact-info">
+              <h3 class="contact-info__heading">Our Location</h3>
+              <p>123 Sneaker Street, Cityville, Country</p>
+              <h3 class="contact-info__heading">Hours</h3>
+              <p>Monday - Friday: 9am - 6pm</p>
+              <p>Saturday 9:00 am – 2:00 pm</p>
+              <p>​Sunday 9:00 am – 3:00 pm</p>
+              <div class="contact-info__image">
+                <img src="images/about-image.jpg" alt="About Us Image" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer__container">
+        <!-- Newsletter and Form Section -->
+        <div class="footer__column">
+          <div class="footer__newsletter">
+            <h3 class="footer__heading">Join Our Newsletter</h3>
+            <p class="footer__paragraph">
+              Stay updated with our latest releases, special offers, and more!
+            </p>
+          </div>
+          <form class="footer__form">
+            <label for="email" class="footer__label">Email Address *</label>
+            <input
+              type="email"
+              id="email"
+              class="footer__input"
+              placeholder="Your email address"
+              required
+            />
+            <button type="submit" class="footer__button">Subscribe</button>
+          </form>
+        </div>
+
+        <!-- Location, Menu, and Social Media Section -->
+        <div class="footer__column footer__menu-social">
+          <!-- Location Section -->
+          <div class="footer__item">
+            <h3 class="footer__heading">Location</h3>
+            <p class="footer__paragraph">
+              123 Sneaker Street, Cityville, Country
+            </p>
+          </div>
+
+          <!-- Menu Section -->
+          <div class="footer__item">
+            <h3 class="footer__heading">Menu</h3>
+            <nav class="footer__menu">
+              <ul class="footer__menu-list">
+                <li class="footer__menu-item">
+                  <a href="../men/index.html" class="footer__menu-link">Men</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="../women/index.html" class="footer__menu-link"
+                    >Women</a
+                  >
+                </li>
+                <li class="footer__menu-item">
+                  <a href="../about/index.html" class="footer__menu-link"
+                    >About</a
+                  >
+                </li>
+                <li class="footer__menu-item">
+                  <a href="../contact/index.html" class="footer__menu-link"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <!-- Social Media Section -->
+          <div class="footer__item">
+            <h3 class="footer__heading">Follow Us</h3>
+            <ul class="footer__social">
+              <li><a href="#" class="footer__social-link">Facebook</a></li>
+              <li><a href="#" class="footer__social-link">Twitter</a></li>
+              <li><a href="#" class="footer__social-link">Instagram</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Attribution -->
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="#">Doina</a>.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
