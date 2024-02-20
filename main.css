@@ -1,5 +1,9 @@
-/* Colors */
+/* ------------------- */
+/* Custom properties   */
+/* ------------------- */
+
 :root {
+  /* Colors */
   --primary-orange: hsl(26, 100%, 55%);
   --pale-orange: hsl(25, 100%, 94%);
   
@@ -9,18 +13,83 @@
   --light-grayish-blue: hsl(223, 64%, 98%);
   --white: hsl(0, 0%, 100%);
   --black: hsla(0, 0%, 0%, 0.75); /* 75% opacity for lightbox background */
+
+  /* font-sizes */
+  --fs-mobile-small: 0.75rem; /* 12px / 16px = 0.75rem */
+  --fs-mobile-medium: 0.9375rem; /* 15px / 16px = 0.9375rem */
+  --fs-mobile-normal: 1rem; /* 16px / 16px = 1rem */
+  --fs-mobile-large: 1.125rem; /* 18px / 16px = 1.125rem */
+
+  --fs-desktop-smallest: 0.8125rem; /* 13px */
+  --fs-desktop-small: 0.9375rem; /* 15px */
+  --fs-desktop-medium: 1rem; /* 16px */
+  --fs-desktop-large: 1.75rem; /* 28px */
+  --fs-desktop-largest: 2.75rem; /* 44px */
 }
 
-/* Typography */
-:root {
-  --body-font-size: 16px;
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
+/* https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box sizing */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+h1, 
+h2, 
+h3, 
+h4,
+p {
+  font-weight: 400;
 }
 
 body {
   font-family: 'Kumbh Sans', sans-serif;
-  font-weight: 400; /* Regular */
+  color: var(--dark-grayish-blue);
+  background-color: var(--white);
+  min-height: 100vh;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 700; /* Bold */
+/* images */
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+/* form elements */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* remove animation for people who've turned them off  */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *:before,
+  *:after {
+    animation-duration: 0.01ms!important;
+    animation-iteration-count: 1!important;
+    transition-duration: 0.01ms!important;
+    scroll-behavior: auto!important;
+  }
 }
