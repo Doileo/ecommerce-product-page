@@ -93,3 +93,32 @@ select {
     scroll-behavior: auto!important;
   }
 }
+
+
+/* ------------------- */
+/* Utility classes     */
+/* ------------------- */
+
+/* general */
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.container {
+  padding-inline: 2em;
+  margin-inline: auto;
+  max-width: 80rem;
+}
+
+/* colors */
+.bg-accent { background-color: var(--primary-orange); }
+.bg-light { background-color: var(--pale-orange); }
+
+.text-dark { color: var(--very-dark-blue); }
+.text-accent { color: var(--primary-orange); }
