@@ -24,42 +24,59 @@
     <!-- Header -->
     <header class="header">
       <div class="header__content-wrapper">
-        <figure class="header__logo">
-          <a href="../index.html">
-            <h2 class="header__company-logo">Sneakers</h2>
-          </a>
-        </figure>
-        <div class="header__divider"></div>
-      </div>
-      <!-- Navigation Bar -->
-      <nav class="header__nav">
-        <ul class="header__nav-list">
-          <li class="header__nav-item">
-            <a href="../men/index.html" class="header__nav-link" target="_blank">Men</a>
-          </li>
-          <li class="header__nav-item">
-            <a href="index.html" class="header__nav-link" target="_blank">Women</a>
-          </li>
-          <li class="header__nav-item">
-            <a href="../about/index.html" class="header__nav-link" target="_blank">About</a>
-          </li>
-          <li class="header__nav-item">
-            <a href="../contact/index.html" class="header__nav-link"target="_blank">Contact</a>
-          </li>
-        </ul>
-      </nav>
-      <!-- Cart and User Icons -->
-      <div class="header__icons">
-        <img
-          src="../images/icon-cart.svg"
-          alt="Shopping Cart"
-          class="header__icon header__icon--cart"
-        />
-        <img
-          src="../images/image-avatar.png"
-          alt="User"
-          class="header__icon header__icon--user"
-        />
+        <button class="header__nav-toggle" aria-label="open navigation">
+          <span class="hamburger"></span>
+        </button>
+        <a class="logo" href="../index.html">
+          <h2 class="header__logo">Sneakers</h2>
+        </a>
+        <!-- Navigation Bar -->
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a
+                href="../men/index.html"
+                class="header__nav-link"
+                target="_blank"
+                >Men</a
+              >
+            </li>
+            <li class="header__nav-item">
+              <a href="index.html" class="header__nav-link" target="_blank"
+                >Women</a
+              >
+            </li>
+            <li class="header__nav-item">
+              <a
+                href="../about/index.html"
+                class="header__nav-link"
+                target="_blank"
+                >About</a
+              >
+            </li>
+            <li class="header__nav-item">
+              <a
+                href="../contact/index.html"
+                class="header__nav-link"
+                target="_blank"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <!-- Cart and User Icons -->
+        <div class="header__icons">
+          <img
+            src="../images/icon-cart.svg"
+            alt="Shopping Cart"
+            class="header__icon header__icon--cart"
+          />
+          <img
+            src="../images/image-avatar.png"
+            alt="User"
+            class="header__icon header__icon--user"
+          />
+        </div>
       </div>
     </header>
 
@@ -90,8 +107,11 @@
             <!-- Casual Model 1 -->
             <div class="casual-items">
               <a href="w_casual_1/index.html" class="model-link">
-                <img src="../women/w_casual_1/w_casual_1_img/w_casual1.png" alt="Casual Sneakers"
-                class="category-item__image"/>
+                <img
+                  src="../women/w_casual_1/w_casual_1_img/w_casual1.png"
+                  alt="Casual Sneakers"
+                  class="category-item__image"
+                />
                 <div class="casual-items__details">
                   <h3 class="casual-item__title">Casual Model 1</h3>
                   <p class="casual-item__price">$99.99</p>
@@ -99,143 +119,175 @@
               </a>
             </div>
             <!-- Casual Model 2 -->
-          <div class="casual-items">
-            <a href="w_casual_2/index.html" class="model-link">
-              <img src="../women/w_casual_2/w_casual_2_img/w_casual2.png" alt="Casual Sneakers" class="category-item__image">
-              <div class="casual-items__details">
-                <h3 class="casual-item__title">Casual Model 2</h3>
-                <p class="casual-item__price">$89.99</p>
-              </div>
-            </a>
+            <div class="casual-items">
+              <a href="w_casual_2/index.html" class="model-link">
+                <img
+                  src="../women/w_casual_2/w_casual_2_img/w_casual2.png"
+                  alt="Casual Sneakers"
+                  class="category-item__image"
+                />
+                <div class="casual-items__details">
+                  <h3 class="casual-item__title">Casual Model 2</h3>
+                  <p class="casual-item__price">$89.99</p>
+                </div>
+              </a>
+            </div>
+            <!-- Casual Model 3 -->
+            <div class="casual-items">
+              <a href="w_casual_3/index.html" class="model-link">
+                <img
+                  src="../women/w_casual_3/w_casual_3_img/w_casual3.png"
+                  alt="Casual Sneakers"
+                  class="category-item__image"
+                />
+                <div class="casual-items__details">
+                  <h3 class="casual-item__title">Casual Model 3</h3>
+                  <p class="casual-item__price">$79.99</p>
+                </div>
+              </a>
+            </div>
           </div>
-          <!-- Casual Model 3 -->
-          <div class="casual-items">
-            <a href="w_casual_3/index.html" class="model-link">
-              <img src="../women/w_casual_3/w_casual_3_img/w_casual3.png" alt="Casual Sneakers" class="category-item__image">
-              <div class="casual-items__details">
-                <h3 class="casual-item__title">Casual Model 3</h3>
-                <p class="casual-item__price">$79.99</p>
-              </div>
-            </a>
+          <!-- Category 2: Athletic -->
+          <div class="category-item">
+            <!-- Athletic Model 1 -->
+            <div class="athletic-items">
+              <a href="w_athletic_1/index.html" class="model-link">
+                <img
+                  src="../women/w_athletic_1/w_athletic_1_img/w_athletic1.png"
+                  alt="Athletic Sneakers"
+                  class="category-item__image"
+                />
+                <div class="athletic-items__details">
+                  <h3 class="athletic-item__title">Athletic Model 1</h3>
+                  <p class="athletic-item__price">$69.99</p>
+                </div>
+              </a>
+            </div>
+            <!-- Athletic Model 2 -->
+            <div class="athletic-items">
+              <a href="w_athletic_2/index.html" class="model-link">
+                <img
+                  src="../women/w_athletic_2/w_athletic_2_img/w_athletic2.png"
+                  alt="Athletic Sneakers"
+                  class="category-item__image"
+                />
+                <div class="athletic-items__details">
+                  <h3 class="athletic-item__title">Athletic Model 2</h3>
+                  <p class="athletic-item__price">$79.99</p>
+                </div>
+              </a>
+            </div>
+            <!-- Athletic Model 3 -->
+            <div class="athletic-items">
+              <a href="w_athletic_3/index.html" class="model-link">
+                <img
+                  src="../women/w_athletic_3/w_athletic_3_img/w_athletic3.png"
+                  alt="Formal Sneakers"
+                  class="category-item__image"
+                />
+                <div class="athletic-items__details">
+                  <h3 class="athletic-item__title">Athletic Model 1</h3>
+                  <p class="athletic-item__price">$79.99</p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- Category 3: Formal -->
+          <div class="category-item">
+            <!-- Formal Model 1 -->
+            <div class="formal-items">
+              <a href="w_formal_1/index.html" class="model-link">
+                <img
+                  src="../women/w_formal_1/w_formal_1_img/w_formal1.png"
+                  alt="Formal Sneakers"
+                  class="category-item__image"
+                />
+                <div class="formal-items__details">
+                  <h3 class="formal-item__title">Formal Model 1</h3>
+                  <p class="formal-item__price">$119.99</p>
+                </div>
+              </a>
+            </div>
+            <!-- Formal Model 2 -->
+            <div class="formal-items">
+              <a href="w_formal_2/index.html" class="model-link">
+                <img
+                  src="../women/w_formal_2/w_formal_2_img/w_formal2.png"
+                  alt="Formal Sneakers"
+                  class="category-item__image"
+                />
+                <div class="formal-item__details">
+                  <h3 class="formal-item__title">Formal Model 2</h3>
+                  <p class="formal-item__price">$109.99</p>
+                </div>
+              </a>
+            </div>
+            <!-- Formal Model 3 -->
+            <div class="formal-items">
+              <a href="w_formal_3/index.html" class="model-link">
+                <img
+                  src="../women/w_formal_3/w_formal_3_img/w_formal3.png"
+                  alt="Formal Sneakers"
+                  class="category-item__image"
+                />
+                <div class="formal-item__details">
+                  <h3 class="formal-item__title">Formal Model 3</h3>
+                  <p class="formal-item__price">$129.99</p>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
-        <!-- Category 2: Athletic -->
-      <div class="category-item">
-        <!-- Athletic Model 1 -->
-        <div class="athletic-items">
-          <a href="w_athletic_1/index.html" class="model-link">
-            <img src="../women/w_athletic_1/w_athletic_1_img/w_athletic1.png" alt="Athletic Sneakers" class="category-item__image">
-            <div class="athletic-items__details">
-              <h3 class="athletic-item__title">Athletic Model 1</h3>
-              <p class="athletic-item__price">$69.99</p>
-            </div>
-          </a>
-        </div>
-        <!-- Athletic Model 2 -->
-        <div class="athletic-items">
-          <a href="w_athletic_2/index.html" class="model-link">
-            <img src="../women/w_athletic_2/w_athletic_2_img/w_athletic2.png" alt="Athletic Sneakers" class="category-item__image">
-            <div class="athletic-items__details">
-              <h3 class="athletic-item__title">Athletic Model 2</h3>
-              <p class="athletic-item__price">$79.99</p>
-            </div>
-          </a>
-        </div>
-        <!-- Athletic Model 3 -->
-        <div class="athletic-items">
-          <a href="w_athletic_3/index.html" class="model-link">
-            <img src="../women/w_athletic_3/w_athletic_3_img/w_athletic3.png" alt="Formal Sneakers" class="category-item__image">
-            <div class="athletic-items__details">
-              <h3 class="athletic-item__title">Athletic Model 1</h3>
-              <p class="athletic-item__price">$79.99</p>
-            </div>
-          </a>
-        </div>
-      </div>
-      <!-- Category 3: Formal -->
-      <div class="category-item">
-        <!-- Formal Model 1 -->
-        <div class="formal-items">
-          <a href="w_formal_1/index.html" class="model-link">
-              <img src="../women/w_formal_1/w_formal_1_img/w_formal1.png" alt="Formal Sneakers" class="category-item__image">
-              <div class="formal-items__details">
-                <h3 class="formal-item__title">Formal Model 1</h3>
-                <p class="formal-item__price">$119.99</p>
-              </div>
-          </a>
-        </div>
-        <!-- Formal Model 2 -->
-        <div class="formal-items">
-          <a href="w_formal_2/index.html" class="model-link">
-            <img src="../women/w_formal_2/w_formal_2_img/w_formal2.png" alt="Formal Sneakers" class="category-item__image">
-            <div class="formal-item__details">
-              <h3 class="formal-item__title">Formal Model 2</h3>
-              <p class="formal-item__price">$109.99</p>
-            </div>
-          </a>
-        </div>
-        <!-- Formal Model 3 -->
-          <div class="formal-items">
-            <a href="w_formal_3/index.html" class="model-link">
-              <img src="../women/w_formal_3/w_formal_3_img/w_formal3.png" alt="Formal Sneakers" class="category-item__image">
-              <div class="formal-item__details">
-                <h3 class="formal-item__title">Formal Model 3</h3>
-                <p class="formal-item__price">$129.99</p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Bestsellers Section -->
-    <section class="bestsellers">
-      <h2 class="bestsellers__title">Bestsellers</h2>
-      <div class="bestsellers__grid">
+      <!-- Bestsellers Section -->
+      <section class="bestsellers">
+        <h2 class="bestsellers__title">Bestsellers</h2>
+        <div class="bestsellers__grid">
           <!-- Bestseller 1 -->
           <div class="bestseller-item">
-              <a href="w_bestseller_1/index.html" class="model-link">
-                <img
-                  class="bestseller-item__image"
-                  src="../women/w_bestseller_1/w_bestseller_1_img/w_bestseller1.png"
-                  alt="Bestseller 1"
-                />
-                <div class="bestseller-item__details">
-                  <h3 class="bestseller-item__title">Bestseller Model 1</h3>
-                  <p class="bestseller-item__price">$99.99</p>
-                </div>
-              </a>
-            </div>
+            <a href="w_bestseller_1/index.html" class="model-link">
+              <img
+                class="bestseller-item__image"
+                src="../women/w_bestseller_1/w_bestseller_1_img/w_bestseller1.png"
+                alt="Bestseller 1"
+              />
+              <div class="bestseller-item__details">
+                <h3 class="bestseller-item__title">Bestseller Model 1</h3>
+                <p class="bestseller-item__price">$99.99</p>
+              </div>
+            </a>
+          </div>
           <!-- Bestseller 2 -->
           <div class="bestseller-item">
-              <a href="w_bestseller_2/index.html" class="model-link">
-                <img
-                  class="bestseller-item__image"
-                  src="../women/w_bestseller_2/w_bestseller_2_img/w_bestseller2.png"
-                  alt="Bestseller 2"
-                />
-                <div class="bestseller-item__details">
-                  <h3 class="bestseller-item__title">Bestseller Model 2</h3>
-                  <p class="bestseller-item__price">$89.99</p>
-                </div>
-              </a>
-            </div>
+            <a href="w_bestseller_2/index.html" class="model-link">
+              <img
+                class="bestseller-item__image"
+                src="../women/w_bestseller_2/w_bestseller_2_img/w_bestseller2.png"
+                alt="Bestseller 2"
+              />
+              <div class="bestseller-item__details">
+                <h3 class="bestseller-item__title">Bestseller Model 2</h3>
+                <p class="bestseller-item__price">$89.99</p>
+              </div>
+            </a>
+          </div>
           <!-- Bestseller 3 -->
           <div class="bestseller-item">
-          <a href="w_bestseller_3/index.html" class="model-link">
-            <img
-              class="bestseller-item__image"
-              src="../women/w_bestseller_3/w_bestseller_3_img/w_bestseller3.png"
-              alt="Bestseller 5"
-            />
-            <div class="bestseller-item__details">
-              <h3 class="bestseller-item__title">Bestseller Model 3</h3>
-              <p class="bestseller-item__price">$79.99</p>
-            </div>
-          </a>
+            <a href="w_bestseller_3/index.html" class="model-link">
+              <img
+                class="bestseller-item__image"
+                src="../women/w_bestseller_3/w_bestseller_3_img/w_bestseller3.png"
+                alt="Bestseller 5"
+              />
+              <div class="bestseller-item__details">
+                <h3 class="bestseller-item__title">Bestseller Model 3</h3>
+                <p class="bestseller-item__price">$79.99</p>
+              </div>
+            </a>
+          </div>
         </div>
-      </div>
-  </section>
+      </section>
 
       <!-- About Women's Sneakers Section -->
       <section class="about-women">

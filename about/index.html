@@ -22,42 +22,44 @@
   <body>
     <header class="header">
       <div class="header__content-wrapper">
-        <figure class="header__logo">
-          <a href="../index.html">
-            <h2 class="header__company-logo">Sneakers</h2>
-          </a>
-        </figure>
-        <div class="header__divider"></div>
-      </div>
-      <!-- Navigation Bar -->
-      <nav class="header__nav">
-        <ul class="header__nav-list">
-          <li class="header__nav-item">
-            <a href="../men/index.html" class="header__nav-link">Men</a>
-          </li>
-          <li class="header__nav-item">
-            <a href="../women/index.html" class="header__nav-link">Women</a>
-          </li>
-          <li class="header__nav-item">
-            <a href="index.html" class="header__nav-link">About</a>
-          </li>
-          <li class="header__nav-item">
-            <a href="../contact/index.html" class="header__nav-link">Contact</a>
-          </li>
-        </ul>
-      </nav>
-      <!-- Cart and User Icons -->
-      <div class="header__icons">
-        <img
-          src="../images/icon-cart.svg"
-          alt="Shopping Cart"
-          class="header__icon header__icon--cart"
-        />
-        <img
-          src="../images/image-avatar.png"
-          alt="User"
-          class="header__icon header__icon--user"
-        />
+        <button class="header__nav-toggle" aria-label="open navigation">
+          <span class="hamburger"></span>
+        </button>
+        <a class="logo" href="../index.html">
+          <h2 class="header__logo">Sneakers</h2>
+        </a>
+        <!-- Navigation Bar -->
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a href="../men/index.html" class="header__nav-link">Men</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="../women/index.html" class="header__nav-link">Women</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="index.html" class="header__nav-link">About</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="../contact/index.html" class="header__nav-link"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <!-- Cart and User Icons -->
+        <div class="header__icons">
+          <img
+            src="../images/icon-cart.svg"
+            alt="Shopping Cart"
+            class="header__icon header__icon--cart"
+          />
+          <img
+            src="../images/image-avatar.png"
+            alt="User"
+            class="header__icon header__icon--user"
+          />
+        </div>
       </div>
     </header>
 
@@ -163,7 +165,10 @@
               </p>
             </div>
             <div class="our-philosophy__image">
-              <img src="../about/about_img/about1.1.png" alt="Philosophy Image" />
+              <img
+                src="../about/about_img/about1.1.png"
+                alt="Philosophy Image"
+              />
             </div>
           </div>
         </div>
