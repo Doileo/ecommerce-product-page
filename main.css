@@ -5,6 +5,7 @@
 :root {
   /* Colors */
   --primary-orange: hsl(26, 100%, 55%);
+  --dark-orange: hsl(26, 100%, 45%);
   --pale-orange: hsl(25, 100%, 94%);
 
   --very-dark-blue: hsl(220, 13%, 13%);
@@ -19,6 +20,7 @@
   --fs-mobile-medium: 0.9375rem; /* 15px / 16px = 0.9375rem */
   --fs-mobile-normal: 1rem; /* 16px / 16px = 1rem */
   --fs-mobile-large: 1.125rem; /* 18px / 16px = 1.125rem */
+  --fs-mobile-largest: 1.75rem; /* 28px */
 
   --fs-desktop-smallest: 0.8125rem; /* 13px */
   --fs-desktop-small: 0.9375rem; /* 15px */
@@ -299,6 +301,62 @@ header {
   color: var(--grayish-blue);
 }
 
+/* Hero section styles */
+.hero__image {
+  width: 100%;
+  height: auto;
+}
+
+.hero__text {
+  padding: 1rem;
+  line-height: 32px;
+  text-align: center;
+}
+
+.hero__title {
+  font-size: var(--fs-mobile-largest);
+  color: var(--very-dark-blue);
+  margin-bottom: 1rem;
+}
+
+.hero__subtitle {
+  font-size: var(--fs-mobile-medium);
+  color: var(--dark-grayish-blue);
+  line-height: 25px;
+  margin-bottom: 0.75rem;
+}
+
+.hero__button {
+  display: inline-block;
+  background-color: var(--primary-orange);
+  color: var(--white);
+  border: none;
+  border-radius: 15px;
+  padding: 10px 50px;
+  font-size: var(--fs-mobile-medium);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.hero__button:hover {
+  background-color: var(--dark-orange);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Focus effect */
+.hero__button:focus {
+  outline: none; /* Remove the default focus outline */
+  box-shadow: 0 0 0 3px rgba(255, 165, 0, 0.5); /* Add a glowing orange border on focus */
+}
+
+/* Active effect */
+.hero__button:active {
+  transform: translateY(1px); /* Move the button slightly down on click */
+  box-shadow: none; /* Remove the shadow on click */
+}
+
 @media (min-width: 800px) {
   .header__nav-toggle {
     display: none;
@@ -346,5 +404,10 @@ header {
 
   .header__icons img:nth-child(2):hover {
     border: 2px solid var(--primary-orange);
+  }
+
+  .header__icon--cart {
+    height: 20px;
+    margin-right: 2rem;
   }
 }
