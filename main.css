@@ -113,7 +113,7 @@ select {
 
 .container {
   width: 90%;
-  margin: 1rem 2rem;
+  margin: 2% 5%;
   max-width: 70rem;
   position: relative;
 }
@@ -265,12 +265,11 @@ header {
 .cart-content {
   display: none;
   position: absolute;
-  top: calc(100% + 50px);
-  left: 47%;
+  top: calc(100% + 35px);
+  left: 50%;
   transform: translateX(-50%);
   background-color: white;
   width: 100%;
-  max-width: 360px;
   height: auto;
   border: 1px solid var(--light-grayish-blue);
   border-radius: 5px;
