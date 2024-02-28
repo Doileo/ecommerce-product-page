@@ -300,6 +300,7 @@ header {
   color: var(--grayish-blue);
 }
 
+/* -----Main Styles ---------- */
 /* Hero section styles */
 .hero__image {
   width: 100%;
@@ -330,30 +331,105 @@ header {
   background-color: var(--primary-orange);
   color: var(--white);
   border: none;
-  border-radius: 15px;
-  padding: 10px 50px;
+  border-radius: 5px;
+  padding: 8px 80px;
   font-size: var(--fs-mobile-medium);
   font-weight: 600;
   cursor: pointer;
 }
 
 /* Hover effect */
-.hero__button:hover {
+.hero__button:hover,
+.about__learn-more-button:hover {
   background-color: var(--dark-orange);
   transform: translateY(-2px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Focus effect */
-.hero__button:focus {
+.hero__button:focus,
+.about__learn-more-button:focus {
   outline: none; /* Remove the default focus outline */
   box-shadow: 0 0 0 3px rgba(255, 165, 0, 0.5); /* Add a glowing orange border on focus */
 }
 
 /* Active effect */
-.hero__button:active {
+.hero__button:active,
+.about__learn-more-button:active {
   transform: translateY(1px); /* Move the button slightly down on click */
   box-shadow: none; /* Remove the shadow on click */
+}
+
+/* Bestsellers Section Styles */
+.bestsellers {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.5em;
+  margin-bottom: 2em;
+}
+
+.bestsellers__title,
+.about__title {
+  color: var(--very-dark-blue);
+  margin-bottom: 0.75em;
+}
+
+.bestseller-item__link {
+  text-decoration: none;
+}
+
+.bestseller-item__details {
+  margin: 1em 0;
+}
+
+.bestseller-item__title,
+.bestseller-item__price {
+  color: var(--very-dark-blue);
+}
+
+.bestseller-item__title:hover,
+.bestseller-item__price:hover,
+.bestseller-item__title:focus,
+.bestseller-item__price:focus {
+  color: var(--primary-orange);
+  cursor: pointer;
+}
+
+.bestseller-item__title {
+  font-size: var(--fs-mobile-large);
+  font-weight: 600;
+  margin-bottom: 0.125em;
+}
+
+.bestseller-item__price {
+  font-size: var(--fs-mobile-medium);
+}
+
+/* About Section Styles */
+.about__content {
+  display: flex;
+  flex-direction: column-reverse;
+  line-height: 1.6;
+}
+
+.about__title {
+  margin-top: 0.5em;
+}
+
+.about__learn-more-button {
+  display: inline-block;
+  background-color: var(--primary-orange);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  padding: 8px 40px;
+  font-size: var(--fs-mobile-medium);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.about__description {
+  margin-bottom: 1em;
 }
 
 @media (min-width: 800px) {
