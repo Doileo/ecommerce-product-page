@@ -19,16 +19,19 @@
     />
     <link rel="stylesheet" href="../main.css" />
   </head>
+
   <body>
     <!-- Header -->
     <header class="header">
-      <div class="header__content-wrapper">
-        <button class="header__nav-toggle" aria-label="open navigation">
-          <span class="hamburger"></span>
-        </button>
-        <a class="logo" href="../index.html">
-          <h2 class="header__logo">Sneakers</h2>
-        </a>
+      <div class="header__content-wrapper container">
+        <div class="header__container">
+          <button class="header__nav-toggle" aria-label="open navigation">
+            <span class="hamburger"></span>
+          </button>
+          <a class="logo" href="../index.html">
+            <h2 class="header__logo">sneakers</h2>
+          </a>
+        </div>
         <!-- Navigation Bar -->
         <nav class="header__nav">
           <ul class="header__nav-list">
@@ -65,11 +68,25 @@
         </nav>
         <!-- Cart and User Icons -->
         <div class="header__icons">
-          <img
-            src="../images/icon-cart.svg"
-            alt="Shopping Cart"
-            class="header__icon header__icon--cart"
-          />
+          <div class="cart-container">
+            <img
+              src="../images/icon-cart.svg"
+              alt="Shopping Cart"
+              class="header__icon header__icon--cart"
+              id="cart-icon"
+            />
+            <div class="cart-content" id="cart-content">
+              <!-- Content to show when cart is opened -->
+              <div class="cart-header">
+                <!-- Heading wrapping the word "Cart" -->
+                <h3>Cart</h3>
+              </div>
+              <div class="cart-items">
+                <!-- Content to show when there are items in the cart -->
+                <p>Your cart is empty</p>
+              </div>
+            </div>
+          </div>
           <img
             src="../images/image-avatar.png"
             alt="User"
