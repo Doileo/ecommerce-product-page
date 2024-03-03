@@ -5,6 +5,7 @@
 :root {
   /* Colors */
   --primary-orange: hsl(26, 100%, 55%);
+  --very-dark-orange: hsl(2.917, 91.1%, 27.8%);
   --dark-orange: hsl(26, 100%, 45%);
   --soft-orange: hsl(38.82, 55%, 69%);
   --pale-orange: hsl(25, 100%, 94%);
@@ -13,6 +14,7 @@
   --dark-grayish-blue: hsl(211, 9%, 45%);
   --grayish-blue: hsl(220, 14%, 75%);
   --light-grayish-blue: hsl(223, 64%, 98%);
+  --darker-gray: hsl(0, 0%, 20%);
   --white: hsl(0, 0%, 100%);
   --black: hsla(0, 0%, 0%, 0.75); /* 75% opacity for lightbox background */
 
@@ -551,16 +553,16 @@ header {
 .attribution {
   background-color: var(--soft-orange);
   text-align: center;
-  color: var(--dark-grayish-blue);
+  color: var(--very-dark-blue);
 }
 
 .attribution a {
-  color: var(--dark-orange);
+  color: var(--very-dark-orange);
   text-decoration: none;
 }
 
 .attribution a:hover {
-  color: var(--primary-orange);
+  color: var(--darker-gray);
   text-decoration: underline;
 }
 
