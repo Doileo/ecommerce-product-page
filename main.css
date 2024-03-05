@@ -173,7 +173,6 @@ header {
   z-index: 1000;
   transition: transform 0.3s ease;
   transform: translateY(-100%);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .header__nav-visible {
@@ -185,7 +184,7 @@ header {
   height: 100vh;
   position: fixed;
   top: 0;
-  right: 5px;
+  right: 0;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 900;
   display: none;
@@ -245,7 +244,7 @@ header {
 }
 
 .header__nav-item:first-child {
-  margin-top: 3rem;
+  margin-top: 4rem;
 }
 
 .header__nav-item {
@@ -266,7 +265,7 @@ header {
 
 .header__nav-close {
   position: absolute;
-  top: 0.5rem;
+  top: 1.5rem;
   left: 0.5rem;
   background: transparent;
   border: none;
@@ -551,7 +550,7 @@ header {
 
 .footer__logo {
   text-decoration: none;
-  margin-bottom: 1em;
+  margin-bottom: 1.875rem;
 }
 
 .footer__menu-social {
@@ -603,6 +602,69 @@ header {
 .attribution a:hover {
   color: var(--darker-gray);
   text-decoration: underline;
+}
+
+/* -----About Page Styles ---------- */
+.about .about__heading {
+  margin-bottom: 1.5rem;
+  font-size: var(--fs-mobile-largest);
+  text-align: center;
+  padding: 4rem 0;
+  background-color: var(--soft-orange);
+  color: var(--very-dark-blue);
+}
+
+.about__content-wrapper {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.6;
+}
+
+.about__subtitle,
+.our-values__heading {
+  color: var(--very-dark-blue);
+  margin: 1rem 0;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--grayish-blue);
+}
+
+.about__story-description {
+  margin-bottom: 1rem;
+}
+
+.our-values__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.875rem;
+  margin-top: 1.875rem;
+}
+
+.value-item {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  line-height: 1.4;
+}
+
+.value-item h3 {
+  font-size: var(--fs-mobile-large);
+  font-weight: 600;
+  color: var(--very-dark-blue);
+}
+
+.value-item p {
+  margin-top: 1rem;
+}
+
+.our-philosophy {
+  margin-top: 1.875rem;
+  padding: 1.5rem 1rem;
+  background-color: var(--dark-orange);
+  color: var(--white);
+}
+
+.our-philosophy__text p {
+  margin: 1rem 0;
 }
 
 @media (min-width: 800px) {
