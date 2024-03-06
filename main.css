@@ -418,7 +418,8 @@ header {
 .bestsellers__title,
 .about__title,
 .featured-categories__title,
-.about-men__title {
+.about-men__title,
+.about-women__title {
   font-size: 1.25rem;
   color: var(--very-dark-blue);
   margin-bottom: 0.75rem;
@@ -463,7 +464,8 @@ header {
 }
 
 .about__title,
-.about-men__title {
+.about-men__title,
+.about-women__title {
   margin-top: 0.5em;
 }
 
@@ -480,7 +482,8 @@ header {
 }
 
 .about__description,
-.about-men__description {
+.about-men__description,
+.about-women__description {
   margin-bottom: 1em;
 }
 
@@ -678,27 +681,31 @@ header {
   margin: 1rem 0;
 }
 
-/* -----Men Page Styles ---------- */
-.men-hero__content {
+/* -----Men & Women Page Styles ---------- */
+.men-hero__content,
+.women-hero__content {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
 
-.men-hero__title {
+.men-hero__title,
+.women-hero__title {
   margin: 1rem 0;
   font-weight: 600;
   color: var(--very-dark-blue);
 }
 
-.men-hero__subtitle {
+.men-hero__subtitle,
+.women-hero__subtitle {
   margin: 6% 5%;
   line-height: 25px;
 }
 
 /* About Men Section */
-.about-men__content {
+.about-men__content,
+.about-women__content {
   display: flex;
   flex-direction: column;
   line-height: 1.6;
