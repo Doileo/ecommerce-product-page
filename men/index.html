@@ -34,6 +34,9 @@
         </div>
         <!-- Navigation Bar -->
         <nav class="header__nav">
+          <button class="header__nav-close" aria-label="close navigation">
+            X
+          </button>
           <ul class="header__nav-list">
             <li class="header__nav-item">
               <a href="index.html" class="header__nav-link" target="_blank"
@@ -66,6 +69,8 @@
             </li>
           </ul>
         </nav>
+        <!-- Gray transparent overlay -->
+        <div class="overlay"></div>
         <!-- Cart and User Icons -->
         <div class="header__icons">
           <div class="cart-container">
@@ -99,15 +104,14 @@
     <main class="main">
       <!-- Hero Section -->
       <section class="hero">
-        <div class="hero__content">
-          <!-- Hero Image/Banner -->
+        <div class="men-hero__content">
+          <h1 class="men-hero__title">Shop Men's Sneakers</h1>
           <img
-            src="../images/hero-men.jpg"
+            src="../men/formal_model_1/formal_model_1_img/hero_image.png"
             alt="Men's Sneakers"
             class="hero__image"
           />
-          <h1 class="hero__title">Shop Men's Sneakers</h1>
-          <p class="hero__subtitle">
+          <p class="men-hero__subtitle">
             Discover the latest collection of stylish men's sneakers.
           </p>
           <button class="hero__button">Explore Now</button>
@@ -115,7 +119,7 @@
       </section>
 
       <!-- Featured Categories Section -->
-      <section class="featured-categories">
+      <section class="featured-categories container">
         <h2 class="featured-categories__title">Featured Categories</h2>
         <div class="featured-categories__grid">
           <!-- Category 1: Casual -->
@@ -128,9 +132,9 @@
                   alt="Casual Sneakers"
                   class="category-item__image"
                 />
-                <div class="casual-items__details">
-                  <h3 class="casual-item__title">Casual Model 1</h3>
-                  <p class="casual-item__price">$79.99</p>
+                <div class="item-details">
+                  <h3 class="item-title">Casual Model 1</h3>
+                  <p class="item-price">$79.99</p>
                 </div>
               </a>
             </div>
@@ -142,9 +146,9 @@
                   alt="Casual Sneakers"
                   class="category-item__image"
                 />
-                <div class="casual-items__details">
-                  <h3 class="casual-item__title">Casual Model 2</h3>
-                  <p class="casual-item__price">$89.99</p>
+                <div class="item-details">
+                  <h3 class="item-title">Casual Model 2</h3>
+                  <p class="item-price">$89.99</p>
                 </div>
               </a>
             </div>
@@ -159,9 +163,9 @@
                   alt="Athletic Sneakers"
                   class="category-item__image"
                 />
-                <div class="athletic-items__details">
-                  <h3 class="athletic-item__title">Athletic Model 1</h3>
-                  <p class="athletic-item__price">$99.99</p>
+                <div class="item-details">
+                  <h3 class="item-title">Athletic Model 1</h3>
+                  <p class="item-price">$99.99</p>
                 </div>
               </a>
             </div>
@@ -173,9 +177,9 @@
                   alt="Athletic Sneakers"
                   class="category-item__image"
                 />
-                <div class="athletic-items__details">
-                  <h3 class="athletic-item__title">Athletic Model 2</h3>
-                  <p class="athletic-item__price">$109.99</p>
+                <div class="item-details">
+                  <h3 class="item-title">Athletic Model 2</h3>
+                  <p class="item-price">$109.99</p>
                 </div>
               </a>
             </div>
@@ -187,9 +191,9 @@
                   alt="Formal Sneakers"
                   class="category-item__image"
                 />
-                <div class="athletic-items__details">
-                  <h3 class="athletic-item__title">Athletic Model 3</h3>
-                  <p class="athletic-item__price">$129.99</p>
+                <div class="item-details">
+                  <h3 class="item-title">Athletic Model 3</h3>
+                  <p class="item-price">$129.99</p>
                 </div>
               </a>
             </div>
@@ -204,9 +208,9 @@
                   alt="Formal Sneakers"
                   class="category-item__image"
                 />
-                <div class="formal-items__details">
-                  <h3 class="formal-item__title">Formal Model 1</h3>
-                  <p class="formal-item__price">$129.99</p>
+                <div class="item-details">
+                  <h3 class="item-title">Formal Model 1</h3>
+                  <p class="item-price">$129.99</p>
                 </div>
               </a>
             </div>
@@ -218,9 +222,9 @@
                   alt="Formal Sneakers"
                   class="category-item__image"
                 />
-                <div class="formal-item__details">
-                  <h3 class="formal-item__title">Formal Model 2</h3>
-                  <p class="formal-item__price">$139.99</p>
+                <div class="item-details">
+                  <h3 class="item-title">Formal Model 2</h3>
+                  <p class="item-price">$139.99</p>
                 </div>
               </a>
             </div>
@@ -232,9 +236,9 @@
                   alt="Formal Sneakers"
                   class="category-item__image"
                 />
-                <div class="formal-item__details">
-                  <h3 class="formal-item__title">Formal Model 3</h3>
-                  <p class="formal-item__price">$149.99</p>
+                <div class="item-details">
+                  <h3 class="item-title">Formal Model 3</h3>
+                  <p class="item-price">$149.99</p>
                 </div>
               </a>
             </div>
@@ -243,7 +247,7 @@
       </section>
 
       <!-- Bestsellers Section -->
-      <section class="bestsellers">
+      <section class="bestsellers container">
         <h2 class="bestsellers__title">Bestsellers</h2>
         <div class="bestsellers__grid">
           <!-- Bestseller 1 -->
@@ -254,9 +258,9 @@
                 src="../men/bestseller_model_1/bestseller_model_1_img/bestseller1.png"
                 alt="Bestseller men model"
               />
-              <div class="bestseller-item__details">
-                <h3 class="bestseller-item__title">Bestseller Model 1</h3>
-                <p class="bestseller-item__price">$99.99</p>
+              <div class="item-details">
+                <h3 class="item-title">Bestseller Model 1</h3>
+                <p class="item-price">$99.99</p>
               </div>
             </a>
           </div>
@@ -268,9 +272,9 @@
                 src="../men/bestseller_model_2/bestseller_model_2_img/bestseller2.png"
                 alt="Bestseller men model"
               />
-              <div class="bestseller-item__details">
-                <h3 class="bestseller-item__title">Bestseller Model 2</h3>
-                <p class="bestseller-item__price">$79.99</p>
+              <div class="item-details">
+                <h3 class="item-title">Bestseller Model 2</h3>
+                <p class="item-price">$79.99</p>
               </div>
             </a>
           </div>
@@ -282,9 +286,9 @@
                 src="../men/bestseller_model_3/bestseller_model_3_img/bestseller3.png"
                 alt="Bestseller men model"
               />
-              <div class="bestseller-item__details">
-                <h3 class="bestseller-item__title">Bestseller Model 3</h3>
-                <p class="bestseller-item__price">$94.99</p>
+              <div class="item-details">
+                <h3 class="item-title">Bestseller Model 3</h3>
+                <p class="item-price">$94.99</p>
               </div>
             </a>
           </div>
@@ -292,7 +296,7 @@
       </section>
 
       <!-- About Men's Sneakers Section -->
-      <section class="about-men">
+      <section class="about-men container">
         <div class="about-men__content">
           <h2 class="about-men__title">About Men's Sneakers</h2>
           <p class="about-men__description">
@@ -311,7 +315,7 @@
     <footer class="footer">
       <div class="footer__container">
         <!-- Newsletter and Form Section -->
-        <div class="footer__column">
+        <div class="footer__column footer__newsletter-wrapper container">
           <div class="footer__newsletter">
             <h3 class="footer__heading">Join Our Newsletter</h3>
             <p class="footer__paragraph">
@@ -333,49 +337,54 @@
 
         <!-- Location, Menu, and Social Media Section -->
         <div class="footer__column footer__menu-social">
-          <!-- Location Section -->
-          <div class="footer__item">
-            <h3 class="footer__heading">Location</h3>
-            <p class="footer__paragraph">
-              123 Sneaker Street, Cityville, Country
-            </p>
-          </div>
+          <!-- Logo -->
+          <a class="footer__logo" href="#">
+            <h2 class="footer__logo-text">sneakers</h2>
+          </a>
+          <div class="footer__row">
+            <!-- Location Section -->
+            <div class="footer__item col">
+              <h3 class="footer__heading">Location</h3>
+              <p class="footer__paragraph">
+                123 Sneaker Street, Cityville, Country
+              </p>
+            </div>
 
-          <!-- Menu Section -->
-          <div class="footer__item">
-            <h3 class="footer__heading">Menu</h3>
-            <nav class="footer__menu">
-              <ul class="footer__menu-list">
-                <li class="footer__menu-item">
-                  <a href="../men/index.html" class="footer__menu-link">Men</a>
-                </li>
-                <li class="footer__menu-item">
-                  <a href="../women/index.html" class="footer__menu-link"
-                    >Women</a
-                  >
-                </li>
-                <li class="footer__menu-item">
-                  <a href="../about/index.html" class="footer__menu-link"
-                    >About</a
-                  >
-                </li>
-                <li class="footer__menu-item">
-                  <a href="../contact/index.html" class="footer__menu-link"
-                    >Contact</a
-                  >
-                </li>
+            <!-- Menu Section -->
+            <div class="footer__item col">
+              <h3 class="footer__heading">Menu</h3>
+              <nav class="footer__menu">
+                <ul class="footer__menu-list">
+                  <li class="footer__menu-item">
+                    <a href="men/index.html" class="footer__menu-link">Men</a>
+                  </li>
+                  <li class="footer__menu-item">
+                    <a href="women/index.html" class="footer__menu-link"
+                      >Women</a
+                    >
+                  </li>
+                  <li class="footer__menu-item">
+                    <a href="about/index.html" class="footer__menu-link"
+                      >About</a
+                    >
+                  </li>
+                  <li class="footer__menu-item">
+                    <a href="contact/index.html" class="footer__menu-link"
+                      >Contact</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <!-- Social Media Section -->
+            <div class="footer__item col">
+              <h3 class="footer__heading">Follow Us</h3>
+              <ul class="footer__social">
+                <li><a href="#" class="footer__social-link">Facebook</a></li>
+                <li><a href="#" class="footer__social-link">Twitter</a></li>
+                <li><a href="#" class="footer__social-link">Instagram</a></li>
               </ul>
-            </nav>
-          </div>
-
-          <!-- Social Media Section -->
-          <div class="footer__item">
-            <h3 class="footer__heading">Follow Us</h3>
-            <ul class="footer__social">
-              <li><a href="#" class="footer__social-link">Facebook</a></li>
-              <li><a href="#" class="footer__social-link">Twitter</a></li>
-              <li><a href="#" class="footer__social-link">Instagram</a></li>
-            </ul>
+            </div>
           </div>
         </div>
 
@@ -388,5 +397,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="js/main.js"></script>
   </body>
 </html>
