@@ -546,7 +546,8 @@ header {
   margin-bottom: 1em;
 }
 
-.footer__button {
+.footer__button,
+.form-submit {
   background-color: var(--primary-orange);
   color: var(--white);
   border: none;
@@ -557,7 +558,8 @@ header {
   transition: background-color 0.3s ease;
 }
 
-.footer__button:hover {
+.footer__button:hover,
+.form-submit:hover {
   background-color: var(--dark-orange);
 }
 
@@ -619,7 +621,8 @@ header {
 }
 
 /* -----About Page Styles ---------- */
-.about .about__heading {
+.about .about__heading,
+.contact__heading {
   margin-bottom: 1.5rem;
   font-size: var(--fs-mobile-largest);
   text-align: center;
@@ -709,6 +712,76 @@ header {
   display: flex;
   flex-direction: column;
   line-height: 1.6;
+}
+
+/* -----Contact Page Styles ---------- */
+.contact-form {
+  width: 100%;
+  max-width: 400px;
+}
+
+.contact-form__heading,
+.contact-info__heading {
+  font-weight: 600;
+  color: var(--very-dark-blue);
+}
+
+.contact-form__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  color: var(--very-dark-blue);
+  margin-bottom: 0.5em;
+  margin-top: 1.5em;
+}
+
+.form-label,
+.form-input {
+  font-size: var(--fs-mobile-medium);
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  border: 1px solid var(--grayish-blue);
+}
+.form-textarea {
+  padding: 1.5em;
+}
+
+.form-input,
+.form-submit {
+  padding: 0.5em;
+  margin-bottom: 1em;
+}
+
+.form-submit {
+  margin-top: 1.5em;
+  padding: 0.75em 1em;
+}
+
+.contact-info {
+  margin-top: 3.5em;
+}
+
+.row {
+  margin-bottom: 1.5em;
+}
+
+.contact-info__heading {
+  margin-bottom: 0.5em;
+}
+
+.row p {
+  font-size: var(--fs-mobile-medium);
+  line-height: 25px;
 }
 
 @media (min-width: 800px) {
