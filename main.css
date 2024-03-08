@@ -754,12 +754,11 @@ header {
 }
 
 .form-input:hover {
-  border-color: var(--light-blue); /* Change border color on hover */
+  border-color: var(--light-blue);
 }
 
-/* Apply hover effect to form labels */
 .form-label:hover {
-  color: var(--light-blue); /* Change label color on hover */
+  color: var(--light-blue);
 }
 
 .form-textarea {
