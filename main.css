@@ -353,6 +353,11 @@ header {
   height: auto;
 }
 
+/* Hide tablet/desktop hero image by default */
+.tablet-desktop-image {
+  display: none;
+}
+
 .hero__text {
   padding: 1rem;
   line-height: 32px;
@@ -791,6 +796,113 @@ header {
 .row p {
   font-size: var(--fs-mobile-medium);
   line-height: 25px;
+}
+
+/* Tablet media query */
+@media only screen and (min-width: 768px) {
+  body {
+    font-size: var(--fs-desktop-medium);
+  }
+
+  .mobile-image {
+    display: none; /* Hide mobile hero image on tablet/desktop */
+  }
+
+  .tablet-desktop-image {
+    display: block; /* Display tablet/desktop hero image */
+  }
+
+  /* Hero section styles */
+  .hero__title {
+    font-size: 2rem;
+  }
+
+  .hero__subtitle {
+    font-size: var(--fs-desktop-medium);
+    margin-bottom: 1.5em;
+  }
+
+  .bestsellers__title {
+    font-size: 1.5rem;
+  }
+
+  .bestsellers__grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .bestseller-item {
+    width: calc(33.33% - 10px);
+    margin-bottom: 20px;
+  }
+
+  .about__content {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 3rem 0;
+  }
+
+  .about__text {
+    flex: 1;
+    margin-left: 1rem;
+  }
+
+  .about__title {
+    margin-top: 0;
+    font-size: 1.5rem;
+  }
+
+  .about__image-container {
+    flex: 1;
+  }
+
+  .about__image {
+    width: 100%;
+    height: auto;
+  }
+
+  .footer__newsletter-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .footer__newsletter {
+    width: 100%;
+  }
+
+  .footer__heading {
+    font-size: 1.25rem;
+  }
+
+  .footer__paragraph {
+    width: 90%;
+  }
+
+  .footer__form {
+    width: 100%;
+    margin-left: 20px;
+  }
+
+  .footer__label {
+    margin-top: 0;
+    font-size: 1.125rem;
+  }
+
+  .footer__menu-social {
+    padding: 2.5em;
+  }
+
+  .footer__logo-text {
+    margin-bottom: 1.5em;
+  }
+
+  .footer__input {
+    border: transparent;
+  }
 }
 
 @media (min-width: 800px) {
