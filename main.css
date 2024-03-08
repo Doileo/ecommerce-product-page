@@ -752,6 +752,16 @@ header {
   width: 100%;
   border: 1px solid var(--grayish-blue);
 }
+
+.form-input:hover {
+  border-color: var(--light-blue); /* Change border color on hover */
+}
+
+/* Apply hover effect to form labels */
+.form-label:hover {
+  color: var(--light-blue); /* Change label color on hover */
+}
+
 .form-textarea {
   padding: 1.5em;
 }
