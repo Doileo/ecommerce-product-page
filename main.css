@@ -813,26 +813,34 @@ header {
   }
 
   /* Hero section styles */
-  .hero__title {
+  .hero__title,
+  .men-hero__title {
     font-size: 2rem;
   }
 
-  .hero__subtitle {
+  .hero__subtitle,
+  .men-hero__subtitle {
     font-size: var(--fs-desktop-medium);
     margin-bottom: 1.5em;
   }
 
-  .bestsellers__title {
+  .bestsellers__title,
+  .featured-categories__title,
+  .about-men__title {
     font-size: 1.5rem;
   }
 
-  .bestsellers__grid {
+  .bestsellers__grid,
+  .category-item {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
 
-  .bestseller-item {
+  .bestseller-item,
+  .casual-items,
+  .athletic-items,
+  .formal-items {
     width: calc(33.33% - 10px);
     margin-bottom: 20px;
   }
