@@ -512,6 +512,10 @@ header {
   justify-content: space-between;
 }
 
+.footer__newsletter-wrapper {
+  padding-inline: 0;
+}
+
 .footer__item {
   margin-bottom: 1.5em;
 }
@@ -953,6 +957,55 @@ header {
     width: 100%;
     display: flex;
     align-items: center;
+  }
+
+  /* -----Contact Page Styles ---------- */
+  .contact__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5em 0;
+  }
+
+  .contact-form__heading,
+  .contact-info__heading {
+    font-size: 1.5rem;
+  }
+
+  .contact-info {
+    margin-top: 0;
+  }
+
+  .contact-info__heading {
+    margin-bottom: 1.25em;
+  }
+
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .footer__newsletter-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 2em 0;
+  }
+
+  .footer__form {
+    margin: 1.5em 0;
+  }
+
+  .footer__heading {
+    font-size: 1.5rem;
+  }
+
+  .footer__label {
+    margin-bottom: 1em;
   }
 }
 
