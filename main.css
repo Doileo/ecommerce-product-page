@@ -711,6 +711,23 @@ header {
   line-height: 25px;
 }
 
+.featured-categories__header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.featured-categories__title {
+  width: 100%;
+}
+
+.sort-select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+}
+
 /* About Men Section */
 .about-men__content,
 .about-women__content {
@@ -1009,7 +1026,7 @@ header {
   }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1024px) {
   .header__nav-toggle {
     display: none;
   }

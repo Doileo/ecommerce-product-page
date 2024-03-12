@@ -127,7 +127,14 @@
 
       <!-- Featured Categories Section -->
       <section class="featured-categories container">
-        <h2 class="featured-categories__title">Featured Categories</h2>
+        <div class="featured-categories__header">
+          <h2 class="featured-categories__title">Featured Categories</h2>
+          <select id="sort-select" class="sort-select">
+            <option value="price-low-high">Price: Low to High</option>
+            <option value="price-high-low">Price: High to Low</option>
+            <option value="bestsellers">Bestsellers</option>
+          </select>
+        </div>
         <div class="featured-categories__grid">
           <!-- Category 1 Casual -->
           <div class="category-item">
