@@ -1032,18 +1032,25 @@ header {
   }
 
   .header__nav {
-    visibility: visible;
-    display: flex;
     align-items: center;
     justify-content: flex-start;
     height: auto;
     position: relative;
     font-size: var(--fs-desktop-small);
+    top: 1.25rem;
   }
 
   .header__nav-list {
+    margin: 0;
     display: flex;
-    margin-left: 2rem;
+    flex-direction: row;
+    justify-content: left;
+    gap: 1.75rem;
+    align-items: center;
+  }
+
+  .header__nav-item:first-child {
+    margin-top: 0;
   }
 
   .header__nav-item {
