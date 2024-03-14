@@ -1026,6 +1026,7 @@ header {
   }
 }
 
+/* Medium Desktop media query */
 @media (min-width: 1024px) {
   .header__nav-toggle {
     display: none;
@@ -1089,5 +1090,45 @@ header {
   .header__icon--cart {
     height: 20px;
     margin-right: 2rem;
+  }
+
+  /* Large Desktop media query */
+  @media (min-width: 1200px) {
+    .header {
+      padding: 2rem 0;
+      border: none;
+    }
+
+    .header__content-wrapper,
+    .hero__text,
+    .bestsellers,
+    .about,
+    .footer__newsletter-wrapper {
+      max-width: none;
+      margin: 0 auto;
+    }
+
+    .hero__text {
+      padding: 3.5rem 0;
+    }
+
+    .about__text {
+      margin-left: 3.5rem;
+    }
+
+    .footer__newsletter-wrapper {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 2rem;
+    }
+
+    .footer__form {
+      margin-top: 0;
+    }
+
+    .footer__input,
+    .footer__button {
+      padding: 1rem;
+    }
   }
 }
