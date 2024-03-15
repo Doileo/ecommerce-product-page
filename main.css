@@ -836,7 +836,8 @@ header {
   }
 
   .hero__subtitle,
-  .men-hero__subtitle {
+  .men-hero__subtitle,
+  .women-hero__subtitle {
     font-size: var(--fs-desktop-medium);
     margin-bottom: 1.5em;
   }
@@ -1028,6 +1029,10 @@ header {
 
 /* Medium Desktop media query */
 @media (min-width: 1024px) {
+  .header {
+    border: none;
+  }
+
   .header__nav-toggle {
     display: none;
   }
@@ -1092,6 +1097,14 @@ header {
     margin-right: 2rem;
   }
 
+  .hero {
+    margin-bottom: 3.5rem;
+  }
+
+  .men-hero__title {
+    display: none;
+  }
+
   /* Large Desktop media query */
   @media (min-width: 1200px) {
     .header {
@@ -1103,7 +1116,8 @@ header {
     .hero__text,
     .bestsellers,
     .about,
-    .footer__newsletter-wrapper {
+    .footer__newsletter-wrapper,
+    .featured-categories {
       max-width: none;
       margin: 0 auto;
     }
@@ -1129,6 +1143,85 @@ header {
     .footer__input,
     .footer__button {
       padding: 1rem;
+    }
+
+    .sort-select {
+      width: 40%;
+    }
+
+    .about .container,
+    .our-values .container,
+    .our-philosophy .container {
+      max-width: none;
+      margin: 0 auto;
+    }
+
+    .about__heading {
+      margin-bottom: 0;
+    }
+
+    .about__content-wrapper {
+      margin: 3.5rem 0;
+    }
+
+    .about__image {
+      background-color: transparent;
+    }
+
+    .about__story {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .our-values__grid {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    .value-item {
+      max-width: 300px;
+    }
+
+    .our-philosophy .container {
+      padding: 4rem;
+    }
+
+    .our-philosophy__text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .footer__container {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .footer__newsletter-wrapper {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .footer__newsletter {
+      margin-bottom: auto;
+    }
+
+    .footer__column {
+      margin: 0;
+    }
+
+    .footer__menu-social {
+      padding: 2rem;
+      width: 60%;
+    }
+
+    .attribution {
+      width: 100%;
     }
   }
 }
