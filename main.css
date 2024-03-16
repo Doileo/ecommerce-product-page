@@ -1151,7 +1151,7 @@ header {
 
     .about .container,
     .our-values .container,
-    .our-philosophy .container {
+    .our-philosophy {
       max-width: none;
       margin: 0 auto;
     }
@@ -1184,8 +1184,8 @@ header {
       max-width: 300px;
     }
 
-    .our-philosophy .container {
-      padding: 4rem;
+    .our-philosophy {
+      padding: 3rem;
     }
 
     .our-philosophy__text {
@@ -1194,15 +1194,20 @@ header {
       justify-content: center;
     }
 
+    .our-philosophy__image {
+      display: flex;
+      justify-content: flex-end;
+    }
+
     .footer__container {
       display: flex;
       flex-direction: row-reverse;
-      justify-content: space-between;
+      justify-content: space-around;
       flex-wrap: wrap;
     }
 
     .footer__newsletter-wrapper {
-      width: 40%;
+      width: 30%;
       display: flex;
       flex-direction: column;
     }
@@ -1217,11 +1222,59 @@ header {
 
     .footer__menu-social {
       padding: 2rem;
-      width: 60%;
+      width: 70%;
     }
 
     .attribution {
       width: 100%;
     }
+
+    /* -----Contact Page Styles ---------- */
+    .contact__heading {
+      margin-bottom: 3rem;
+    }
+
+    .contact__content {
+      max-width: 100rem;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .contact-wrapper {
+      width: 60%;
+      margin: 0;
+      gap: 3rem;
+    }
+
+    .contact-form__form {
+      gap: 0.5rem;
+    }
+
+    .form-row {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-input,
+    .form-submit {
+      padding: 1rem;
+    }
+
+    .contact-info {
+      width: 100%;
+    }
+
+    .footer__menu-social {
+      width: 100%;
+    }
+
+    /*
+    .footer__item {
+      flex: 1 1 25%;
+      margin-bottom: 0;
+    }
+    */
   }
 }
