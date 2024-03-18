@@ -18,18 +18,19 @@
   --white: hsl(0, 0%, 100%);
   --black: hsla(0, 0%, 0%, 0.75); /* 75% opacity for lightbox background */
 
-  /* font-sizes */
-  --fs-mobile-small: 0.75rem; /* 12px / 16px = 0.75rem */
-  --fs-mobile-medium: 0.9375rem; /* 15px / 16px = 0.9375rem */
-  --fs-mobile-normal: 1rem; /* 16px / 16px = 1rem */
-  --fs-mobile-large: 1.125rem; /* 18px / 16px = 1.125rem */
-  --fs-mobile-largest: 1.75rem; /* 28px */
-
-  --fs-desktop-smallest: 0.8125rem; /* 13px */
-  --fs-desktop-small: 0.9375rem; /* 15px */
-  --fs-desktop-medium: 1rem; /* 16px */
-  --fs-desktop-large: 1.75rem; /* 28px */
-  --fs-desktop-largest: 2.75rem; /* 44px */
+  /* Font sizes */
+  --base-font-size: 16px;
+  --fs-xs: 0.75rem; /* Extra Small (12px) */
+  --fs-s: 0.8125rem; /* Small (13px) */
+  --fs-m: 0.9375rem; /* Medium (15px) */
+  --fs-n: 1rem; /* Normal (16px) */
+  --fs-l: 1.125rem; /* Large (18px) */
+  --fs-xl: 1.25rem; /* Extra Large (20px) */
+  --fs-xxl: 1.375rem; /* Extra Extra Large (22px) */
+  --fs-3xl: 1.5rem; /* Triple Extra Large (24px) */
+  --fs-4xl: 1.75rem; /* Quadruple Extra Large (28px) */
+  --fs-5xl: 2rem; /* Quintuple Extra Large (32px) */
+  --fs-6xl: 2.75rem; /* 44px */
 }
 
 /* ------------------- */
@@ -165,7 +166,7 @@ header {
 .header__nav {
   width: 60%;
   height: 100vh;
-  font-size: var(--fs-mobile-large);
+  font-size: var(--fs-l);
   position: fixed;
   top: 0;
   left: 0;
@@ -269,7 +270,7 @@ header {
   left: 0.5rem;
   background: transparent;
   border: none;
-  font-size: 1.5rem;
+  font-size: var(--fs-3xl);
   color: var(--very-dark-blue);
   cursor: pointer;
 }
@@ -281,7 +282,7 @@ header {
 
 .header__logo,
 .footer__logo-text {
-  font-size: 2rem;
+  font-size: var(--fs-5xl);
   color: var(--very-dark-blue);
   margin-bottom: 0.5rem;
 }
@@ -336,13 +337,13 @@ header {
   top: 0;
   left: 0;
   padding: 1rem;
-  font-size: var(--fs-mobile-normal);
+  font-size: var(--fs-n);
   font-weight: 600;
 }
 
 .cart-items p {
   font-weight: 600;
-  font-size: var(--fs-mobile-normal);
+  font-size: var(--fs-n);
   color: var(--grayish-blue);
 }
 
@@ -365,13 +366,13 @@ header {
 }
 
 .hero__title {
-  font-size: var(--fs-mobile-largest);
+  font-size: var(--fs-4xl);
   color: var(--very-dark-blue);
   margin-bottom: 1rem;
 }
 
 .hero__subtitle {
-  font-size: var(--fs-mobile-medium);
+  font-size: var(--fs-s);
   color: var(--dark-grayish-blue);
   line-height: 25px;
   margin-bottom: 0.75rem;
@@ -384,7 +385,7 @@ header {
   border: none;
   border-radius: 5px;
   padding: 8px 80px;
-  font-size: var(--fs-mobile-medium);
+  font-size: var(--fs-s);
   font-weight: 600;
   cursor: pointer;
 }
@@ -425,7 +426,7 @@ header {
 .featured-categories__title,
 .about-men__title,
 .about-women__title {
-  font-size: 1.25rem;
+  font-size: var(--fs-xl);
   color: var(--very-dark-blue);
   margin-bottom: 0.75rem;
 }
@@ -458,7 +459,7 @@ header {
 }
 
 .item-price {
-  font-size: var(--fs-mobile-medium);
+  font-size: var(--fs-m);
 }
 
 /* About Section Styles */
@@ -481,7 +482,7 @@ header {
   border: none;
   border-radius: 5px;
   padding: 8px 40px;
-  font-size: var(--fs-mobile-medium);
+  font-size: var(--fs-m);
   font-weight: 600;
   cursor: pointer;
 }
@@ -507,7 +508,8 @@ header {
   padding: 2em 1em;
 }
 
-.footer__row {
+.footer__row,
+.contact-footer__row {
   display: flex;
   justify-content: space-between;
 }
@@ -524,7 +526,7 @@ header {
 }
 
 .footer__paragraph {
-  font-size: var(--fs-mobile-medium);
+  font-size: var(--fs-m);
   color: var(--very-dark-blue);
   margin-top: 1em;
 }
@@ -542,7 +544,7 @@ header {
 
 .footer__label,
 .footer__input {
-  font-size: var(--fs-mobile-medium);
+  font-size: var(--fs-m);
 }
 
 .footer__input,
@@ -558,7 +560,7 @@ header {
   border: none;
   border-radius: 5px;
   padding: 0.5rem 1rem;
-  font-size: var(--fs-mobile-medium);
+  font-size: var(--fs-m);
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -600,7 +602,7 @@ header {
 .footer__social-link {
   text-decoration: none;
   color: var(--very-dark-blue);
-  font-size: var(--fs-mobile-medium);
+  font-size: var(--fs-m);
 }
 
 .footer__menu-link:hover,
@@ -612,7 +614,7 @@ header {
   background-color: var(--soft-orange);
   text-align: center;
   color: var(--very-dark-blue);
-  font-size: var(--fs-mobile-small);
+  font-size: var(--fs-xs);
 }
 
 .attribution a {
@@ -629,7 +631,7 @@ header {
 .about .about__heading,
 .contact__heading {
   margin-bottom: 1.5rem;
-  font-size: var(--fs-mobile-largest);
+  font-size: var(--fs-4xl);
   text-align: center;
   padding: 4rem 0;
   background-color: var(--soft-orange);
@@ -669,7 +671,7 @@ header {
 }
 
 .value-item h3 {
-  font-size: var(--fs-mobile-large);
+  font-size: var(--fs-l);
   font-weight: 600;
   color: var(--very-dark-blue);
 }
@@ -766,7 +768,7 @@ header {
 
 .form-label,
 .form-input {
-  font-size: var(--fs-mobile-medium);
+  font-size: var(--fs-m);
 }
 
 .form-input,
@@ -811,14 +813,14 @@ header {
 }
 
 .row p {
-  font-size: var(--fs-mobile-medium);
+  font-size: var(--fs-m);
   line-height: 25px;
 }
 
 /* Tablet media query */
 @media only screen and (min-width: 768px) {
   body {
-    font-size: var(--fs-desktop-medium);
+    font-size: var(--fs-n);
   }
 
   .mobile-image {
@@ -832,20 +834,20 @@ header {
   /* Hero section styles */
   .hero__title,
   .men-hero__title {
-    font-size: 2rem;
+    font-size: var(--fs-5xl);
   }
 
   .hero__subtitle,
   .men-hero__subtitle,
   .women-hero__subtitle {
-    font-size: var(--fs-desktop-medium);
+    font-size: var(--fs-n);
     margin-bottom: 1.5em;
   }
 
   .bestsellers__title,
   .featured-categories__title,
   .about-men__title {
-    font-size: 1.5rem;
+    font-size: var(--fs-3xl);
   }
 
   .bestsellers__grid,
@@ -915,7 +917,7 @@ header {
 
   .footer__label {
     margin-top: 0;
-    font-size: 1.125rem;
+    font-size: var(--fs-l);
   }
 
   .footer__menu-social {
@@ -987,7 +989,7 @@ header {
 
   .contact-form__heading,
   .contact-info__heading {
-    font-size: 1.5rem;
+    font-size: var(--fs-3xlvar);
   }
 
   .contact-info {
@@ -1018,7 +1020,7 @@ header {
 
   .contact__newsletter-wrapper {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding: 0;
   }
 
@@ -1027,7 +1029,7 @@ header {
   }
 
   .footer__heading {
-    font-size: 1.5rem;
+    font-size: var(--fs-3xl);
   }
 
   .footer__label {
