@@ -1223,6 +1223,7 @@ header {
     }
 
     .footer__newsletter {
+      margin-top: 3.5rem;
       margin-bottom: auto;
     }
 
@@ -1233,6 +1234,14 @@ header {
     .footer__menu-social {
       padding: 2rem;
       width: 70%;
+    }
+
+    .footer__logo-text {
+      margin: 0;
+    }
+
+    .footer__row {
+      margin-top: 1.5rem;
     }
 
     .attribution {
@@ -1293,7 +1302,7 @@ header {
     }
 
     .contact__newsletter-wrapper {
-      margin: 4rem 0 0 4rem;
+      margin: 0.5rem 0 0 4rem;
       display: flex;
       flex-wrap: wrap;
       flex: 0 0 25%;
