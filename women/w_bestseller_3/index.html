@@ -101,7 +101,124 @@
         </div>
       </div>
     </header>
-    <main></main>
+
+    <main class="main-product">
+      <div class="product-images">
+        <!-- Product Image Slider -->
+        <div class="product-slider">
+          <img
+            src="../w_bestseller_3/w_bestseller_3_img/bestseller.jpg"
+            alt="Product Image"
+            class="product-slider__image"
+          />
+          <img
+            src="../w_bestseller_3/w_bestseller_3_img/image-product-2.jpg"
+            alt="Product Image"
+            class="product-slider__image"
+          />
+          <img
+            src="../w_bestseller_3/w_bestseller_3_img/image-product-3.jpg"
+            alt="Product Image"
+            class="product-slider__image"
+          />
+          <img
+            src="../w_bestseller_3/w_bestseller_3_img/image-product-4.jpg"
+            alt="Product Image"
+            class="product-slider__image"
+          />
+          <button class="product-slider__prev">
+            <img
+              src="../../images/icon-previous.svg"
+              alt="Previous"
+              class="product-slider__prev-icon"
+            />
+          </button>
+          <button class="product-slider__next">
+            <img
+              src="../../images/icon-next.svg"
+              alt="Next"
+              class="product-slider__next-icon"
+            />
+          </button>
+        </div>
+
+        <!-- Thumbnail images for desktop view -->
+        <div class="product-thumbnails">
+          <img
+            src="../w_bestseller_3/w_bestseller_3_img/image-product-1-thumbnail.jpg"
+            alt="Thumbnail 1"
+            class="product-thumbnails__image"
+          />
+          <img
+            src="../w_bestseller_3/w_bestseller_3_img/image-product-2-thumbnail.jpg"
+            alt="Thumbnail 2"
+            class="product-thumbnails__image"
+          />
+          <img
+            src="../w_bestseller_3/w_bestseller_3_img/image-product-3-thumbnail.jpg"
+            alt="Thumbnail 3"
+            class="product-thumbnails__image"
+          />
+          <img
+            src="../w_bestseller_3/w_bestseller_3_img/image-product-4-thumbnail.jpg"
+            alt="Thumbnail 4"
+            class="product-thumbnails__image"
+          />
+        </div>
+      </div>
+
+      <!-- Product Details -->
+      <div class="product">
+        <p class="product__subtitle">sneaker company</p>
+        <h1 class="product__title">Fall Limited Edition Sneakers</h1>
+        <p class="product__description">
+          These low-profile sneakers are your perfect casual wear companion.
+          Featuring a durable rubber outer sole, they’ll withstand everything
+          the weather can offer.
+        </p>
+        <div class="price">
+          <div class="product__price">
+            <span class="product__price-current">$125</span>
+            <span class="product__discount">50% off</span>
+          </div>
+          <div class="product__old-price">
+            <span class="old-price">$250</span>
+          </div>
+        </div>
+
+        <!-- Quantity Control -->
+        <div class="quantity-control">
+          <button class="quantity-control__decrease">
+            <img
+              src="icon-minus.svg"
+              alt="Decrease"
+              class="quantity-control__icon"
+            />
+          </button>
+          <input type="number" class="quantity-control__input" value="1" />
+          <button class="quantity-control__increase">
+            <img
+              src="icon-plus.svg"
+              alt="Increase"
+              class="quantity-control__icon"
+            />
+          </button>
+        </div>
+
+        <!-- Add to Cart Button -->
+        <button class="product__add-to-cart">
+          <img
+            src="../../images/icon-cart.svg"
+            alt="Add to Cart"
+            class="product__cart-icon"
+          />
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- Overlay -->
+      <div class="product-page__overlay"></div>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
