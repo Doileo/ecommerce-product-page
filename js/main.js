@@ -54,3 +54,24 @@ document.addEventListener("DOMContentLoaded", function () {
     .querySelector(".product-slider__prev")
     .addEventListener("click", goToPreviousImage);
 });
+
+// Get the product image and arrow icons
+const productImage = document.querySelector(".product-slider__image");
+const prevArrow = document.querySelector(".product-slider__prev");
+const nextArrow = document.querySelector(".product-slider__next");
+
+// Function to calculate and set arrow position
+function setArrowPosition() {
+  const imageRect = productImage.getBoundingClientRect();
+  const imageCenterY = imageRect.top + imageRect.height / 2;
+
+  // Set arrow position to center vertically
+  prevArrow.style.top = `${imageCenterY}px`;
+  nextArrow.style.top = `${imageCenterY}px`;
+}
+
+// Initial setup
+setArrowPosition();
+
+// Recalculate position on window resize
+window.addEventListener("resize", setArrowPosition);
