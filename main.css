@@ -8,7 +8,7 @@
   --very-dark-orange: hsl(2.917, 91.1%, 27.8%);
   --dark-orange: hsl(26, 100%, 45%);
   --soft-orange: hsl(38.82, 55%, 69%);
-  --pale-orange: hsl(25, 110%, 75%);
+  --pale-orange: hsl(25, 110%, 95%);
 
   --very-dark-blue: hsl(220, 13%, 13%);
   --dark-grayish-blue: hsl(211, 9%, 45%);
@@ -558,7 +558,8 @@ header {
 }
 
 .footer__button,
-.form-submit {
+.form-submit,
+.product__add-to-cart {
   background-color: var(--primary-orange);
   color: var(--white);
   font-weight: 600;
@@ -571,7 +572,8 @@ header {
 }
 
 .footer__button:hover,
-.form-submit:hover {
+.form-submit:hover,
+.product__add-to-cart:hover {
   background-color: var(--pale-orange);
 }
 
@@ -846,6 +848,7 @@ header {
 .product-slider__prev,
 .product-slider__next {
   position: absolute;
+  top: 50%;
   background-color: var(--white);
   border: none;
   border-radius: 50px;
@@ -861,6 +864,97 @@ header {
 
 .product-slider__next {
   right: 3%;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.product__subtitle {
+  text-transform: uppercase;
+  font-size: var(--fs-xs);
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.product__title {
+  line-height: 2rem;
+  font-size: var(--fs-4xl);
+  color: var(--very-dark-blue);
+}
+
+.product__description {
+  font-size: var(--fs-m);
+  line-height: 1.55rem;
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product__price {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.product__price-current {
+  font-size: var(--fs-4xl);
+  font-weight: 600;
+  color: var(--very-dark-blue);
+}
+
+.product__discount {
+  font-weight: 600;
+  font-size: var(--fs-n);
+}
+
+.old-price {
+  text-decoration: line-through;
+  font-size: var(--fs-n);
+  font-weight: 600;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  background-color: var(--light-grayish-blue);
+  color: var(--very-dark-blue);
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+.quantity-control__input {
+  flex: 1;
+  text-align: center;
+  background-color: var(--light-grayish-blue);
+  border: transparent;
+}
+
+.quantity-control__decrease,
+.quantity-control__increase {
+  flex: 0 0 auto;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.product__add-to-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+
+.product__cart-icon {
+  filter: brightness(0) invert(1);
+  height: 1rem;
 }
 
 /* Tablet media query */
