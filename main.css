@@ -242,14 +242,16 @@ header {
   margin: 0;
   padding: 0;
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .header__nav-item:first-child {
-  margin-top: 4rem;
+  margin-top: 4.5rem;
 }
 
 .header__nav-item {
-  margin-bottom: 1rem;
   margin-left: 1rem;
   text-align: left;
 }
@@ -322,6 +324,7 @@ header {
   border-radius: 5px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   padding: 6rem;
+  z-index: 999;
 }
 
 .cart-content.show {
@@ -330,13 +333,22 @@ header {
 
 .cart-items {
   text-align: center;
+  padding-top: 2rem;
 }
 
 .cart-header {
   position: absolute;
   top: 0;
   left: 0;
-  padding: 1rem;
+  padding: 1rem 1rem 1.5rem 1rem;
+  font-size: var(--fs-n);
+  font-weight: 600;
+  width: 100%;
+  border-bottom: 1px solid var(--light-grayish-blue);
+  text-align: left;
+}
+
+.cart-header h3 {
   font-size: var(--fs-n);
   font-weight: 600;
 }
