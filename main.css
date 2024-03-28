@@ -1187,6 +1187,45 @@ header {
   .footer__label {
     margin-bottom: 1em;
   }
+
+  /* -----Product Page Styles ---------- */
+  .product-container {
+    margin: 7% 5%;
+    width: 90%;
+    max-width: 70rem;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .product-images {
+    width: 100%;
+    position: relative;
+  }
+
+  .product-slider__prev,
+  .product-slider__next {
+    display: none;
+  }
+
+  .product-thumbnails {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    gap: 1.3rem;
+    padding: 0.5rem 0;
+  }
+
+  .product-thumbnails__image {
+    height: 80px;
+  }
+
+  .product {
+    flex: 1;
+  }
 }
 
 /* Medium Desktop media query */
