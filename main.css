@@ -1336,6 +1336,33 @@ header {
     display: none;
   }
 
+  .product-page .header {
+    border-bottom: 1px solid var(--grayish-blue);
+  }
+
+  .product-page .product-container {
+    margin: 3rem auto;
+    max-width: none;
+    gap: 2rem;
+  }
+
+  .product {
+    flex: unset;
+  }
+
+  .product-thumbnails {
+    display: flex;
+    justify-content: space-between;
+    position: unset;
+  }
+
+  .price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
   /* Large Desktop media query */
   @media (min-width: 1200px) {
     .header {
