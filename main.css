@@ -1384,6 +1384,30 @@ header {
     font-size: var(--fs-n);
   }
 
+  .product-page .footer__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .product-page .footer__newsletter-wrapper {
+    justify-content: center;
+    align-items: flex-end;
+    width: 40%;
+    order: 2;
+    gap: 1rem;
+    padding-top: 2rem;
+  }
+
+  .product-page .footer__menu-social {
+    width: 60%;
+  }
+
+  .product-page .attribution {
+    order: 3;
+    width: 100%;
+  }
+
   /* Large Desktop media query */
   @media (min-width: 1200px) {
     .header {
