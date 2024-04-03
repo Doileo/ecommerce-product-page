@@ -1399,6 +1399,10 @@ header {
     padding-top: 2rem;
   }
 
+  .product-page .footer__newsletter {
+    margin-top: 5.3rem;
+  }
+
   .product-page .footer__menu-social {
     width: 60%;
   }
@@ -1604,6 +1608,10 @@ header {
 
     .footer__label {
       margin: 1rem 0;
+    }
+
+    .product-page .footer__newsletter {
+      margin-top: 4rem;
     }
   }
 }
