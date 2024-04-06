@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <title>Frontend Mentor | E-commerce product page</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../../images/favicon-32x32.png"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../main.css" />
+  </head>
+
+  <body class="product-page">
+    <!-- Header -->
+    <header class="header">
+      <div class="header__content-wrapper container">
+        <div class="header__container">
+          <button class="header__nav-toggle" aria-label="open navigation">
+            <span class="hamburger"></span>
+          </button>
+          <a class="logo" href="../../../index.html">
+            <h2 class="header__logo">sneakers</h2>
+          </a>
+        </div>
+        <!-- Navigation Bar -->
+        <nav class="header__nav">
+          <button class="header__nav-close" aria-label="close navigation">
+            X
+          </button>
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a
+                href="../../men/index.html"
+                class="header__nav-link"
+                target="_blank"
+                >Men</a
+              >
+            </li>
+            <li class="header__nav-item">
+              <a href="../index.html" class="header__nav-link" target="_blank"
+                >Women</a
+              >
+            </li>
+            <li class="header__nav-item">
+              <a
+                href="../../about/index.html"
+                class="header__nav-link"
+                target="_blank"
+                >About</a
+              >
+            </li>
+            <li class="header__nav-item">
+              <a
+                href="../../contact/index.html"
+                class="header__nav-link"
+                target="_blank"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <!-- Gray transparent overlay -->
+        <div class="overlay"></div>
+        <!-- Cart and User Icons -->
+        <div class="header__icons">
+          <div class="cart-container">
+            <img
+              src="../../images/icon-cart.svg"
+              alt="Shopping Cart"
+              class="header__icon header__icon--cart"
+              id="cart-icon"
+            />
+            <div class="cart-content" id="cart-content">
+              <!-- Content to show when cart is opened -->
+              <div class="cart-header">
+                <!-- Heading wrapping the word "Cart" -->
+                <h3>Cart</h3>
+              </div>
+              <div class="cart-items">
+                <!-- Content to show when there are items in the cart -->
+                <p>Your cart is empty</p>
+              </div>
+            </div>
+          </div>
+          <img
+            src="../../images/image-avatar.png"
+            alt="User"
+            class="header__icon header__icon--user"
+          />
+        </div>
+      </div>
+    </header>
+
+    <main class="main-product product-container">
+      <div class="product-images">
+        <!-- Product Image Slider -->
+        <div class="product-slider">
+          <img
+            src="../casual_model_2/casual_model_2_img/casual-2.png"
+            alt="Product Image"
+            class="product-slider__image active"
+          />
+          <img
+            src="../casual_model_2/casual_model_2_img/casual-2.1.png"
+            alt="Product Image"
+            class="product-slider__image"
+          />
+          <img
+            src="../casual_model_2/casual_model_2_img/casual-2.2.png"
+            alt="Product Image"
+            class="product-slider__image active"
+          />
+          <img
+            src="../casual_model_2/casual_model_2_img/casual-2.3.png"
+            alt="Product Image"
+            class="product-slider__image"
+          />
+          <button class="product-slider__prev">
+            <img
+              src="../../images/icon-previous.svg"
+              alt="Previous"
+              class="product-slider__prev-icon"
+            />
+          </button>
+          <button class="product-slider__next">
+            <img
+              src="../../images/icon-next.svg"
+              alt="Next"
+              class="product-slider__next-icon"
+            />
+          </button>
+        </div>
+
+        <!-- Thumbnail images for desktop view -->
+        <div class="product-thumbnails">
+          <img
+            src="../casual_model_2/casual_model_2_img/casual-2-thumbnail.png"
+            alt="Thumbnail 1"
+            class="product-thumbnails__image"
+          />
+          <img
+            src="../casual_model_2/casual_model_2_img/casual-2.1-thumbnail.png"
+            alt="Thumbnail 2"
+            class="product-thumbnails__image"
+          />
+          <img
+            src="../casual_model_2/casual_model_2_img/casual-2.2-thumbnail.png"
+            alt="Thumbnail 3"
+            class="product-thumbnails__image"
+          />
+          <img
+            src="../casual_model_2/casual_model_2_img/casual-2.3-thumbnail.png"
+            alt="Thumbnail 4"
+            class="product-thumbnails__image"
+          />
+        </div>
+      </div>
+
+      <!-- Product Details -->
+      <div class="product container">
+        <p class="product__subtitle text-accent">sneaker company</p>
+        <h1 class="product__title">Fall Limited Edition Sneakers</h1>
+        <p class="product__description">
+          These low-profile sneakers are your perfect casual wear companion.
+          Featuring a durable rubber outer sole, they’ll withstand everything
+          the weather can offer.
+        </p>
+        <div class="price">
+          <div class="product__price">
+            <span class="product__price-current">$85</span>
+            <span class="product__discount text-accent bg-light">50%</span>
+          </div>
+          <div class="product__old-price">
+            <span class="old-price">$170</span>
+          </div>
+        </div>
+
+        <div class="buttons-container">
+          <!-- Quantity Control -->
+          <div class="quantity-control">
+            <button class="quantity-control__decrease">
+              <img
+                src="../../images/icon-minus.svg"
+                alt="Decrease"
+                class="quantity-control__icon"
+              />
+            </button>
+            <input type="number" class="quantity-control__input" value="1" />
+            <button class="quantity-control__increase">
+              <img
+                src="../../images/icon-plus.svg"
+                alt="Increase"
+                class="quantity-control__icon"
+              />
+            </button>
+          </div>
+
+          <!-- Add to Cart Button -->
+          <button class="product__add-to-cart">
+            <img
+              src="../../images/icon-cart.svg"
+              alt="Add to Cart"
+              class="product__cart-icon"
+            />
+            Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Overlay -->
+      <div class="product-page__overlay"></div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer__container">
+        <!-- Newsletter and Form Section -->
+        <div class="footer__column footer__newsletter-wrapper container">
+          <div class="footer__newsletter">
+            <h3 class="footer__heading">Join Our Newsletter</h3>
+            <p class="footer__paragraph">
+              Stay updated with our latest releases, special offers, and more!
+            </p>
+          </div>
+          <form class="footer__form">
+            <label for="email" class="footer__label">Email Address *</label>
+            <input
+              type="email"
+              id="email"
+              class="footer__input"
+              placeholder="Your email address"
+              required
+            />
+            <button type="submit" class="footer__button">Subscribe</button>
+          </form>
+        </div>
+
+        <!-- Location, Menu, and Social Media Section -->
+        <div class="footer__column footer__menu-social">
+          <!-- Logo -->
+          <a class="footer__logo" href="#">
+            <h2 class="footer__logo-text">sneakers</h2>
+          </a>
+          <div class="footer__row">
+            <!-- Location Section -->
+            <div class="footer__item col">
+              <h3 class="footer__heading">Location</h3>
+              <p class="footer__paragraph">
+                123 Sneaker Street, Cityville, Country
+              </p>
+            </div>
+
+            <!-- Menu Section -->
+            <div class="footer__item col">
+              <h3 class="footer__heading">Menu</h3>
+              <nav class="footer__menu">
+                <ul class="footer__menu-list">
+                  <li class="footer__menu-item">
+                    <a href="men/index.html" class="footer__menu-link">Men</a>
+                  </li>
+                  <li class="footer__menu-item">
+                    <a href="women/index.html" class="footer__menu-link"
+                      >Women</a
+                    >
+                  </li>
+                  <li class="footer__menu-item">
+                    <a href="about/index.html" class="footer__menu-link"
+                      >About</a
+                    >
+                  </li>
+                  <li class="footer__menu-item">
+                    <a href="contact/index.html" class="footer__menu-link"
+                      >Contact</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <!-- Social Media Section -->
+            <div class="footer__item col">
+              <h3 class="footer__heading">Follow Us</h3>
+              <ul class="footer__social">
+                <li><a href="#" class="footer__social-link">Facebook</a></li>
+                <li><a href="#" class="footer__social-link">Twitter</a></li>
+                <li><a href="#" class="footer__social-link">Instagram</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Attribution -->
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="#">Doina</a>.
+        </div>
+      </div>
+    </footer>
+
+    <script src="../../../js/main.js"></script>
+  </body>
+</html>
