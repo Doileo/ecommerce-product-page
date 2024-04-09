@@ -75,3 +75,22 @@ setArrowPosition();
 
 // Recalculate position on window resize
 window.addEventListener("resize", setArrowPosition);
+
+// Function to scroll back to the top of the page
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth", // Smooth scroll behavior
+  });
+}
+
+// To hide the back-to-top button when scrolling to the top
+window.addEventListener("scroll", function () {
+  var backToTopButton = document.querySelector(".back-to-top");
+  if (window.scrollY === 0) {
+    // Check if user scrolled to the top
+    backToTopButton.style.display = "none";
+  } else {
+    backToTopButton.style.display = "block";
+  }
+});
