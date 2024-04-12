@@ -16,7 +16,7 @@
   --light-grayish-blue: hsl(223, 64%, 98%);
   --darker-gray: hsl(0, 0%, 20%);
   --white: hsl(0, 0%, 100%);
-  --black: hsla(0, 0%, 0%, 0.75); /* 75% opacity for lightbox background */
+  --black: hsla(0, 0%, 0%, 0.75);
 
   /* Font sizes */
   --base-font-size: 16px;
@@ -327,36 +327,78 @@ header {
   z-index: 999;
 }
 
+/* Show cart content */
 .cart-content.show {
   display: block;
 }
 
-.cart-items {
-  text-align: center;
-  padding-top: 2rem;
+/* Orange dot style */
+#cart-icon.has-items::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--primary-orange);
+  border-radius: 50%;
 }
 
-.cart-header {
+/* Style for cart items */
+.cart-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.cart-item.no-border {
+  border: none;
+}
+
+.cart-item__image {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.empty-cart-message__heading {
   position: absolute;
   top: 0;
   left: 0;
   padding: 1rem 1rem 1.5rem 1rem;
   font-size: var(--fs-n);
+  text-align: left;
   font-weight: 600;
   width: 100%;
   border-bottom: 1px solid var(--light-grayish-blue);
-  text-align: left;
 }
 
-.cart-header h3 {
-  font-size: var(--fs-n);
-  font-weight: 600;
-}
-
-.cart-items p {
-  font-weight: 600;
+.empty-cart-message__text,
+.cart-item__price,
+.cart-item__quantity {
   font-size: var(--fs-n);
   color: var(--grayish-blue);
+}
+
+.cart-item__total {
+  margin: 0;
+  color: var(--very-dark-blue);
+}
+
+.cart-item__total {
+  margin: 0;
+  font-weight: bold;
+  color: var(--very-dark-blue);
+}
+
+.cart-item__remove-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  margin-left: auto;
 }
 
 /* -----Main Styles ---------- */
@@ -373,7 +415,7 @@ header {
 
 .hero__text {
   padding: 1rem;
-  line-height: 32px;
+  line-height: 2;
   text-align: center;
 }
 
@@ -386,11 +428,12 @@ header {
 .hero__subtitle {
   font-size: var(--fs-s);
   color: var(--dark-grayish-blue);
-  line-height: 25px;
+  line-height: 1.5;
   margin-bottom: 0.75rem;
 }
 
-.hero__button {
+.hero__button,
+.checkout-button {
   display: inline-block;
   background-color: var(--primary-orange);
   color: var(--white);
@@ -404,7 +447,8 @@ header {
 
 /* Hover effect */
 .hero__button:hover,
-.about__learn-more-button:hover {
+.about__learn-more-button:hover,
+.checkout-button:hover {
   background-color: var(--dark-orange);
   transform: translateY(-2px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -412,16 +456,22 @@ header {
 
 /* Focus effect */
 .hero__button:focus,
-.about__learn-more-button:focus {
+.about__learn-more-button:focus,
+.checkout-button:focus {
   outline: none; /* Remove the default focus outline */
   box-shadow: 0 0 0 3px rgba(255, 165, 0, 0.5); /* Add a glowing orange border on focus */
 }
 
 /* Active effect */
 .hero__button:active,
-.about__learn-more-button:active {
+.about__learn-more-button:active,
+.checkout-button:active {
   transform: translateY(1px); /* Move the button slightly down on click */
   box-shadow: none; /* Remove the shadow on click */
+}
+
+.checkout-button {
+  display: none;
 }
 
 /* Bestsellers Section Styles */
@@ -657,8 +707,8 @@ header {
   width: 40px;
   height: 40px;
   text-align: center;
-  line-height: 40px;
-  font-size: 20px;
+  line-height: 2.5;
+  font-size: var(--fs-xl);
   cursor: pointer;
   border-radius: 50%;
   display: block; /* Show by default */
@@ -751,7 +801,7 @@ header {
 .men-hero__subtitle,
 .women-hero__subtitle {
   margin: 6% 5%;
-  line-height: 25px;
+  line-height: 1.5;
 }
 
 .featured-categories__header {
@@ -856,7 +906,7 @@ header {
 
 .row p {
   font-size: var(--fs-m);
-  line-height: 25px;
+  line-height: 1.5;
 }
 
 /* -----Product Page Styles ---------- */
@@ -914,14 +964,14 @@ header {
 }
 
 .product__title {
-  line-height: 2rem;
+  line-height: 2;
   font-size: var(--fs-4xl);
   color: var(--very-dark-blue);
 }
 
 .product__description {
   font-size: var(--fs-m);
-  line-height: 1.55rem;
+  line-height: 1.5;
 }
 
 .price {
@@ -1063,7 +1113,7 @@ header {
 
   .about__title {
     margin-top: 0;
-    font-size: 1.5rem;
+    font-size: var(--fs-3xl);
   }
 
   .about__image-container {
@@ -1087,7 +1137,7 @@ header {
   }
 
   .footer__heading {
-    font-size: 1.25rem;
+    font-size: var(--fs-l);
   }
 
   .footer__paragraph {
@@ -1264,7 +1314,7 @@ header {
 
   .product-thumbnails__image:hover {
     opacity: 0.7;
-    border-color: orange;
+    border-color: var(--primary-orange);
   }
 
   .product {
