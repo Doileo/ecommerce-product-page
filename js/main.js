@@ -50,11 +50,8 @@ function addItemToCart() {
     document.querySelector(".quantity-control__input").value
   );
 
-  // If cart is empty, hide the empty cart message
-  const emptyCartMessage = document.getElementById("empty-cart-message");
-  if (emptyCartMessage) {
-    emptyCartMessage.style.display = "none";
-  }
+  // Check if cart is empty before adding item
+  const cartIsEmpty = cartItems.children.length === 0;
 
   const cartItem = document.createElement("div");
   cartItem.classList.add("cart-item");
@@ -78,10 +75,15 @@ function addItemToCart() {
   const checkoutButton = document.querySelector(".checkout-button");
   checkoutButton.style.display = "block";
 
-  updateCartIcon(); // Update cart icon to show that items are present
+  // Update empty cart message visibility if cart was previously empty
+  if (cartIsEmpty) {
+    const emptyCartMessage = document.getElementById("empty-cart-message");
+    if (emptyCartMessage) {
+      emptyCartMessage.style.display = "none";
+    }
+  }
 
-  // Remove border from cart-item when items are added
-  cartItem.classList.add("no-border");
+  updateCartIcon(); // Update cart icon to show that items are present
 }
 
 // Function to update cart icon to indicate items are present
