@@ -625,6 +625,14 @@ header {
 }
 
 .footer__input,
+.footer__button,
+.form-submit,
+.product__add-to-cart {
+  border: none;
+  border-radius: 5px;
+}
+
+.footer__input,
 .footer__button {
   padding: 0.5em;
   margin-bottom: 1em;
@@ -636,8 +644,6 @@ header {
   background-color: var(--primary-orange);
   color: var(--white);
   font-weight: 600;
-  border: none;
-  border-radius: 5px;
   padding: 0.5rem 1rem;
   font-size: var(--fs-m);
   cursor: pointer;
@@ -1016,28 +1022,34 @@ header {
 
 .buttons-container {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
   margin-top: 1.5rem;
 }
 
+.quantity-control,
+.quantity-control__input,
+.quantity-control__decrease,
+.quantity-control__increase {
+  background-color: var(--light-grayish-blue);
+  border: none;
+  border-radius: 5px;
+}
+
 .quantity-control {
   display: flex;
   align-items: center;
   flex-grow: 0;
-  background-color: var(--light-grayish-blue);
   color: var(--very-dark-blue);
-  border: none;
-  border-radius: 5px;
   padding: 0.5rem;
+  width: 100%;
 }
 
 .quantity-control__input {
-  flex: 1;
   text-align: center;
-  background-color: var(--light-grayish-blue);
-  border: transparent;
+  flex: 1;
 }
 
 .quantity-control__decrease,
@@ -1048,6 +1060,7 @@ header {
   cursor: pointer;
 }
 
+/* Add to Cart Button */
 .product__add-to-cart {
   display: flex;
   justify-content: center;
@@ -1055,6 +1068,7 @@ header {
   flex-grow: 1;
   gap: 0.5rem;
   padding: 0.5rem;
+  width: 100%;
 }
 
 .product__cart-icon {
