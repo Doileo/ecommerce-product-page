@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
   navClose.addEventListener("click", closeMenu);
 });
 
-// Cart functionality
+// Function to toggle cart visibility
 function toggleCart() {
   const cartContent = document.getElementById("cart-content");
   const overlay = document.querySelector(".product-page__overlay");
@@ -53,6 +53,7 @@ function addItemToCart() {
   // Check if cart is empty before adding item
   const cartIsEmpty = cartItems.children.length === 0;
 
+  // Add the item to the cart display
   const cartItem = document.createElement("div");
   cartItem.classList.add("cart-item");
   cartItem.innerHTML = `
@@ -139,7 +140,7 @@ document.addEventListener("DOMContentLoaded", function () {
     images[currentIndex].style.display = "block";
   }
 
-  //Function to go to the previous image
+  // Function to go to the previous image
   function goToPreviousImage() {
     images[currentIndex].style.display = "none";
     currentIndex = (currentIndex - 1 + images.length) % images.length;
@@ -186,13 +187,15 @@ function scrollToTop() {
   });
 }
 
-// To hide the back-to-top button when scrolling to the top
 window.addEventListener("scroll", function () {
   var backToTopButton = document.querySelector(".back-to-top");
-  if (window.scrollY === 0) {
-    // Check if user scrolled to the top
-    backToTopButton.style.display = "none";
-  } else {
-    backToTopButton.style.display = "block";
+  if (backToTopButton) {
+    // Check if back-to-top button exists
+    if (window.scrollY === 0) {
+      // Check if user scrolled to the top
+      backToTopButton.style.display = "none";
+    } else {
+      backToTopButton.style.display = "block";
+    }
   }
 });
