@@ -77,16 +77,21 @@
               class="header__icon header__icon--cart"
               id="cart-icon"
             />
-            <div class="cart-content" id="cart-content">
-              <!-- Content to show when cart is opened -->
-              <div class="cart-header">
-                <!-- Heading wrapping the word "Cart" -->
-                <h3>Cart</h3>
+            <!-- Cart content -->
+            <div class="cart-content" id="cart-content" aria-hidden="true">
+              <div id="empty-cart-message" class="empty-cart-message">
+                <h2 class="empty-cart-message__heading">Cart</h2>
+                <br id="cart-br-tag" />
+                <p class="empty-cart-message__text">Your cart is empty.</p>
               </div>
-              <div class="cart-items">
-                <!-- Content to show when there are items in the cart -->
-                <p>Your cart is empty</p>
+              <!-- Cart items-->
+              <div class="cart-items" id="cart-items">
+                <!-- Dynamic content for cart items will be added here -->
               </div>
+              <!-- Checkout button -->
+              <button class="checkout-button" id="checkout-button">
+                Checkout
+              </button>
             </div>
           </div>
           <img
