@@ -884,6 +884,7 @@ header {
 .form-textarea {
   width: 100%;
   border: 1px solid var(--grayish-blue);
+  border-radius: 5px;
 }
 
 .form-input:hover {
@@ -1339,7 +1340,6 @@ header {
   }
 
   .product {
-    /*flex: 1;*/
     flex: unset;
     gap: 0.5rem;
   }
