@@ -405,6 +405,7 @@ header {
 
 .checkout-button {
   margin: 1rem auto;
+  width: 90%;
 }
 
 .empty-cart-message__heading,
@@ -1110,9 +1111,13 @@ header {
     left: 75%;
   }
 
+  .cart-items {
+    width: 90%;
+    padding: 0;
+  }
+
   .checkout-button {
     padding: 10px 80px;
-    width: 90%;
   }
 
   /* Bestsellers and Featured Categories */

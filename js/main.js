@@ -94,10 +94,10 @@ function addItemToCart() {
       );
       const lineBreak = emptyCartMessage.querySelector("#cart-br-tag");
       if (heading) {
-        heading.style.display = "block"; // Or any other appropriate display style
+        heading.style.display = "block";
       }
       if (lineBreak) {
-        lineBreak.style.display = "block"; // Or any other appropriate display style
+        lineBreak.style.display = "block";
       }
     }
   }
