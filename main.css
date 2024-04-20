@@ -581,7 +581,7 @@ header {
 
 .footer__column {
   background-color: var(--soft-orange);
-  padding: 2em 1em;
+  padding: 2em;
 }
 
 .footer__row,

@@ -80,7 +80,25 @@ function addItemToCart() {
   if (cartIsEmpty) {
     const emptyCartMessage = document.getElementById("empty-cart-message");
     if (emptyCartMessage) {
-      emptyCartMessage.style.display = "none";
+      // Hide the paragraph
+      const paragraph = emptyCartMessage.querySelector(
+        ".empty-cart-message__text"
+      );
+      if (paragraph) {
+        paragraph.style.display = "none";
+      }
+
+      // Show the heading and line break
+      const heading = emptyCartMessage.querySelector(
+        ".empty-cart-message__heading"
+      );
+      const lineBreak = emptyCartMessage.querySelector("#cart-br-tag");
+      if (heading) {
+        heading.style.display = "block"; // Or any other appropriate display style
+      }
+      if (lineBreak) {
+        lineBreak.style.display = "block"; // Or any other appropriate display style
+      }
     }
   }
 
