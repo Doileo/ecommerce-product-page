@@ -40,9 +40,10 @@ document.getElementById("cart-icon").addEventListener("click", toggleCart);
 function addItemToCart() {
   const cartItems = document.getElementById("cart-items");
   const productName = document.querySelector(".product__title").innerText;
-  const productPrice = document.querySelector(
+  const productPriceText = document.querySelector(
     ".product__price-current"
   ).innerText;
+  const productPrice = parseFloat(productPriceText.replace("$", ""));
   const productImageSrc = document.querySelector(
     ".product-slider__image.active"
   ).src;
@@ -53,6 +54,10 @@ function addItemToCart() {
   // Check if cart is empty before adding item
   const cartIsEmpty = cartItems.children.length === 0;
 
+  // Calculate the total price with the desired format
+  const totalPrice = (productPrice * quantity).toFixed(2);
+  const totalPriceFormatted = `$${totalPrice}`;
+
   // Add the item to the cart display
   const cartItem = document.createElement("div");
   cartItem.classList.add("cart-item");
@@ -60,11 +65,8 @@ function addItemToCart() {
         <img src="${productImageSrc}" alt="Product Image" class="cart-item__image">
         <div class="cart-item__details">
             <h3 class="cart-item__title">${productName}</h3>
-            <span class="cart-item__price">${productPrice}</span>
-            <span class="cart-item__quantity">${quantity}</span>
-            <span class="cart-item__total">${
-              parseInt(productPrice.slice(1)) * quantity
-            }</span>
+            <span class="cart-item__price">${productPriceText} x ${quantity}</span>
+            <span class="cart-item__total">${totalPriceFormatted}</span>
         </div>
         <button class="cart-item__remove-btn">
             <img src="../../images/icon-delete.svg" alt="Delete Icon">
