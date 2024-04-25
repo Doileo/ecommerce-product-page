@@ -251,7 +251,11 @@ document.addEventListener("DOMContentLoaded", function () {
       displayProductImage(currentImageIndex);
 
       // Show the thumbnails wrapper
-      productThumbnailsWrapper.style.display = "block";
+      productThumbnailsWrapper.style.display = "flex";
+
+      // Ensure left and right arrows are visible
+      prevButton.style.display = "block";
+      nextButton.style.display = "block";
     });
   });
 
@@ -286,5 +290,9 @@ document.addEventListener("DOMContentLoaded", function () {
     productImageOverlay.classList.remove("show");
     // Hide the thumbnails wrapper
     productThumbnailsWrapper.style.display = "none";
+
+    // Hide the left and right arrows
+    prevButton.style.display = "none";
+    nextButton.style.display = "none";
   });
 });
