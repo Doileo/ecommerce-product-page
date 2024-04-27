@@ -1389,6 +1389,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
   }
 
   /* Product Image Container */
@@ -1404,9 +1405,6 @@ header {
   /* Product Slider Arrows */
   .product-slider__prev-btn,
   .product-slider__next-btn {
-    position: fixed; /* Changed from absolute to fixed */
-    top: 50%;
-    transform: translateY(-50%);
     background-color: var(--white);
     border: none;
     border-radius: 50px;
