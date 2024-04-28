@@ -302,6 +302,11 @@ header {
   margin-right: 1rem;
 }
 
+.header__icon--cart:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
 .header__icon--user {
   height: 24px;
 }
