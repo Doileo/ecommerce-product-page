@@ -51,60 +51,63 @@ function addItemToCart() {
     document.querySelector(".quantity-control__input").value
   );
 
-  // Check if cart is empty before adding item
-  const cartIsEmpty = cartItems.children.length === 0;
-
-  // Calculate the total price with the desired format
+  // Create cart item HTML
   const totalPrice = (productPrice * quantity).toFixed(2);
-  const totalPriceFormatted = `$${totalPrice}`;
+  const cartItemHTML = `
+    <div class="cart-item">
+      <img src="${productImageSrc}" alt="Product Image" class="cart-item__image">
+      <div class="cart-item__details">
+        <h3 class="cart-item__title">${productName}</h3>
+        <span class="cart-item__price">${productPriceText} x ${quantity}</span>
+        <span class="cart-item__total">$${totalPrice}</span>
+      </div>
+      <button class="cart-item__remove-btn">
+        <img src="../../images/icon-delete.svg" alt="Delete Icon">
+      </button>
+    </div>
+  `;
 
   // Add the item to the cart display
-  const cartItem = document.createElement("div");
-  cartItem.classList.add("cart-item");
-  cartItem.innerHTML = `
-        <img src="${productImageSrc}" alt="Product Image" class="cart-item__image">
-        <div class="cart-item__details">
-            <h3 class="cart-item__title">${productName}</h3>
-            <span class="cart-item__price">${productPriceText} x ${quantity}</span>
-            <span class="cart-item__total">${totalPriceFormatted}</span>
-        </div>
-        <button class="cart-item__remove-btn">
-            <img src="../../images/icon-delete.svg" alt="Delete Icon">
-        </button>
-    `;
-  cartItems.appendChild(cartItem);
+  cartItems.insertAdjacentHTML("beforeend", cartItemHTML);
 
   // Show the checkout button
   const checkoutButton = document.querySelector(".checkout-button");
   checkoutButton.style.display = "block";
 
   // Update empty cart message visibility if cart was previously empty
-  if (cartIsEmpty) {
+  if (cartItems.children.length === 1) {
     const emptyCartMessage = document.getElementById("empty-cart-message");
     if (emptyCartMessage) {
-      // Hide the paragraph
       const paragraph = emptyCartMessage.querySelector(
         ".empty-cart-message__text"
       );
-      if (paragraph) {
-        paragraph.style.display = "none";
-      }
-
-      // Show the heading and line break
-      const heading = emptyCartMessage.querySelector(
-        ".empty-cart-message__heading"
-      );
-      const lineBreak = emptyCartMessage.querySelector("#cart-br-tag");
-      if (heading) {
-        heading.style.display = "block";
-      }
-      if (lineBreak) {
-        lineBreak.style.display = "block";
-      }
+      if (paragraph) paragraph.style.display = "none";
     }
   }
 
-  updateCartIcon(); // Update cart icon to show that items are present
+  updateCartIcon(); // Update cart icon
+
+  // Add event listener for the remove button of this newly added item
+  const removeButton = cartItems.lastElementChild.querySelector(
+    ".cart-item__remove-btn"
+  );
+  removeButton.addEventListener("click", function () {
+    cartItems.lastElementChild.remove(); // Remove the cart item
+
+    // Hide the checkout button and restore empty cart structure if cart becomes empty
+    if (cartItems.children.length === 0) {
+      checkoutButton.style.display = "none"; // Hide checkout button
+      const emptyCartMessage = document.getElementById("empty-cart-message");
+      if (emptyCartMessage) {
+        const paragraph = emptyCartMessage.querySelector(
+          ".empty-cart-message__text"
+        );
+        if (paragraph) paragraph.style.display = "block";
+      }
+    }
+
+    updateCartIcon(); // Update cart icon
+  });
 }
 
 // Function to update cart icon to indicate items are present
