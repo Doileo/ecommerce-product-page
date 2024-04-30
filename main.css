@@ -1426,6 +1426,21 @@ header {
     right: 16%;
   }
 
+  /* Close icon */
+  .product-image-overlay__close {
+    position: absolute;
+    top: 13%;
+    right: 9%;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .product-image-overlay__close-icon {
+    width: 20px;
+    height: 20px;
+  }
+
   .product {
     flex: unset;
     gap: 0.5rem;
