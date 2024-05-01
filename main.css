@@ -1429,8 +1429,9 @@ header {
   /* Close icon */
   .product-image-overlay__close {
     position: absolute;
-    top: 13%;
-    right: 9%;
+    top: 18%;
+    right: 7%;
+    transform: translate(-50%, -50%);
     background: transparent;
     border: none;
     cursor: pointer;
@@ -1439,6 +1440,14 @@ header {
   .product-image-overlay__close-icon {
     width: 20px;
     height: 20px;
+  }
+
+  .product-image-overlay__close img {
+    filter: brightness(0) invert(1); /* Converts the icon to white */
+  }
+
+  .product-image-overlay__close img:hover {
+    filter: brightness(90%) sepia(1) saturate(500%) hue-rotate(2deg);
   }
 
   .product {
@@ -1576,6 +1585,11 @@ header {
   .quantity-control,
   .product__add-to-cart {
     padding: 0.75rem 1rem;
+  }
+
+  .product-image-overlay__close {
+    top: 19%;
+    right: 18%;
   }
 
   .product-page .footer__container {
@@ -1794,6 +1808,11 @@ header {
   }
 
   /* Product Page Styles */
+  .product-image-overlay__close {
+    top: 22%;
+    right: 22%;
+  }
+
   .product-page .footer__newsletter {
     margin-top: 4rem;
   }
