@@ -5,6 +5,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const navClose = document.querySelector(".header__nav-close");
   const navMenu = document.querySelector(".header__nav");
   const overlay = document.querySelector(".overlay");
+  const emptyCartMessage = document.getElementById("empty-cart-message"); // Get the empty cart message
+
+  // Show the empty cart message by default
+  if (emptyCartMessage) {
+    const paragraph = emptyCartMessage.querySelector(
+      ".empty-cart-message__text"
+    );
+    if (paragraph) paragraph.style.display = "block";
+  }
 
   // Function to open the menu
   function openMenu() {
@@ -42,7 +51,7 @@ function addItemToCart() {
   const productName = document.querySelector(".product__title").innerText;
   const productPriceText = document.querySelector(
     ".product__price-current"
-  ).innerText;
+  ).textContent;
   const productPrice = parseFloat(productPriceText.replace("$", ""));
   const productImageSrc = document.querySelector(
     ".product-slider__image.active"
@@ -74,15 +83,13 @@ function addItemToCart() {
   const checkoutButton = document.querySelector(".checkout-button");
   checkoutButton.style.display = "block";
 
-  // Update empty cart message visibility if cart was previously empty
-  if (cartItems.children.length === 1) {
-    const emptyCartMessage = document.getElementById("empty-cart-message");
-    if (emptyCartMessage) {
-      const paragraph = emptyCartMessage.querySelector(
-        ".empty-cart-message__text"
-      );
-      if (paragraph) paragraph.style.display = "none";
-    }
+  // Hide the empty cart message
+  const emptyCartMessage = document.getElementById("empty-cart-message");
+  if (emptyCartMessage) {
+    const paragraph = emptyCartMessage.querySelector(
+      ".empty-cart-message__text"
+    );
+    if (paragraph) paragraph.style.display = "none";
   }
 
   updateCartIcon(); // Update cart icon
@@ -113,20 +120,46 @@ function addItemToCart() {
 // Function to update cart icon to indicate items are present
 function updateCartIcon() {
   const cartIcon = document.getElementById("cart-icon");
-  cartIcon.classList.add("has-items");
+  const cartItems = document.querySelectorAll(".cart-item");
+  const itemCountElement = cartIcon.querySelector(".item-count");
+
+  // Calculate the total number of items in the cart
+  let totalItemCount = 0;
+  cartItems.forEach((item) => {
+    totalItemCount += parseInt(
+      item.querySelector(".cart-item__price").textContent.split("x")[1]
+    );
+  });
+
+  if (totalItemCount > 0) {
+    itemCountElement.textContent = totalItemCount; // Update item count text
+    cartIcon.classList.add("has-items"); // Add class to indicate items are present
+    itemCountElement.style.display = "block"; // Show item count
+    itemCountElement.style.backgroundColor = getComputedStyle(
+      document.documentElement
+    ).getPropertyValue("--primary-orange");
+    itemCountElement.style.borderRadius = "50%"; // Apply border-radius for rounding
+  } else {
+    cartIcon.classList.remove("has-items"); // Remove class if no items
+    itemCountElement.style.display = "none"; // Hide item count if no items
+    const checkoutButton = document.querySelector(".checkout-button");
+    checkoutButton.style.display = "none"; // Hide checkout button if no items
+
+    // Show the empty cart message
+    const emptyCartMessage = document.getElementById("empty-cart-message");
+    if (emptyCartMessage) {
+      const paragraph = emptyCartMessage.querySelector(
+        ".empty-cart-message__text"
+      );
+      if (paragraph) paragraph.style.display = "block";
+    }
+  }
 }
 
 // Function to handle add to cart button click
 function handleAddToCart() {
   addItemToCart();
-  updateCartDot(); // Update cart icon to show the orange dot
   toggleCart();
-}
-
-// Function to update cart icon to show orange dot
-function updateCartDot() {
-  const cartIcon = document.getElementById("cart-icon");
-  cartIcon.classList.add("has-items");
 }
 
 // Event listener for add to cart button click

@@ -338,16 +338,19 @@ header {
   padding: 6rem 0;
 }
 
-/* Orange dot style */
-#cart-icon.has-items::after {
-  content: "";
+.item-count {
+  display: none; /* Initially hide the item count */
   position: absolute;
-  top: -5px;
-  right: -5px;
-  width: 10px;
-  height: 10px;
+  top: -8px;
+  right: 24px;
   background-color: var(--primary-orange);
+  color: var(--white);
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
+  text-align: center;
+  font-size: var(--fs-xs);
+  line-height: 20px; /* Center text vertically */
 }
 
 /* Style for cart items */
@@ -1547,6 +1550,10 @@ header {
   .header__icon--cart {
     height: 20px;
     margin-right: 2rem;
+  }
+
+  .item-count {
+    right: 61px;
   }
 
   .contact-info__image {
