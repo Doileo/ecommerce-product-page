@@ -75,12 +75,15 @@
         <!-- Cart and User Icons -->
         <div class="header__icons">
           <div class="cart-container">
-            <img
-              src="../../images/icon-cart.svg"
-              alt="Shopping Cart"
-              class="header__icon header__icon--cart"
-              id="cart-icon"
-            />
+            <div id="cart-icon" class="cart-icon">
+              <img
+                src="../../images/icon-cart.svg"
+                alt="Shopping Cart"
+                class="header__icon header__icon--cart"
+              />
+              <!-- Item count element -->
+              <div class="item-count" id="item-count">0</div>
+            </div>
             <!-- Cart content -->
             <div class="cart-content" id="cart-content" aria-hidden="true">
               <div id="empty-cart-message" class="empty-cart-message">
