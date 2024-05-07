@@ -1092,6 +1092,12 @@ header {
   height: 1rem;
 }
 
+@media only screen and (max-width: 767px) {
+  .product-image-overlay__close {
+    display: none;
+  }
+}
+
 /* Tablet media query */
 @media only screen and (min-width: 768px) {
   /* General styles */
