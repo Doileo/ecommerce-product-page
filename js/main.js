@@ -34,6 +34,68 @@ document.addEventListener("DOMContentLoaded", function () {
   navClose.addEventListener("click", closeMenu);
 });
 
+// Function to sort items by price in ascending order
+function sortByPriceAscending() {
+  const allItems = document.querySelectorAll(".item-details");
+
+  // Create an array of objects representing each item and its price
+  const itemsWithPrice = Array.from(allItems).map((item) => {
+    return {
+      element: item.parentElement.parentElement, // Parent element of item details
+      price: parseFloat(
+        item.querySelector(".item-price").textContent.replace("$", "")
+      ),
+    };
+  });
+
+  // Sort items based on price in ascending order
+  itemsWithPrice.sort((a, b) => a.price - b.price);
+
+  // Update the HTML content based on the sorted array
+  const container = document.querySelector(".featured-categories__grid");
+  container.innerHTML = ""; // Clear the container
+
+  itemsWithPrice.forEach((item) => {
+    container.appendChild(item.element); // Append the sorted items back to the container
+  });
+}
+
+// Function to sort items by price in descending order
+function sortByPriceDescending() {
+  const allItems = document.querySelectorAll(".item-details");
+
+  // Create an array of objects representing each item and its price
+  const itemsWithPrice = Array.from(allItems).map((item) => {
+    return {
+      element: item.parentElement.parentElement, // Parent element of item details
+      price: parseFloat(
+        item.querySelector(".item-price").textContent.replace("$", "")
+      ),
+    };
+  });
+
+  // Sort items based on price in descending order
+  itemsWithPrice.sort((a, b) => b.price - a.price);
+
+  // Update the HTML content based on the sorted array
+  const container = document.querySelector(".featured-categories__grid");
+  container.innerHTML = ""; // Clear the container
+
+  itemsWithPrice.forEach((item) => {
+    container.appendChild(item.element); // Append the sorted items back to the container
+  });
+}
+
+// Event listener for the sort select
+document.getElementById("sort-select").addEventListener("change", function () {
+  const sortBy = this.value;
+  if (sortBy === "price-low-high") {
+    sortByPriceAscending();
+  } else if (sortBy === "price-high-low") {
+    sortByPriceDescending();
+  }
+});
+
 // Function to toggle cart visibility
 function toggleCart() {
   const cartContent = document.getElementById("cart-content");
