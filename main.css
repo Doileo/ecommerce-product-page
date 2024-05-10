@@ -163,6 +163,7 @@ header {
   align-items: center;
 }
 
+/* Navigation */
 .header__nav {
   width: 60%;
   height: 100vh;
@@ -177,7 +178,7 @@ header {
 }
 
 .header__nav-visible {
-  transform: translateX(0); /* Move the menu back to its original position */
+  transform: translateX(0);
 }
 
 .overlay {
@@ -195,6 +196,7 @@ header {
   display: block;
 }
 
+/* Toggle Button */
 .header__nav-toggle {
   cursor: pointer;
   border: 0;
@@ -215,6 +217,7 @@ header {
   opacity: 0.6;
 }
 
+/* Hamburger Icon */
 .hamburger,
 .hamburger::before,
 .hamburger::after {
@@ -238,6 +241,7 @@ header {
   transform: translateY(3px);
 }
 
+/* Navigation List */
 .header__nav-list {
   margin: 0;
   padding: 0;
@@ -266,6 +270,7 @@ header {
   color: hsl(220, 13%, 10%);
 }
 
+/* Close Button */
 .header__nav-close {
   position: absolute;
   top: 1.5rem;
@@ -339,7 +344,7 @@ header {
 }
 
 .item-count {
-  display: none; /* Initially hide the item count */
+  display: none;
   position: absolute;
   top: -8px;
   right: 24px;
@@ -350,7 +355,7 @@ header {
   border-radius: 50%;
   text-align: center;
   font-size: var(--fs-xs);
-  line-height: 20px; /* Center text vertically */
+  line-height: 20px;
 }
 
 /* Style for cart items */
@@ -418,7 +423,7 @@ header {
 
 .empty-cart-message__heading,
 .cart-heading {
-  display: block; /* Ensure the heading is always displayed */
+  display: block;
 }
 
 /* -----Main Styles ---------- */
@@ -479,7 +484,7 @@ header {
 .about__learn-more-button:focus,
 .checkout-button:focus {
   outline: none; /* Remove the default focus outline */
-  box-shadow: 0 0 0 3px rgba(255, 165, 0, 0.5); /* Add a glowing orange border on focus */
+  box-shadow: 0 0 0 3px rgba(255, 165, 0, 0.5);
 }
 
 /* Active effect */
@@ -737,7 +742,7 @@ header {
   font-size: var(--fs-xl);
   cursor: pointer;
   border-radius: 50%;
-  display: block; /* Show by default */
+  display: block;
 }
 
 .back-to-top:hover {
@@ -938,17 +943,17 @@ header {
 
 /* -----Product Page Styles ---------- */
 .product-slider {
-  display: flex; /* Display images in a row */
+  display: flex;
   width: 100%;
   overflow-x: scroll;
-  scroll-snap-type: x mandatory; /* Snap images to the container's edges */
+  scroll-snap-type: x mandatory;
 }
 
 .product-slider__image {
-  flex: 0 0 auto; /* Prevent images from growing or shrinking */
+  flex: 0 0 auto;
   width: 100%;
   height: auto;
-  scroll-snap-align: center; /* Ensure images snap to the center */
+  scroll-snap-align: center;
 }
 
 .product-thumbnails {
@@ -1093,7 +1098,8 @@ header {
 }
 
 @media only screen and (max-width: 767px) {
-  .product-image-overlay__close {
+  .product-image-overlay__close,
+  .product-image-container {
     display: none;
   }
 }
@@ -1148,7 +1154,8 @@ header {
   }
 
   .bestsellers__grid,
-  .category-item {
+  .category-item,
+  .sorted-products {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;

@@ -32,140 +32,119 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Event listener for the close button
   navClose.addEventListener("click", closeMenu);
-});
 
-// Function to sort items by price in ascending order
-function sortByPriceAscending() {
-  const allItems = document.querySelectorAll(".item-details");
-
-  // Create an array of objects representing each item and its price
-  const itemsWithPrice = Array.from(allItems).map((item) => {
-    return {
-      element: item.parentElement.parentElement, // Parent element of item details
-      price: parseFloat(
-        item.querySelector(".item-price").textContent.replace("$", "")
-      ),
-    };
-  });
-
-  // Sort items based on price in ascending order
-  itemsWithPrice.sort((a, b) => a.price - b.price);
-
-  // Update the HTML content based on the sorted array
-  const container = document.querySelector(".featured-categories__grid");
-  container.innerHTML = ""; // Clear the container
-
-  itemsWithPrice.forEach((item) => {
-    container.appendChild(item.element); // Append the sorted items back to the container
-  });
-}
-
-// Function to sort items by price in descending order
-function sortByPriceDescending() {
-  const allItems = document.querySelectorAll(".item-details");
-
-  // Create an array of objects representing each item and its price
-  const itemsWithPrice = Array.from(allItems).map((item) => {
-    return {
-      element: item.parentElement.parentElement, // Parent element of item details
-      price: parseFloat(
-        item.querySelector(".item-price").textContent.replace("$", "")
-      ),
-    };
-  });
-
-  // Sort items based on price in descending order
-  itemsWithPrice.sort((a, b) => b.price - a.price);
-
-  // Update the HTML content based on the sorted array
-  const container = document.querySelector(".featured-categories__grid");
-  container.innerHTML = ""; // Clear the container
-
-  itemsWithPrice.forEach((item) => {
-    container.appendChild(item.element); // Append the sorted items back to the container
-  });
-}
-
-// Event listener for the sort select
-document.getElementById("sort-select").addEventListener("change", function () {
-  const sortBy = this.value;
-  if (sortBy === "price-low-high") {
-    sortByPriceAscending();
-  } else if (sortBy === "price-high-low") {
-    sortByPriceDescending();
+  // Function to toggle cart visibility
+  function toggleCart() {
+    const cartContent = document.getElementById("cart-content");
+    const overlay = document.querySelector(".product-page__overlay");
+    cartContent.classList.toggle("show");
+    overlay.classList.toggle("show");
   }
-});
 
-// Function to toggle cart visibility
-function toggleCart() {
-  const cartContent = document.getElementById("cart-content");
-  const overlay = document.querySelector(".product-page__overlay");
-  cartContent.classList.toggle("show");
-  overlay.classList.toggle("show");
-}
+  // Event listener for cart icon click to toggle cart visibility
+  document.getElementById("cart-icon").addEventListener("click", toggleCart);
 
-// Event listener for cart icon click to toggle cart visibility
-document.getElementById("cart-icon").addEventListener("click", toggleCart);
-
-// Function to add item to cart
-function addItemToCart() {
-  const cartItems = document.getElementById("cart-items");
-  const productName = document.querySelector(".product__title").innerText;
-  const productPriceText = document.querySelector(
-    ".product__price-current"
-  ).textContent;
-  const productPrice = parseFloat(productPriceText.replace("$", ""));
-  const productImageSrc = document.querySelector(
-    ".product-slider__image.active"
-  ).src;
-  const quantity = parseInt(
-    document.querySelector(".quantity-control__input").value
-  );
-
-  // Create cart item HTML
-  const totalPrice = (productPrice * quantity).toFixed(2);
-  const cartItemHTML = `
-    <div class="cart-item">
-      <img src="${productImageSrc}" alt="Product Image" class="cart-item__image">
-      <div class="cart-item__details">
-        <h3 class="cart-item__title">${productName}</h3>
-        <span class="cart-item__price">${productPriceText} x ${quantity}</span>
-        <span class="cart-item__total">$${totalPrice}</span>
-      </div>
-      <button class="cart-item__remove-btn">
-        <img src="../../images/icon-delete.svg" alt="Delete Icon">
-      </button>
-    </div>
-  `;
-
-  // Add the item to the cart display
-  cartItems.insertAdjacentHTML("beforeend", cartItemHTML);
-
-  // Show the checkout button
-  const checkoutButton = document.querySelector(".checkout-button");
-  checkoutButton.style.display = "block";
-
-  // Hide the empty cart message
-  const emptyCartMessage = document.getElementById("empty-cart-message");
-  if (emptyCartMessage) {
-    const paragraph = emptyCartMessage.querySelector(
-      ".empty-cart-message__text"
+  // Function to add item to cart
+  function addItemToCart() {
+    const cartItems = document.getElementById("cart-items");
+    const productName = document.querySelector(".product__title").innerText;
+    const productPriceText = document.querySelector(
+      ".product__price-current"
+    ).textContent;
+    const productPrice = parseFloat(productPriceText.replace("$", ""));
+    const productImageSrc = document.querySelector(
+      ".product-slider__image.active"
+    ).src;
+    const quantity = parseInt(
+      document.querySelector(".quantity-control__input").value
     );
-    if (paragraph) paragraph.style.display = "none";
+
+    // Create cart item HTML
+    const totalPrice = (productPrice * quantity).toFixed(2);
+    const cartItemHTML = `
+      <div class="cart-item">
+        <img src="${productImageSrc}" alt="Product Image" class="cart-item__image">
+        <div class="cart-item__details">
+          <h3 class="cart-item__title">${productName}</h3>
+          <span class="cart-item__price">${productPriceText} x ${quantity}</span>
+          <span class="cart-item__total">$${totalPrice}</span>
+        </div>
+        <button class="cart-item__remove-btn">
+          <img src="../../images/icon-delete.svg" alt="Delete Icon">
+        </button>
+      </div>
+    `;
+
+    // Add the item to the cart display
+    cartItems.insertAdjacentHTML("beforeend", cartItemHTML);
+
+    // Show the checkout button
+    const checkoutButton = document.querySelector(".checkout-button");
+    checkoutButton.style.display = "block";
+
+    // Hide the empty cart message
+    const emptyCartMessage = document.getElementById("empty-cart-message");
+    if (emptyCartMessage) {
+      const paragraph = emptyCartMessage.querySelector(
+        ".empty-cart-message__text"
+      );
+      if (paragraph) paragraph.style.display = "none";
+    }
+
+    updateCartIcon(); // Update cart icon
+
+    // Add event listener for the remove button of this newly added item
+    const removeButton = cartItems.lastElementChild.querySelector(
+      ".cart-item__remove-btn"
+    );
+    removeButton.addEventListener("click", function () {
+      cartItems.lastElementChild.remove(); // Remove the cart item
+
+      // Hide the checkout button and restore empty cart structure if cart becomes empty
+      if (cartItems.children.length === 0) {
+        checkoutButton.style.display = "none"; // Hide checkout button
+        const emptyCartMessage = document.getElementById("empty-cart-message");
+        if (emptyCartMessage) {
+          const paragraph = emptyCartMessage.querySelector(
+            ".empty-cart-message__text"
+          );
+          if (paragraph) paragraph.style.display = "block";
+        }
+      }
+
+      updateCartIcon(); // Update cart icon
+    });
   }
 
-  updateCartIcon(); // Update cart icon
+  // Function to update cart icon to indicate items are present
+  function updateCartIcon() {
+    const cartIcon = document.getElementById("cart-icon");
+    const cartItems = document.querySelectorAll(".cart-item");
+    const itemCountElement = cartIcon.querySelector(".item-count");
 
-  // Add event listener for the remove button of this newly added item
-  const removeButton = cartItems.lastElementChild.querySelector(
-    ".cart-item__remove-btn"
-  );
-  removeButton.addEventListener("click", function () {
-    cartItems.lastElementChild.remove(); // Remove the cart item
+    // Calculate the total number of items in the cart
+    let totalItemCount = 0;
+    cartItems.forEach((item) => {
+      totalItemCount += parseInt(
+        item.querySelector(".cart-item__price").textContent.split("x")[1]
+      );
+    });
 
-    // Hide the checkout button and restore empty cart structure if cart becomes empty
-    if (cartItems.children.length === 0) {
-      checkoutButton.style.display = "none"; // Hide checkout button
+    if (totalItemCount > 0) {
+      itemCountElement.textContent = totalItemCount; // Update item count text
+      cartIcon.classList.add("has-items"); // Add class to indicate items are present
+      itemCountElement.style.display = "block"; // Show item count
+      itemCountElement.style.backgroundColor = getComputedStyle(
+        document.documentElement
+      ).getPropertyValue("--primary-orange");
+      itemCountElement.style.borderRadius = "50%"; // Apply border-radius for rounding
+    } else {
+      cartIcon.classList.remove("has-items"); // Remove class if no items
+      itemCountElement.style.display = "none"; // Hide item count if no items
+      const checkoutButton = document.querySelector(".checkout-button");
+      checkoutButton.style.display = "none"; // Hide checkout button if no items
+
+      // Show the empty cart message
       const emptyCartMessage = document.getElementById("empty-cart-message");
       if (emptyCartMessage) {
         const paragraph = emptyCartMessage.querySelector(
@@ -174,80 +153,37 @@ function addItemToCart() {
         if (paragraph) paragraph.style.display = "block";
       }
     }
+  }
 
-    updateCartIcon(); // Update cart icon
-  });
-}
+  // Function to handle add to cart button click
+  function handleAddToCart() {
+    addItemToCart();
+    toggleCart();
+  }
 
-// Function to update cart icon to indicate items are present
-function updateCartIcon() {
-  const cartIcon = document.getElementById("cart-icon");
-  const cartItems = document.querySelectorAll(".cart-item");
-  const itemCountElement = cartIcon.querySelector(".item-count");
+  // Event listener for add to cart button click
+  document
+    .querySelector(".product__add-to-cart")
+    .addEventListener("click", handleAddToCart);
 
-  // Calculate the total number of items in the cart
-  let totalItemCount = 0;
-  cartItems.forEach((item) => {
-    totalItemCount += parseInt(
-      item.querySelector(".cart-item__price").textContent.split("x")[1]
-    );
-  });
+  // Functionality for increasing/decreasing buttons
+  const decreaseButton = document.querySelector(".quantity-control__decrease");
+  const increaseButton = document.querySelector(".quantity-control__increase");
+  const quantityInput = document.querySelector(".quantity-control__input");
 
-  if (totalItemCount > 0) {
-    itemCountElement.textContent = totalItemCount; // Update item count text
-    cartIcon.classList.add("has-items"); // Add class to indicate items are present
-    itemCountElement.style.display = "block"; // Show item count
-    itemCountElement.style.backgroundColor = getComputedStyle(
-      document.documentElement
-    ).getPropertyValue("--primary-orange");
-    itemCountElement.style.borderRadius = "50%"; // Apply border-radius for rounding
-  } else {
-    cartIcon.classList.remove("has-items"); // Remove class if no items
-    itemCountElement.style.display = "none"; // Hide item count if no items
-    const checkoutButton = document.querySelector(".checkout-button");
-    checkoutButton.style.display = "none"; // Hide checkout button if no items
-
-    // Show the empty cart message
-    const emptyCartMessage = document.getElementById("empty-cart-message");
-    if (emptyCartMessage) {
-      const paragraph = emptyCartMessage.querySelector(
-        ".empty-cart-message__text"
-      );
-      if (paragraph) paragraph.style.display = "block";
+  decreaseButton.addEventListener("click", () => {
+    const currentValue = parseInt(quantityInput.value);
+    if (currentValue > 1) {
+      quantityInput.value = currentValue - 1;
     }
-  }
-}
+  });
 
-// Function to handle add to cart button click
-function handleAddToCart() {
-  addItemToCart();
-  toggleCart();
-}
+  increaseButton.addEventListener("click", () => {
+    const currentValue = parseInt(quantityInput.value);
+    quantityInput.value = currentValue + 1;
+  });
 
-// Event listener for add to cart button click
-document
-  .querySelector(".product__add-to-cart")
-  .addEventListener("click", handleAddToCart);
-
-// Functionality for increasing/decreasing buttons
-const decreaseButton = document.querySelector(".quantity-control__decrease");
-const increaseButton = document.querySelector(".quantity-control__increase");
-const quantityInput = document.querySelector(".quantity-control__input");
-
-decreaseButton.addEventListener("click", () => {
-  const currentValue = parseInt(quantityInput.value);
-  if (currentValue > 1) {
-    quantityInput.value = currentValue - 1;
-  }
-});
-
-increaseButton.addEventListener("click", () => {
-  const currentValue = parseInt(quantityInput.value);
-  quantityInput.value = currentValue + 1;
-});
-
-// Product slider
-document.addEventListener("DOMContentLoaded", function () {
+  // Product slider
   const images = document.querySelectorAll(".product-slider__image");
   let currentIndex = 0;
 
@@ -274,51 +210,49 @@ document.addEventListener("DOMContentLoaded", function () {
   document
     .querySelector(".product-slider__prev")
     .addEventListener("click", goToPreviousImage);
-});
 
-// Get the product image and arrow icons
-const productImage = document.querySelector(".product-slider__image");
-const prevArrow = document.querySelector(".product-slider__prev");
-const nextArrow = document.querySelector(".product-slider__next");
+  // Get the product image and arrow icons
+  const productImage = document.querySelector(".product-slider__image");
+  const prevArrow = document.querySelector(".product-slider__prev");
+  const nextArrow = document.querySelector(".product-slider__next");
 
-// Function to calculate and set arrow position
-function setArrowPosition() {
-  const imageRect = productImage.getBoundingClientRect();
-  const imageCenterY = imageRect.top + imageRect.height / 2;
+  // Function to calculate and set arrow position
+  function setArrowPosition() {
+    const imageRect = productImage.getBoundingClientRect();
+    const imageCenterY = imageRect.top + imageRect.height / 2;
 
-  // Set arrow position to center vertically
-  prevArrow.style.top = `${imageCenterY}px`;
-  nextArrow.style.top = `${imageCenterY}px`;
-}
-
-// Initial setup
-setArrowPosition();
-
-// Recalculate position on window resize
-window.addEventListener("resize", setArrowPosition);
-
-// Function to scroll back to the top of the page
-function scrollToTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth", // Smooth scroll behavior
-  });
-}
-
-window.addEventListener("scroll", function () {
-  var backToTopButton = document.querySelector(".back-to-top");
-  if (backToTopButton) {
-    // Check if back-to-top button exists
-    if (window.scrollY === 0) {
-      // Check if user scrolled to the top
-      backToTopButton.style.display = "none";
-    } else {
-      backToTopButton.style.display = "block";
-    }
+    // Set arrow position to center vertically
+    prevArrow.style.top = `${imageCenterY}px`;
+    nextArrow.style.top = `${imageCenterY}px`;
   }
-});
 
-document.addEventListener("DOMContentLoaded", function () {
+  // Initial setup
+  setArrowPosition();
+
+  // Recalculate position on window resize
+  window.addEventListener("resize", setArrowPosition);
+
+  // Function to scroll back to the top of the page
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Smooth scroll behavior
+    });
+  }
+
+  window.addEventListener("scroll", function () {
+    var backToTopButton = document.querySelector(".back-to-top");
+    if (backToTopButton) {
+      // Check if back-to-top button exists
+      if (window.scrollY === 0) {
+        // Check if user scrolled to the top
+        backToTopButton.style.display = "none";
+      } else {
+        backToTopButton.style.display = "block";
+      }
+    }
+  });
+
   const productThumbnails = document.querySelectorAll(
     ".product-thumbnails__image"
   );
