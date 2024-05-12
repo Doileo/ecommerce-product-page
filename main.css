@@ -1396,7 +1396,12 @@ header {
     z-index: 1000;
   }
 
-  .product-thumbnails-wrapper {
+  .women-bestseller-model3 .product-thumbnails-wrapper {
+    bottom: 6%;
+  }
+
+  .product-thumbnails-wrapper,
+  .women-bestseller-model3 .product-thumbnails-wrappe {
     display: none;
   }
 
@@ -1457,6 +1462,10 @@ header {
     background: transparent;
     border: none;
     cursor: pointer;
+  }
+
+  .women-bestseller-model3 .product-image-overlay__close {
+    top: 18%;
   }
 
   .product-image-overlay__close-icon {
