@@ -1842,6 +1842,10 @@ header {
   }
 
   /* Product Page Styles */
+  .product-thumbnails__image {
+    height: 100px;
+  }
+
   .product-image-overlay__close {
     right: 25%;
   }
