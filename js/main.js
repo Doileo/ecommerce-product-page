@@ -1,5 +1,13 @@
 "use strict";
 
+// Function to scroll back to the top of the page
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth", // Smooth scroll behavior
+  });
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   const navToggle = document.querySelector(".header__nav-toggle");
   const navClose = document.querySelector(".header__nav-close");
@@ -232,14 +240,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Recalculate position on window resize
   window.addEventListener("resize", setArrowPosition);
 
-  // Function to scroll back to the top of the page
-  function scrollToTop() {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth", // Smooth scroll behavior
-    });
-  }
-
+  // Event listener for scrolling
   window.addEventListener("scroll", function () {
     var backToTopButton = document.querySelector(".back-to-top");
     if (backToTopButton) {
@@ -253,78 +254,79 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  const productThumbnails = document.querySelectorAll(
-    ".product-thumbnails__image"
-  );
-  const productImageOverlay = document.getElementById("product-image-overlay");
-  const productImageContainer = document.getElementById(
-    "product-image-container"
-  );
-  const prevButton = document.querySelector(".product-slider__prev-btn");
-  const nextButton = document.querySelector(".product-slider__next-btn");
-  const closeButton = document.querySelector(".product-image-overlay__close");
-  const productSliderImages = document.querySelectorAll(
-    ".product-slider__image"
-  );
-  const productThumbnailsWrapper = document.querySelector(
-    ".product-thumbnails-wrapper"
-  );
+  // Event listener for back to top button click
+  document.querySelector(".back-to-top").addEventListener("click", scrollToTop);
+});
 
-  let currentImageIndex = 0;
+const productThumbnails = document.querySelectorAll(
+  ".product-thumbnails__image"
+);
+const productImageOverlay = document.getElementById("product-image-overlay");
+const productImageContainer = document.getElementById(
+  "product-image-container"
+);
+const prevButton = document.querySelector(".product-slider__prev-btn");
+const nextButton = document.querySelector(".product-slider__next-btn");
+const closeButton = document.querySelector(".product-image-overlay__close");
+const productSliderImages = document.querySelectorAll(".product-slider__image");
+const productThumbnailsWrapper = document.querySelector(
+  ".product-thumbnails-wrapper"
+);
 
-  // Event listener for each product thumbnail image
-  productThumbnails.forEach(function (thumbnail, index) {
-    thumbnail.addEventListener("click", function () {
-      // Show the overlay
-      productImageOverlay.classList.add("show");
+let currentImageIndex = 0;
 
-      // Display the corresponding product image
-      currentImageIndex = index;
-      displayProductImage(currentImageIndex);
+// Event listener for each product thumbnail image
+productThumbnails.forEach(function (thumbnail, index) {
+  thumbnail.addEventListener("click", function () {
+    // Show the overlay
+    productImageOverlay.classList.add("show");
 
-      // Show the thumbnails wrapper
-      productThumbnailsWrapper.style.display = "flex";
-
-      // Ensure left and right arrows are visible
-      prevButton.style.display = "block";
-      nextButton.style.display = "block";
-    });
-  });
-
-  // Function to display the product image in the overlay
-  function displayProductImage(index) {
-    // Clear previous image
-    productImageContainer.innerHTML = "";
-
-    // Create image element
-    const newImage = productSliderImages[index].cloneNode(true);
-
-    // Append image to container
-    productImageContainer.appendChild(newImage);
-  }
-
-  // Event listener for previous button
-  prevButton.addEventListener("click", function () {
-    currentImageIndex =
-      (currentImageIndex - 1 + productSliderImages.length) %
-      productSliderImages.length;
+    // Display the corresponding product image
+    currentImageIndex = index;
     displayProductImage(currentImageIndex);
-  });
 
-  // Event listener for next button
-  nextButton.addEventListener("click", function () {
-    currentImageIndex = (currentImageIndex + 1) % productSliderImages.length;
-    displayProductImage(currentImageIndex);
-  });
+    // Show the thumbnails wrapper
+    productThumbnailsWrapper.style.display = "flex";
 
-  // Event listener for closing the overlay
-  closeButton.addEventListener("click", function () {
-    productImageOverlay.classList.remove("show");
-    // Hide the thumbnails wrapper
-    productThumbnailsWrapper.style.display = "none";
-
-    // Hide the left and right arrows
-    prevButton.style.display = "none";
-    nextButton.style.display = "none";
+    // Ensure left and right arrows are visible
+    prevButton.style.display = "block";
+    nextButton.style.display = "block";
   });
+});
+
+// Function to display the product image in the overlay
+function displayProductImage(index) {
+  // Clear previous image
+  productImageContainer.innerHTML = "";
+
+  // Create image element
+  const newImage = productSliderImages[index].cloneNode(true);
+
+  // Append image to container
+  productImageContainer.appendChild(newImage);
+}
+
+// Event listener for previous button
+prevButton.addEventListener("click", function () {
+  currentImageIndex =
+    (currentImageIndex - 1 + productSliderImages.length) %
+    productSliderImages.length;
+  displayProductImage(currentImageIndex);
+});
+
+// Event listener for next button
+nextButton.addEventListener("click", function () {
+  currentImageIndex = (currentImageIndex + 1) % productSliderImages.length;
+  displayProductImage(currentImageIndex);
+});
+
+// Event listener for closing the overlay
+closeButton.addEventListener("click", function () {
+  productImageOverlay.classList.remove("show");
+  // Hide the thumbnails wrapper
+  productThumbnailsWrapper.style.display = "none";
+
+  // Hide the left and right arrows
+  prevButton.style.display = "none";
+  nextButton.style.display = "none";
 });
