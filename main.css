@@ -4,15 +4,16 @@
 
 :root {
   /* Colors */
-  --primary-orange: hsl(26, 100%, 55%);
+  --primary-orange: hsl(26.5, 83.6%, 38.4%);
   --very-dark-orange: hsl(2.917, 91.1%, 27.8%);
+  --dark-red: hsl(0, 100%, 20.8%);
   --dark-orange: hsl(26, 100%, 45%);
   --soft-orange: hsl(38.82, 55%, 69%);
   --pale-orange: hsl(25, 110%, 95%);
 
   --very-dark-blue: hsl(220, 13%, 13%);
   --dark-grayish-blue: hsl(211, 9%, 45%);
-  --grayish-blue: hsl(220, 14%, 75%);
+  --grayish-blue: hsl(220, 2.5%, 44.3%);
   --light-grayish-blue: hsl(223, 64%, 98%);
   --darker-gray: hsl(0, 0%, 20%);
   --white: hsl(0, 0%, 100%);
@@ -211,10 +212,13 @@ header {
 }
 
 .header__nav-toggle:focus,
-.header__nav-toggle:hover,
+.header__nav-toggle:hover {
+  opacity: 0.6;
+}
+
 .header__nav-link:hover,
 .header__nav-link:focus {
-  opacity: 0.6;
+  opacity: 1;
 }
 
 /* Hamburger Icon */
@@ -719,7 +723,7 @@ header {
 }
 
 .attribution a {
-  color: var(--very-dark-orange);
+  color: var(--dark-red);
   text-decoration: none;
 }
 
@@ -844,6 +848,17 @@ header {
 
 .featured-categories__title {
   width: 100%;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
 .sort-select {
