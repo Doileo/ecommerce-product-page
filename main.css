@@ -455,7 +455,7 @@ header {
 }
 
 .hero__subtitle {
-  font-size: var(--fs-s);
+  font-size: var(--fs-m);
   color: var(--dark-grayish-blue);
   line-height: 1.5;
   margin-bottom: 0.75rem;
@@ -522,6 +522,17 @@ header {
   margin-bottom: 0.75rem;
 }
 
+.bestsellers__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.bestseller-item {
+  width: calc(50% - 10px);
+  margin-bottom: 20px;
+}
+
 .model-link {
   text-decoration: none;
 }
@@ -584,6 +595,7 @@ header {
 .about__description,
 .about-men__description,
 .about-women__description {
+  font-size: var(--fs-m);
   margin-bottom: 1em;
 }
 
@@ -1181,7 +1193,6 @@ header {
   .athletic-items,
   .formal-items {
     width: calc(33.33% - 10px);
-    margin-bottom: 20px;
   }
 
   /* About section */
