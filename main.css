@@ -522,10 +522,11 @@ header {
   margin-bottom: 0.75rem;
 }
 
-.bestsellers__grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+.bestsellers__grid,
+.featured-categories__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
 }
 
 .bestseller-item {
@@ -880,7 +881,23 @@ header {
   color: var(--dark-grayish-blue);
 }
 
+.category-item {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.bestseller-item {
+  width: 100%;
+}
+
 /* About Men Section */
+.about-men,
+.about-women {
+  margin: 0 auto;
+  max-width: 70rem;
+  position: relative;
+}
+
 .about-men__content,
 .about-women__content {
   display: flex;
@@ -1180,7 +1197,13 @@ header {
     font-size: var(--fs-3xl);
   }
 
-  .bestsellers__grid,
+  .bestsellers__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .bestseller-item,
   .category-item,
   .sorted-products {
     display: flex;
