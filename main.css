@@ -530,7 +530,6 @@ header {
 }
 
 .bestseller-item {
-  width: calc(50% - 10px);
   margin-bottom: 20px;
 }
 
@@ -881,23 +880,16 @@ header {
   color: var(--dark-grayish-blue);
 }
 
-.category-item {
+.item {
   display: grid;
   gap: 0.5rem;
 }
 
-.bestseller-item {
+.bestseller-items .item {
   width: 100%;
 }
 
 /* About Men Section */
-.about-men,
-.about-women {
-  margin: 0 auto;
-  max-width: 70rem;
-  position: relative;
-}
-
 .about-men__content,
 .about-women__content {
   display: flex;
@@ -1200,22 +1192,17 @@ header {
   .bestsellers__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .featured-categories__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
   }
 
-  .bestseller-item,
-  .category-item,
-  .sorted-products {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .bestseller-item,
-  .casual-items,
-  .athletic-items,
-  .formal-items {
-    width: calc(33.33% - 10px);
+  .about-men.container,
+  .about-women.container {
+    max-width: fit-content;
   }
 
   /* About section */
