@@ -149,6 +149,10 @@ h2 {
 header {
   padding: 1em 0;
   text-align: center;
+}
+
+header,
+.header__content-wrapper {
   position: relative;
 }
 
@@ -156,7 +160,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
 }
 
 .header__container {
@@ -205,7 +208,6 @@ header {
   height: 2rem;
   padding: 0em;
   background: var(--white);
-  color: var(--very-dark-blue);
   transition: opacity 250ms ease;
   position: absolute;
   left: 0;
@@ -266,7 +268,6 @@ header {
 
 .header__nav-link {
   text-decoration: none;
-  color: var(--very-dark-blue);
   font-weight: 700;
 }
 
@@ -282,7 +283,6 @@ header {
   background: transparent;
   border: none;
   font-size: var(--fs-3xl);
-  color: var(--very-dark-blue);
   cursor: pointer;
 }
 
@@ -294,7 +294,6 @@ header {
 .header__logo,
 .footer__logo-text {
   font-size: var(--fs-5xl);
-  color: var(--very-dark-blue);
   margin-bottom: 0.5rem;
 }
 
@@ -450,7 +449,6 @@ header {
 
 .hero__title {
   font-size: var(--fs-4xl);
-  color: var(--very-dark-blue);
   margin-bottom: 1rem;
 }
 
@@ -518,7 +516,6 @@ header {
 .about-men__title,
 .about-women__title {
   font-size: var(--fs-xl);
-  color: var(--very-dark-blue);
   margin-bottom: 0.75rem;
 }
 
@@ -541,12 +538,9 @@ header {
   margin: 1em 0;
 }
 
-.item-title {
-  color: var(--very-dark-blue);
-}
-
 .item-price {
   color: var(--dark-grayish-blue);
+  font-size: var(--fs-m);
 }
 
 .item-title:hover,
@@ -561,10 +555,6 @@ header {
   font-size: var(--fs-mobile-large);
   font-weight: 600;
   margin-bottom: 0.125em;
-}
-
-.item-price {
-  font-size: var(--fs-m);
 }
 
 /* About Section Styles */
@@ -627,13 +617,11 @@ header {
 .footer__heading {
   font-size: var(--fs-mobile-large);
   font-weight: 600;
-  color: var(--very-dark-blue);
   margin-bottom: 0.125em;
 }
 
 .footer__paragraph {
   font-size: var(--fs-m);
-  color: var(--very-dark-blue);
   line-height: 1.6;
   margin-top: 1em;
 }
@@ -644,7 +632,6 @@ header {
 }
 
 .footer__label {
-  color: var(--very-dark-blue);
   margin-bottom: 0.5em;
   margin-top: 1.5em;
 }
@@ -717,7 +704,6 @@ header {
 .footer__menu-link,
 .footer__social-link {
   text-decoration: none;
-  color: var(--very-dark-blue);
   font-size: var(--fs-m);
 }
 
@@ -729,7 +715,6 @@ header {
 .attribution {
   background-color: var(--soft-orange);
   text-align: center;
-  color: var(--very-dark-blue);
   font-size: var(--fs-xs);
   padding: 2rem;
 }
@@ -773,7 +758,6 @@ header {
   text-align: center;
   padding: 4rem 0;
   background-color: var(--soft-orange);
-  color: var(--very-dark-blue);
 }
 
 .about__content-wrapper {
@@ -784,7 +768,6 @@ header {
 
 .about__subtitle,
 .our-values__heading {
-  color: var(--very-dark-blue);
   margin: 1rem 0;
   padding-bottom: 2rem;
   border-bottom: 1px solid var(--grayish-blue);
@@ -811,7 +794,6 @@ header {
 .value-item h3 {
   font-size: var(--fs-l);
   font-weight: 600;
-  color: var(--very-dark-blue);
 }
 
 .value-item p {
@@ -842,7 +824,6 @@ header {
 .women-hero__title {
   margin: 1rem 0;
   font-weight: 600;
-  color: var(--very-dark-blue);
 }
 
 .men-hero__subtitle,
@@ -906,21 +887,15 @@ header {
 .contact-form__heading,
 .contact-info__heading {
   font-weight: 600;
-  color: var(--very-dark-blue);
 }
 
-.contact-form__form {
-  display: flex;
-  flex-direction: column;
-}
-
+.contact-form__form,
 .form-group {
   display: flex;
   flex-direction: column;
 }
 
 .form-label {
-  color: var(--very-dark-blue);
   margin-bottom: 0.5em;
   margin-top: 1.5em;
 }
@@ -1040,7 +1015,6 @@ header {
 .product__title {
   line-height: 2;
   font-size: var(--fs-4xl);
-  color: var(--very-dark-blue);
 }
 
 .product__description {
@@ -1063,7 +1037,6 @@ header {
 .product__price-current {
   font-size: var(--fs-4xl);
   font-weight: 600;
-  color: var(--very-dark-blue);
 }
 
 .product__discount {
@@ -1099,7 +1072,6 @@ header {
   display: flex;
   align-items: center;
   flex-grow: 0;
-  color: var(--very-dark-blue);
   padding: 0.5rem;
   width: 100%;
 }
