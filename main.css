@@ -685,7 +685,9 @@ header,
 .footer__button:hover,
 .form-submit:hover,
 .product__add-to-cart:hover {
-  background-color: var(--pale-orange);
+  background-color: var(--dark-orange);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .footer__logo {
