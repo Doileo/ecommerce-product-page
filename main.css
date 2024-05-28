@@ -521,7 +521,6 @@ header,
 
 .bestsellers__title,
 .about__title,
-.featured-categories__title,
 .about-men__title,
 .about-women__title {
   font-size: var(--fs-xl);
@@ -840,29 +839,36 @@ header,
   flex-direction: column;
   align-items: center;
   text-align: center;
+  gap: var(--spacing-base);
 }
 
 .men-hero__title,
 .women-hero__title {
-  margin: 1rem 0;
+  margin-top: var(--margin-base);
   font-weight: 600;
 }
 
 .men-hero__subtitle,
 .women-hero__subtitle {
-  margin: 6% 5%;
   line-height: 1.5;
+}
+
+.men-hero__content .hero__button,
+.women-hero__content .hero__button {
+  padding: 10px 92px;
 }
 
 .featured-categories__header {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: var(--spacing-base);
   margin-bottom: var(--margin-medium);
 }
 
 .featured-categories__title {
   width: 100%;
+  font-size: var(--fs-l);
+  font-weight: 400;
 }
 
 .visually-hidden {
@@ -1149,7 +1155,7 @@ header,
   .men-hero__subtitle,
   .women-hero__subtitle {
     font-size: var(--fs-n);
-    margin-bottom: var(--margin-medium);
+    margin: var(--margin-medium);
   }
 
   .mobile-image {
@@ -1176,7 +1182,6 @@ header,
 
   /* Bestsellers and Featured Categories */
   .bestsellers__title,
-  .featured-categories__title,
   .about-men__title {
     font-size: var(--fs-3xl);
   }
@@ -1247,7 +1252,6 @@ header,
   }
 
   .footer__label {
-    margin-top: 0;
     font-size: var(--fs-l);
     margin-bottom: var(--padding-base);
   }
@@ -1339,6 +1343,10 @@ header,
     display: flex;
     flex-direction: row;
     gap: var(--spacing-base);
+  }
+
+  .footer__column {
+    padding: 7%;
   }
 
   .contact__newsletter-wrapper {
@@ -1533,10 +1541,6 @@ header,
 
 /* Medium Desktop media query */
 @media (min-width: 1024px) {
-  .header {
-    border: none;
-  }
-
   .header__nav-toggle {
     display: none;
   }
@@ -1682,7 +1686,6 @@ header,
 @media (min-width: 1200px) {
   .header {
     padding: 2rem 0;
-    border: none;
   }
 
   /* Container styles */
@@ -1708,6 +1711,10 @@ header,
   /* About section styles */
   .about__text {
     margin-left: 3.5rem;
+  }
+
+  .about__learn-more-button {
+    width: 50%;
   }
 
   /* Footer styles */
