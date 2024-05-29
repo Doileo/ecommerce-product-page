@@ -8,7 +8,14 @@ This is a solution to the [E-commerce product page challenge on Frontend Mentor]
   - [Table of contents](#table-of-contents)
   - [Overview](#overview)
     - [The challenge](#the-challenge)
-    - [Screenshot](#screenshot)
+  - [Screenshots](#screenshots)
+    - [Home Page](#home-page)
+    - [Women’s Product Page](#womens-product-page)
+    - [Product Details Page](#product-details-page)
+    - [Lightbox Gallery](#lightbox-gallery)
+    - [Cart Functionality](#cart-functionality)
+    - [About Page](#about-page)
+    - [Contact Page](#contact-page)
     - [Links](#links)
   - [My process](#my-process)
     - [Built with](#built-with)
@@ -39,9 +46,106 @@ In addition to the initial project requirements, I have completed the following 
 - Created pages for each model on the Men and Women pages.
 - Added the Back to Top feature.
 
-### Screenshot
+## Screenshots
 
-![](./screenshot.jpg)
+### Home Page
+
+<table>
+  <tr>
+    <td>
+      <strong>Desktop View:</strong><br>
+      <img src="images/screenshots/home_page_desktop.png" alt="Home Page Desktop" width="300"/><br>
+      <em>The main landing page on desktop, showcasing navigation and featured products.</em>
+    </td>
+    <td>
+      <strong>Mobile View:</strong><br>
+      <img src="images/screenshots/home_page_mobile.png" alt="Home Page Mobile" width="150"/><br>
+      <em>The main landing page on mobile, demonstrating responsive design.</em>
+    </td>
+  </tr>
+</table>
+
+### Women’s Product Page
+
+<table>
+  <tr>
+    <td>
+      <strong>Desktop View:</strong><br>
+      <img src="images/screenshots/women_page_desktop.png" alt="Women’s Product Page Desktop" width="300"/><br>
+      <em>The Women’s product page with sorting feature on desktop.</em>
+    </td>
+    <td>
+      <strong>Mobile View:</strong><br>
+      <img src="images/screenshots/women_page_mobile.png" alt="Women’s Product Page Mobile" width="150"/><br>
+      <em>The Women’s product page with sorting feature on mobile.</em>
+    </td>
+  </tr>
+</table>
+
+### Product Details Page
+
+<table>
+  <tr>
+    <td>
+      <strong>Desktop View:</strong><br>
+      <img src="images/screenshots/product_details_desktop.png" alt="Product Details Desktop" width="300"/><br>
+      <em>Detailed view of a product on desktop.</em>
+    </td>
+    <td>
+      <strong>Mobile View:</strong><br>
+      <img src="images/screenshots/product_details_mobile.png" alt="Product Details Mobile View" width="150"/><br>
+      <em>Detailed view of a product on mobile.</em>
+    </td>
+  </tr>
+</table>
+
+### Lightbox Gallery
+
+<table>
+  <tr>
+    <td>
+      <strong>Lightbox Gallery (Desktop):</strong><br>
+      <img src="images/screenshots/lightbox_gallery_desktop.png" alt="Lightbox Gallery Desktop" width="300"/><br>
+      <em>The lightbox gallery opened by clicking on the thumbnail images on desktop.</em>
+    </td>
+  </tr>
+</table>
+
+### Cart Functionality
+
+<table>
+  <tr>
+    <td>
+      <strong>Cart (Desktop):</strong><br>
+      <img src="images/screenshots/cart_desktop.png" alt="Cart Desktop" width="300"/><br>
+      <em>View of the cart showing items added and the option to remove them.</em>
+    </td>
+  </tr>
+</table>
+
+### About Page
+
+<table>
+  <tr>
+    <td>
+      <strong>Desktop View:</strong><br>
+      <img src="images/screenshots/about_page_desktop.png" alt="About Page Desktop" width="300"/><br>
+      <em>The About page on desktop, providing company information.</em>
+    </td>
+  </tr>
+</table>
+
+### Contact Page
+
+<table>
+  <tr>
+    <td>
+      <strong>Mobile View:</strong><br>
+      <img src="images/screenshots/contact_page_mobile.png" alt="Contact Page Mobile" width="150"/><br>
+      <em>Focused view of the contact form on the Contact page.</em>
+    </td>
+  </tr>
+</table>
 
 ### Links
 
