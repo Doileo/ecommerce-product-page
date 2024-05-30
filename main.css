@@ -891,7 +891,7 @@ header,
 
 .item {
   display: grid;
-  gap: var(--spacing-base) / 2;
+  gap: 0.5rem;
 }
 
 .bestseller-items .item {
@@ -1121,7 +1121,7 @@ header,
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-  gap: var(--spacing-base) / 2;
+  gap: 0.5rem;
   padding: var(--padding-base);
   width: 100%;
   box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
@@ -1389,7 +1389,7 @@ header,
     width: 100%;
     justify-content: space-between;
     position: unset;
-    gap: var(--spacing-base) / 2;
+    gap: 0.5rem;
     padding: 0.5rem 0;
   }
 
@@ -1513,7 +1513,7 @@ header,
 
   .product {
     flex: unset;
-    gap: var(--spacing-base) / 2;
+    gap: 0.5rem;
   }
 
   .product__title {
@@ -1624,7 +1624,7 @@ header,
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: var(--spacing-base) / 2;
+    gap: 0.5rem;
   }
 
   .product__description,
@@ -1824,7 +1824,7 @@ header,
   }
 
   .contact-form__form {
-    gap: var(--spacing-base) / 2;
+    gap: 0.5rem;
   }
 
   .form-row {
