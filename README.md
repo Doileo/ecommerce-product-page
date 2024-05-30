@@ -150,7 +150,7 @@ In addition to the initial project requirements, I have completed the following 
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [live site URL here](https://ecommerce-product-page-ten-chi.vercel.app/)
 
 ## My process
 
