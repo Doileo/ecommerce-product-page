@@ -149,7 +149,7 @@ In addition to the initial project requirements, I have completed the following 
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [solution URL here](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6/hub?share=true)
 - Live Site URL: [live site URL here](https://ecommerce-product-page-ten-chi.vercel.app/)
 
 ## My process
