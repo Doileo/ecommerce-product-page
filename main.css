@@ -1413,6 +1413,12 @@ header,
     border-color: var(--primary-orange);
   }
 
+  .product-thumbnails__image.selected,
+  .product-thumbnails__img.selected {
+    opacity: 0.8;
+    border-color: var(--dark-grayish-blue);
+  }
+
   /* Product Thumbnails Wrapper */
 
   .product-thumbnails-wrapper {

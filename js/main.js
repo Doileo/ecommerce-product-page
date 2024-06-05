@@ -244,8 +244,19 @@ document.addEventListener("DOMContentLoaded", () => {
       productThumbnailsWrapper.style.display = "flex";
       prevButton.style.display = "block";
       nextButton.style.display = "block";
+      // Highlight the selected thumbnail image
+      highlightSelectedThumbnail(thumbnail);
     });
   });
+
+  // Function to highlight the selected thumbnail image
+  const highlightSelectedThumbnail = (selectedThumbnail) => {
+    productThumbnails.forEach((thumbnail) => {
+      thumbnail.classList.remove("selected");
+    });
+
+    selectedThumbnail.classList.add("selected");
+  };
 
   // Event listeners for navigation within the product images
   prevButton.addEventListener("click", () => {
