@@ -1,17 +1,26 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const sortSelect = document.getElementById("sort-select"); // Dropdown to select sorting order
-  const productContainer = document.querySelector(".sorted-products"); // Container for products to be sorted
+  // Dropdown element for selecting sorting order
+  const sortSelect = document.getElementById("sort-select");
 
-  // Event listener for sort selection change
+  // Container for displaying sorted products
+  const productContainer = document.querySelector(".sorted-products");
+
+  // Event listener for change in sort selection
   sortSelect.addEventListener("change", handleSortChange);
 
-  // Handles the change event for the sort selection
+  // Handles sort selection change
   function handleSortChange() {
-    const sortBy = sortSelect.value; // Get selected sorting option
-    const products = getProductsArray(); // Retrieve array of product elements
+    // Get the selected sorting option
+    const sortBy = sortSelect.value;
 
-    sortProducts(products, sortBy); // Sort products based on the selected option
-    updateProductContainer(products); // Update the DOM with the sorted products
+    // Retrieve array of product elements
+    const products = getProductsArray();
+
+    // Sort products based on the selected option
+    sortProducts(products, sortBy);
+
+    // Update the DOM with the sorted products
+    updateProductContainer(products);
   }
 
   // Retrieves an array of product elements
@@ -22,8 +31,11 @@ document.addEventListener("DOMContentLoaded", function () {
   // Sorts the products array based on the selected sorting option
   function sortProducts(products, sortBy) {
     products.sort((a, b) => {
-      const priceA = getProductPrice(a); // Get price of product A
-      const priceB = getProductPrice(b); // Get price of product B
+      // Get price of product A
+      const priceA = getProductPrice(a);
+
+      // Get price of product B
+      const priceB = getProductPrice(b);
 
       // Compare prices based on selected sorting order
       return sortBy === "price-low-high" ? priceA - priceB : priceB - priceA;
@@ -39,7 +51,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Updates the product container with sorted products
   function updateProductContainer(products) {
-    productContainer.innerHTML = ""; // Clear the product container
-    products.forEach((product) => productContainer.appendChild(product)); // Append sorted products
+    // Clear the product container
+    productContainer.innerHTML = "";
+
+    // Append sorted products
+    products.forEach((product) => productContainer.appendChild(product));
   }
 });

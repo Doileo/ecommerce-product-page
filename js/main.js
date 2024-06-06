@@ -1,6 +1,6 @@
 "use strict";
 
-// Function to scroll back to the top of the page
+// Function to smoothly scroll back to the top of the page
 const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -80,7 +80,10 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelector(".quantity-control__input").value
     );
 
+    // Calculate total price
     const totalPrice = (productPrice * quantity).toFixed(2);
+
+    // Generate cart item HTML
     const cartItemHTML = `
       <div class="cart-item">
         <img src="${productImageSrc}" alt="Product Image" class="cart-item__image">
@@ -95,10 +98,13 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     `;
 
+    // Insert cart item HTML
     cartItems.insertAdjacentHTML("beforeend", cartItemHTML);
 
+    // Display checkout button
     checkoutButton.style.display = "block";
 
+    // Hide empty cart message if cart has items
     if (emptyCartMessage) {
       const paragraph = emptyCartMessage.querySelector(
         ".empty-cart-message__text"
@@ -108,11 +114,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     updateCartIcon();
 
+    // Event listener for removing item from cart
     const removeButton = cartItems.lastElementChild.querySelector(
       ".cart-item__remove-btn"
     );
     removeButton.addEventListener("click", () => {
       cartItems.lastElementChild.remove();
+      // Hide checkout button and show empty cart message if cart is empty
       if (cartItems.children.length === 0) {
         checkoutButton.style.display = "none";
         if (emptyCartMessage) {
@@ -132,16 +140,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const itemCountElement = cartIcon.querySelector(".item-count");
 
     let totalItemCount = 0;
+    // Calculate total number of items in cart
     cartItems.forEach((item) => {
       totalItemCount += parseInt(
         item.querySelector(".cart-item__price").textContent.split("x")[1]
       );
     });
 
+    // Display or hide cart icon based on item count
     if (totalItemCount > 0) {
       itemCountElement.textContent = totalItemCount;
       cartIcon.classList.add("has-items");
       itemCountElement.style.display = "block";
+      // Apply styling to item count badge
       itemCountElement.style.backgroundColor = getComputedStyle(
         document.documentElement
       ).getPropertyValue("--primary-orange");
@@ -151,6 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
       itemCountElement.style.display = "none";
       checkoutButton.style.display = "none";
 
+      // Display empty cart message if cart is empty
       if (emptyCartMessage) {
         const paragraph = emptyCartMessage.querySelector(
           ".empty-cart-message__text"
@@ -188,8 +200,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Function to set the position of the arrow buttons
   const setArrowPosition = () => {
+    // Calculate the vertical center of the product image
     const imageRect = productSliderImages[0].getBoundingClientRect();
     const imageCenterY = imageRect.top + imageRect.height / 2;
+    // Set the position of the arrow buttons
     document.querySelector(
       ".product-slider__prev"
     ).style.top = `${imageCenterY}px`;
@@ -285,6 +299,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Event listener for scrolling
   window.addEventListener("scroll", () => {
     if (backToTopButton) {
+      // Show or hide back to top button based on scroll position
       backToTopButton.style.display = window.scrollY === 0 ? "none" : "block";
     }
   });
@@ -296,4 +311,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Initial setup
   setArrowPosition(); // Set initial arrow position
-});
+}); // Show or hide back to top button based on scroll position
