@@ -1253,7 +1253,7 @@ header,
 
   .footer__label {
     font-size: var(--fs-l);
-    margin-bottom: var(--padding-base);
+    margin: 0 0 1rem;
   }
 
   .footer__menu-social {
@@ -1676,7 +1676,7 @@ header,
   }
 
   .product-page .footer__newsletter {
-    margin-top: 5.3rem;
+    margin-top: 4.8rem;
   }
 
   .product-page .footer__menu-social {
