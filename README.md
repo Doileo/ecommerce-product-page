@@ -156,11 +156,47 @@ In addition to the initial project requirements, I have completed the following 
 
 ### Built with
 
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- Vanilla JavaScript
+- BEM (Block Element Modifier) naming convention for classes
+- Lighthouse for performance and accessibility
+
 ### What I learned
+
+Through this project, I have developed my ability to:
+
+- Build a lightbox gallery feature that activates when images are clicked.
+- Implement a slider to cycle through large product images.
+- Enable users to add products to their shopping cart.
+- Develop a shopping cart interface that displays selected items and allows for their removal.
+
+Additionally, I tackled some extended tasks:
+
+- Implemented a feature to sort products on the Men and Women pages.
+- Developed detailed product pages for individual items on the Men and Women pages.
+- Added a "Back to Top" button for improved navigation.
 
 ### Continued development
 
+Looking ahead, I am excited to build another e-commerce project using React. In this future project, I plan to:
+
+- Add size options for products, along with a size chart for users to consult.
+- Implement a "heart" favorite feature to allow users to save their favorite items.
+- Include a slider for product models that lets users preview different models before accessing their details.
+
+I am eager to apply what I've learned and expand on these features to create a more interactive and user-friendly shopping experience.
+
 ### Useful resources
+
+- [Lighthouse Documentation](https://developers.google.com/web/tools/lighthouse) - This documentation was crucial for optimizing the performance and accessibility of the site. It guided me through using Lighthouse for auditing and improving various aspects of the project.
+
+- [BEM Methodology](https://getbem.com/introduction/) - This resource helped me learn and implement the BEM (Block Element Modifier) naming convention for my CSS classes. It made my code more readable and maintainable, and I plan to continue using this methodology in future projects.
+
+- [W3Schools - JavaScript Array sort()](https://www.w3schools.com/jsref/jsref_sort.asp) - This resource was extremely helpful for implementing the sorting feature for products on the Men and Women pages. The examples and explanations provided a clear understanding of how to use the `sort()` method effectively.
 
 ## Author
 
