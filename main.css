@@ -641,6 +641,7 @@ header,
 .footer__label,
 .footer__input,
 .footer__button,
+.footer__help-text,
 .form-submit,
 .product__add-to-cart {
   font-size: var(--fs-m);
@@ -692,6 +693,12 @@ header,
   background-color: var(--dark-orange);
   transform: translateY(-2px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footer__message {
+  margin-top: 10px;
+  font-size: var(--fs-n);
+  display: none;
 }
 
 .footer__logo {
@@ -1230,12 +1237,17 @@ header,
   }
 
   /* Footer styles */
-  .footer__newsletter-wrapper {
+  /*.footer__newsletter-wrapper {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
     padding: var(--padding-large);
+  } */
+
+  .footer__newsletter-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .footer__newsletter,
@@ -1254,6 +1266,11 @@ header,
   .footer__label {
     font-size: var(--fs-l);
     margin: 0 0 1rem;
+  }
+
+  .footer__help-text,
+  .footer__message {
+    grid-column: 2 / -1;
   }
 
   .footer__menu-social {
@@ -1347,6 +1364,10 @@ header,
 
   .footer__column {
     padding: 7%;
+  }
+
+  .footer__newsletter-wrapper {
+    padding: 5%;
   }
 
   .contact__newsletter-wrapper {
@@ -1734,11 +1755,6 @@ header,
     margin-top: 0;
   }
 
-  .footer__input,
-  .footer__button {
-    padding: var(--padding-base);
-  }
-
   /* About Page Styles */
   .about .container,
   .our-values .container,
@@ -1840,8 +1856,9 @@ header,
   }
 
   .form-input,
+  .footer__button,
   .form-submit {
-    padding: var(--padding-base);
+    padding: 10px 40px;
   }
 
   .contact-info {
