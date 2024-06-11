@@ -358,7 +358,7 @@
               Stay updated with our latest releases, special offers, and more!
             </p>
           </div>
-          <form class="footer__form">
+          <form class="footer__form" id="newsletter-form" novalidate>
             <label for="email" class="footer__label text-dark"
               >Email Address *</label
             >
@@ -368,9 +368,19 @@
               class="footer__input"
               placeholder="Your email address"
               required
+              aria-describedby="emailHelp"
             />
             <button type="submit" class="footer__button">Subscribe</button>
           </form>
+          <p id="emailHelp" class="footer__help-text text-dark">
+            We'll never share your email with anyone else.
+          </p>
+          <p
+            id="form-message"
+            class="footer__message"
+            aria-live="polite"
+            style="display: none"
+          ></p>
         </div>
 
         <!-- Location, Menu, and Social Media Section -->
@@ -459,5 +469,6 @@
 
     <script src="../js/main.js"></script>
     <script src="../js/sortingFeature.js"></script>
+    <script src="../js/newsletter.js"></script>
   </body>
 </html>

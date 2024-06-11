@@ -698,6 +698,7 @@ header,
 .footer__message {
   margin-top: 10px;
   font-size: var(--fs-n);
+  font-weight: 600;
   display: none;
 }
 
