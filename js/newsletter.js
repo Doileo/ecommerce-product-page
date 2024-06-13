@@ -6,7 +6,7 @@
     .addEventListener("submit", function (event) {
       event.preventDefault();
 
-      const emailInput = document.getElementById("email");
+      const emailInput = document.getElementById("newsletter-email");
       const message = document.getElementById("form-message");
 
       // Reset message
