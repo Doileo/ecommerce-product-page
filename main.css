@@ -1690,15 +1690,15 @@ header,
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
     width: 40%;
     order: 2;
-    gap: var(--spacing-base);
+    gap: 0.5rem;
     padding-top: var(--padding-large);
   }
 
   .product-page .footer__newsletter {
     margin-top: 4.8rem;
+    margin-bottom: var(--margin-base);
   }
 
   .product-page .footer__menu-social {
