@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-    <title>Frontend Mentor | E-commerce product page</title>
+    <title>Find Your Perfect Sneakers - Quiz</title>
     <link
       rel="icon"
       type="image/png"
@@ -115,158 +115,186 @@
 
     <!-- Main Content -->
     <main class="main">
-      <!-- Hero Section -->
-      <section class="hero">
-        <div class="hero__content">
-          <!-- Mobile Hero Image -->
-          <img
-            class="hero__image mobile-image"
-            src="images/mobile-hero-image.png"
-            alt="Hero Image."
-          />
-          <!-- Tablet/Desktop Hero Image (hidden by default) -->
-          <img
-            class="hero__image tablet-desktop-image"
-            src="images/desktop-hero-image.png"
-            alt="Tablet/Desktop Hero Image"
-          />
-          <div class="hero__text container">
-            <h1 class="hero__title text-dark">
-              Discover Comfort, Embrace Style
-            </h1>
-            <p class="hero__subtitle">
-              Explore our collection of stylish and comfortable sneakers
+      <section class="quiz container">
+        <h2 class="quiz__title text-dark">Find Your Perfect Style</h2>
+        <p class="quiz__description">
+          Take our quiz to discover the best sneakers for you!
+        </p>
+        <form class="quiz__form">
+          <!-- Question 1 -->
+          <div class="quiz__question">
+            <p class="quiz__label">
+              Question 1: What is your preferred sneaker style?
             </p>
-            <a href="quiz.html" class="hero__button">Take Our Style Quiz</a>
-          </div>
-        </div>
-      </section>
-
-      <!-- Bestsellers Section -->
-      <section class="bestsellers container">
-        <h2 class="bestsellers__title text-dark">Bestsellers</h2>
-        <div class="bestsellers__grid">
-          <!-- Bestseller item 1 -->
-          <div class="bestseller-item">
-            <a href="men/bestseller_model_1/index.html" class="model-link">
-              <img
-                class="bestseller-item__image"
-                src="images/bestseller1.png"
-                alt="Bestseller 1"
-              />
-              <div class="item-details">
-                <h3 class="item-title text-dark">Top Sneakers</h3>
-                <p class="item-price">$100</p>
-              </div>
-            </a>
+            <label for="q1_casual">
+              <input type="radio" id="q1_casual" name="q1" value="casual" />
+              Casual </label
+            ><br />
+            <label for="q1_athletic">
+              <input type="radio" id="q1_athletic" name="q1" value="athletic" />
+              Athletic </label
+            ><br />
+            <label for="q1_formal">
+              <input type="radio" id="q1_formal" name="q1" value="formal" />
+              Formal </label
+            ><br />
           </div>
 
-          <!-- Bestseller item 2 -->
-          <div class="bestseller-item">
-            <a href="women/w_bestseller_1/index.html" class="model-link">
-              <img
-                class="bestseller-item__image"
-                src="images/bestseller2.png"
-                alt="Bestseller 2"
-              />
-              <div class="item-details">
-                <h3 class="item-title text-dark">Darling Sneakers</h3>
-                <p class="item-price">$100</p>
-              </div>
-            </a>
-          </div>
-
-          <!-- Bestseller item 3 -->
-          <div class="bestseller-item">
-            <a href="men/bestseller_model_2/index.html" class="model-link">
-              <img
-                class="bestseller-item__image"
-                src="images/bestseller3.png"
-                alt="Bestseller 3"
-              />
-              <div class="item-details">
-                <h3 class="item-title text-dark">Favorite Sneakers</h3>
-                <p class="item-price">$115</p>
-              </div>
-            </a>
-          </div>
-
-          <!-- Bestseller item 4 -->
-          <div class="bestseller-item">
-            <a href="women/w_formal_1/index.html" class="model-link">
-              <img
-                class="bestseller-item__image"
-                src="women/w_formal_1/w_formal_1_img/w_formal1.png"
-                alt="Bestseller 4"
-              />
-              <div class="item-details">
-                <h3 class="item-title text-dark">Aura Sneakers</h3>
-                <p class="item-price">$120</p>
-              </div>
-            </a>
-          </div>
-
-          <!-- Bestseller item 5 -->
-          <div class="bestseller-item">
-            <a href="men/bestseller_model_3/index.html" class="model-link">
-              <img
-                class="bestseller-item__image"
-                src="images/bestseller5.png"
-                alt="Bestseller 5"
-              />
-              <div class="item-details">
-                <h3 class="item-title text-dark">Choice Sneakers</h3>
-                <p class="item-price">$95</p>
-              </div>
-            </a>
-          </div>
-
-          <!-- Bestseller item 6 -->
-          <div class="bestseller-item">
-            <a href="women/w_bestseller_3/index.html" class="model-link">
-              <img
-                class="bestseller-item__image"
-                src="images/bestseller6.png"
-                alt="Bestseller 6"
-              />
-              <div class="item-details">
-                <h3 class="item-title text-dark">Elegance Sneakers</h3>
-                <p class="item-price">$125</p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- About Section -->
-      <section class="about container">
-        <div class="about__content">
-          <div class="about__text">
-            <h2 class="about__title text-dark">About Us</h2>
-            <p class="about__description">
-              At SNEAKERS, we're more than just shoes. Explore our collection
-              where comfort meets style. Discover timeless footwear designed for
-              trendsetters and comfort seekers alike. Step into a world where
-              each pair tells a story of quality and innovation. Ready to
-              'Discover Comfort, Embrace Style'? Explore more with us.
+          <!-- Question 2 -->
+          <div class="quiz__question">
+            <p class="quiz__label">
+              Question 2: What activities do you primarily wear sneakers for?
             </p>
-            <button
-              type="button"
-              class="about__learn-more-button"
-              onclick="location.href='about/index.html';"
-            >
-              Learn More
-            </button>
+            <label for="q2_walking">
+              <input type="radio" id="q2_walking" name="q2" value="walking" />
+              Walking </label
+            ><br />
+            <label for="q2_running">
+              <input type="radio" id="q2_running" name="q2" value="running" />
+              Running </label
+            ><br />
+            <label for="q2_gym">
+              <input type="radio" id="q2_gym" name="q2" value="gym" />
+              Gym/Workout </label
+            ><br />
+            <label for="q2_casual">
+              <input type="radio" id="q2_casual" name="q2" value="casual" />
+              Casual outings </label
+            ><br />
+            <label for="q2_work">
+              <input type="radio" id="q2_work" name="q2" value="work" />
+              Work/Office </label
+            ><br />
           </div>
-          <div class="about__image-container">
-            <!-- Add your image source and alt text -->
-            <img
-              src="images/about.png"
-              alt="About Us Image"
-              class="about__image"
-            />
+
+          <!-- Question 3 -->
+          <div class="quiz__question">
+            <p class="quiz__label">
+              Question 3: What colors do you prefer for your sneakers?
+            </p>
+            <label for="q3_black">
+              <input type="radio" id="q3_black" name="q3" value="black" />
+              Black </label
+            ><br />
+            <label for="q3_white">
+              <input type="radio" id="q3_white" name="q3" value="white" />
+              White </label
+            ><br />
+            <label for="q3_bright">
+              <input type="radio" id="q3_bright" name="q3" value="bright" />
+              Bright colors </label
+            ><br />
+            <label for="q3_neutral">
+              <input type="radio" id="q3_neutral" name="q3" value="neutral" />
+              Neutral tones </label
+            ><br />
+            <label for="q3_mixed">
+              <input type="radio" id="q3_mixed" name="q3" value="mixed" /> Mixed
+              colors </label
+            ><br />
           </div>
-        </div>
+
+          <!-- Question 4 -->
+          <div class="quiz__question">
+            <p class="quiz__label">
+              Question 4: Which comfort features are most important to you?
+            </p>
+            <label for="q4_arch-support">
+              <input
+                type="radio"
+                id="q4_arch-support"
+                name="q4"
+                value="arch-support"
+              />
+              Arch support </label
+            ><br />
+            <label for="q4_cushioning">
+              <input
+                type="radio"
+                id="q4_cushioning"
+                name="q4"
+                value="cushioning"
+              />
+              Cushioning </label
+            ><br />
+            <label for="q4_breathability">
+              <input
+                type="radio"
+                id="q4_breathability"
+                name="q4"
+                value="breathability"
+              />
+              Breathability </label
+            ><br />
+            <label for="q4_lightweight">
+              <input
+                type="radio"
+                id="q4_lightweight"
+                name="q4"
+                value="lightweight"
+              />
+              Lightweight </label
+            ><br />
+          </div>
+
+          <!-- Question 5 -->
+          <div class="quiz__question">
+            <p class="quiz__label">
+              Question 5: What material do you prefer for your sneakers?
+            </p>
+            <label for="q5_leather">
+              <input type="radio" id="q5_leather" name="q5" value="leather" />
+              Leather </label
+            ><br />
+            <label for="q5_suede">
+              <input type="radio" id="q5_suede" name="q5" value="suede" />
+              Suede </label
+            ><br />
+            <label for="q5_mesh">
+              <input type="radio" id="q5_mesh" name="q5" value="mesh" />
+              Mesh </label
+            ><br />
+            <label for="q5_knit">
+              <input type="radio" id="q5_knit" name="q5" value="knit" /> Knit
+              fabric </label
+            ><br />
+            <label for="q5_synthetic">
+              <input
+                type="radio"
+                id="q5_synthetic"
+                name="q5"
+                value="synthetic"
+              />
+              Synthetic </label
+            ><br />
+          </div>
+
+          <!-- Question 6 -->
+          <div class="quiz__question">
+            <p class="quiz__label">
+              Question 6: What is your preferred price range for sneakers?
+            </p>
+            <label for="q6_under-50">
+              <input type="radio" id="q6_under-50" name="q6" value="under-50" />
+              Under $50 </label
+            ><br />
+            <label for="q6_50-100">
+              <input type="radio" id="q6_50-100" name="q6" value="50-100" /> $50
+              - $100 </label
+            ><br />
+            <label for="q6_100-150">
+              <input type="radio" id="q6_100-150" name="q6" value="100-150" />
+              $100 - $150 </label
+            ><br />
+            <label for="q6_over-150">
+              <input type="radio" id="q6_over-150" name="q6" value="over-150" />
+              Over $150 </label
+            ><br />
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="quiz__submit-button">Submit</button>
+        </form>
       </section>
     </main>
 
