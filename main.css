@@ -473,7 +473,8 @@ header,
 }
 
 .hero__button,
-.checkout-button {
+.checkout-button,
+.quiz__submit-button {
   display: inline-block;
   background-color: var(--primary-orange);
   color: var(--white);
@@ -486,7 +487,8 @@ header,
 
 .hero__button:hover,
 .about__learn-more-button:hover,
-.checkout-button:hover {
+.checkout-button:hover,
+.quiz__submit-button:hover {
   background-color: var(--dark-orange);
   transform: translateY(-2px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -643,7 +645,8 @@ header,
 .footer__button,
 .footer__help-text,
 .form-submit,
-.product__add-to-cart {
+.product__add-to-cart,
+.quiz__submit-button {
   font-size: var(--fs-m);
 }
 
