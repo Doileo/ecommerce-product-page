@@ -1144,6 +1144,55 @@ header,
   height: 1rem;
 }
 
+/* Quiz Section Styles */
+
+/* Base styles for the quiz section */
+.quiz {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--padding-base);
+  background-color: var(--light-grayish-blue);
+  color: var(--very-dark-blue);
+  text-align: center;
+}
+
+.quiz__header {
+  font-size: var(--fs-4xl);
+  font-weight: 700;
+  margin-bottom: var(--margin-large);
+}
+
+.quiz__form {
+  margin-top: var(--margin-base);
+}
+
+.quiz__question {
+  font-size: var(--fs-m);
+  margin-bottom: var(--margin-medium);
+}
+
+.quiz__label {
+  font-weight: bold;
+  margin-bottom: var(--margin-small);
+  display: block;
+}
+
+label {
+  display: block;
+  margin-bottom: var(--margin-small);
+  cursor: pointer;
+}
+
+label input {
+  margin-right: var(--margin-small);
+}
+
+.quiz__submit-button:active {
+  background-color: var(--very-dark-orange);
+  transform: translateY(1px);
+}
+
 @media only screen and (max-width: 767px) {
   .product-image-overlay__close,
   .product-image-container {
@@ -1240,15 +1289,6 @@ header,
     width: 100%;
     height: auto;
   }
-
-  /* Footer styles */
-  /*.footer__newsletter-wrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-    padding: var(--padding-large);
-  } */
 
   .footer__newsletter-wrapper {
     display: grid;
@@ -1570,6 +1610,33 @@ header,
     padding: 2rem 2rem 0 2rem;
     order: 1;
   }
+
+  /* Quiz styles */
+  .quiz {
+    padding: var(--padding-large);
+  }
+
+  .quiz__header {
+    font-size: var(--fs-5xl);
+  }
+
+  .quiz__question {
+    font-size: var(--fs-l);
+    margin-bottom: var(--margin-large);
+  }
+
+  .quiz__form {
+    width: 80%;
+  }
+
+  label {
+    display: flex;
+    align-items: center;
+  }
+
+  label input {
+    margin-right: var(--margin-medium);
+  }
 }
 
 /* Medium Desktop media query */
@@ -1712,6 +1779,28 @@ header,
   .product-page .attribution {
     order: 3;
     width: 100%;
+  }
+
+  /* Quiz styles */
+  .quiz {
+    padding: var(--padding-extra-large);
+  }
+
+  .quiz.container {
+    margin: 2% auto;
+  }
+
+  .quiz__header {
+    font-size: var(--fs-6xl);
+  }
+
+  .quiz__form {
+    width: 60%;
+  }
+
+  .quiz__question {
+    font-size: var(--fs-xl);
+    margin-bottom: var(--margin-extra-large);
   }
 }
 
