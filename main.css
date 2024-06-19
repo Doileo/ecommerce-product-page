@@ -1154,13 +1154,17 @@ header,
   padding: var(--padding-base);
   background-color: var(--light-grayish-blue);
   color: var(--very-dark-blue);
-  text-align: center;
+  text-align: left;
 }
 
 .quiz__header {
   font-size: var(--fs-4xl);
   font-weight: 700;
   margin-bottom: var(--margin-large);
+}
+
+.quiz__description {
+  text-align: center;
 }
 
 .quiz__form {
@@ -1174,7 +1178,7 @@ header,
 
 .quiz__label {
   font-weight: bold;
-  margin-bottom: var(--margin-small);
+  margin-bottom: var(--margin-base);
   display: block;
 }
 
@@ -1185,7 +1189,12 @@ label {
 }
 
 label input {
-  margin-right: var(--margin-small);
+  margin-right: var(--margin-base);
+}
+
+.quiz__submit-button {
+  display: grid;
+  margin: 0 auto;
 }
 
 .quiz__submit-button:active {
