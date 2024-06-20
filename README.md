@@ -45,6 +45,7 @@ In addition to the initial project requirements, I have completed the following 
 - Added another color to the buttons, considering the rotation aspect.
 - Created pages for each model on the Men and Women pages.
 - Added the Back to Top feature.
+- On the Home page, added an interactive element through the "Take Our Style Quiz" button.
 
 ## Screenshots
 
