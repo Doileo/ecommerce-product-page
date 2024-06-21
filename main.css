@@ -472,6 +472,10 @@ header,
   font-size: var(--fs-m);
 }
 
+.hero__button {
+  text-decoration: none;
+}
+
 .hero__button,
 .checkout-button,
 .quiz__submit-button {
@@ -907,6 +911,16 @@ header,
 }
 
 .bestseller-items .item {
+  width: 100%;
+}
+
+.category-item .item:hover img {
+  transform: scale(1.05);
+}
+
+.category-item .item img {
+  transition: transform 0.3s ease;
+  display: block;
   width: 100%;
 }
 
