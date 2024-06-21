@@ -1224,7 +1224,7 @@ label input {
   .hero__subtitle,
   .men-hero__subtitle,
   .women-hero__subtitle {
-    font-size: var(--fs-n);
+    font-size: var(--fs-l);
     margin: var(--margin-medium);
   }
 
@@ -1716,6 +1716,12 @@ label input {
 
   .item-count {
     right: 61px;
+  }
+
+  .hero__subtitle,
+  .men-hero__subtitle,
+  .women-hero__subtitle {
+    font-size: var(--fs-xl);
   }
 
   .contact-info__image {
