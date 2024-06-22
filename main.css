@@ -1248,6 +1248,7 @@ label input {
 
   .tablet-desktop-image {
     display: block;
+    height: 400px;
   }
 
   .cart-content {
@@ -1732,6 +1733,11 @@ label input {
     right: 61px;
   }
 
+  .tablet-desktop-image {
+    max-height: 500px;
+    height: unset;
+  }
+
   .hero__subtitle,
   .men-hero__subtitle,
   .women-hero__subtitle {
@@ -1857,6 +1863,10 @@ label input {
   /* Hero section styles */
   .hero__text {
     padding: 3.5rem 0;
+  }
+
+  .tablet-desktop-image {
+    max-height: 600px;
   }
 
   /* About section styles */
