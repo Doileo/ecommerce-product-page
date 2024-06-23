@@ -2040,4 +2040,12 @@ label input {
   .product-image-overlay__close {
     right: 25%;
   }
+
+  @media (min-width: 1400px) {
+    .tablet-desktop-image {
+      object-fit: cover;
+      height: 750px;
+      max-height: unset;
+    }
+  }
 }
