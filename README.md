@@ -22,6 +22,7 @@ This is a solution to the [E-commerce product page challenge on Frontend Mentor]
     - [What I learned](#what-i-learned)
     - [Continued development](#continued-development)
     - [Useful resources](#useful-resources)
+  - [Installation Instructions](#installation-instructions)
   - [Author](#author)
 
 ## Overview
@@ -198,6 +199,23 @@ I am eager to apply what I've learned and expand on these features to create a m
 - [BEM Methodology](https://getbem.com/introduction/) - This resource helped me learn and implement the BEM (Block Element Modifier) naming convention for my CSS classes. It made my code more readable and maintainable, and I plan to continue using this methodology in future projects.
 
 - [W3Schools - JavaScript Array sort()](https://www.w3schools.com/jsref/jsref_sort.asp) - This resource was extremely helpful for implementing the sorting feature for products on the Men and Women pages. The examples and explanations provided a clear understanding of how to use the `sort()` method effectively.
+
+## Installation Instructions
+
+To set up the E-commerce Product Page on your local machine, follow these steps:
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/yourusername/ecommerce-product-page.git
+   ```
+
+2. Navigate to the project directory:
+   ```bash
+   cd ecommerce-product-page
+   ```
+3. Open the project in your browser:
+   Simply open the `index.html` file in your preferred browser.
 
 ## Author
 
