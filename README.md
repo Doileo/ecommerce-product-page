@@ -23,6 +23,7 @@ This is a solution to the [E-commerce product page challenge on Frontend Mentor]
     - [Continued development](#continued-development)
     - [Useful resources](#useful-resources)
   - [Installation Instructions](#installation-instructions)
+  - [Dependencies](#dependencies)
   - [Author](#author)
 
 ## Overview
@@ -216,6 +217,17 @@ To set up the E-commerce Product Page on your local machine, follow these steps:
    ```
 3. Open the project in your browser:
    Simply open the `index.html` file in your preferred browser.
+
+## Dependencies
+
+This project uses the following dependencies:
+
+- **Vanilla JavaScript** - For implementing core interactivity like the lightbox gallery and cart functionality.
+- **Lighthouse** - Used for auditing performance and accessibility to ensure the project meets best practices.
+- **CSS Grid & Flexbox** - For creating a responsive layout that adapts to various screen sizes.
+- **BEM (Block Element Modifier)** - A CSS methodology used to maintain clean and scalable styles.
+
+There are no external libraries or frameworks used in this project apart from the ones listed above.
 
 ## Author
 
