@@ -24,6 +24,7 @@ This is a solution to the [E-commerce product page challenge on Frontend Mentor]
     - [Useful resources](#useful-resources)
   - [Installation Instructions](#installation-instructions)
   - [Dependencies](#dependencies)
+  - [Usage Instructions](#usage-instructions)
   - [Author](#author)
 
 ## Overview
@@ -228,6 +229,32 @@ This project uses the following dependencies:
 - **BEM (Block Element Modifier)** - A CSS methodology used to maintain clean and scalable styles.
 
 There are no external libraries or frameworks used in this project apart from the ones listed above.
+
+## Usage Instructions
+
+1. **Open the project**:
+   Open the `index.html` file in your preferred web browser to launch the application.
+
+2. **Browse products**:
+
+   - **Explore pages**: Navigate between Home, Men, Women, About, and Contact pages using the navigation bar.
+   - **View products**: Click on product images or titles to view detailed product pages with descriptions, and pricing.
+
+3. **Interact with features**:
+
+   - **Lightbox gallery**: On the product details page, click on the product images to open a lightbox gallery. Use the navigation arrows to browse through images.
+   - **Sort products**: On the Men and Women pages, use the sorting feature to organize products by categories or preferences.
+
+4. **Manage cart**:
+
+   - **Add items**: Select a product and click the "Add to cart" button to add it to your cart.
+   - **View cart**: Open the cart to view selected items, their quantities, and the total price.
+   - **Remove items**: Remove items from the cart using the delete button next to each product.
+
+5. **Additional features**:
+
+   - **Back to top**: Click the "Back to Top" button for easy navigation back to the top of the page.
+   - **Style Quiz**: On the Home page, use the "Take Our Style Quiz" button for an interactive experience.
 
 ## Author
 
