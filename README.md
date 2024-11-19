@@ -25,6 +25,7 @@ This is a solution to the [E-commerce product page challenge on Frontend Mentor]
   - [Installation Instructions](#installation-instructions)
   - [Dependencies](#dependencies)
   - [Usage Instructions](#usage-instructions)
+  - [Project Structure](#project-structure)
   - [Author](#author)
 
 ## Overview
@@ -255,6 +256,23 @@ There are no external libraries or frameworks used in this project apart from th
 
    - **Back to top**: Click the "Back to Top" button for easy navigation back to the top of the page.
    - **Style Quiz**: On the Home page, use the "Take Our Style Quiz" button for an interactive experience.
+
+## Project Structure
+
+- **Root directory**:
+
+  - `index.html`: The main landing page for the application.
+  - `quiz.html`: The style quiz page for users to explore their preferences.
+  - `main.css`: Contains the global styles, including layout, responsive design, and hover states.
+  - `README.md`: Documentation for the project.
+
+- **Folders**:
+  - `about/`: Contains the HTML, and assets related to the "About" page.
+  - `contact/`: Contains the HTML, and assets for the "Contact" page.
+  - `men/`: Contains the HTML and assets for the men's product section.
+  - `women/`: Contains the HTML and assets for the women's product section.
+  - `js/`: Contains JavaScript files for interactive elements like the style quiz and navigation.
+  - `images/`: Contains all images and icons used in the project, including screenshots showcasing the application's features and design.
 
 ## Author
 
