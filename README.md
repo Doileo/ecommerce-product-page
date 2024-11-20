@@ -278,3 +278,4 @@ There are no external libraries or frameworks used in this project apart from th
 
 - Frontend Mentor - [@Doileo](https://www.frontendmentor.io/profile/Doileo)
 - LinkedIn - [@Doina](https://www.linkedin.com/in/doinaleovchindeveloper/)
+- GitHub - [@Doileo](https://github.com/Doileo)
